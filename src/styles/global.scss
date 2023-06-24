@@ -1,0 +1,20 @@
+@import "./fonts.scss";
+
+html,
+body {
+  width: 100%;
+  // font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-main);
+  user-select: none;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}

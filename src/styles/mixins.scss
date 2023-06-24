@@ -1,0 +1,29 @@
+// Media-queries breakpoints
+$breakpoints: (mobile: 640,
+  mobile-m: 800,
+  tablet: 1024,
+  desktop: 1440,
+);
+
+@mixin breakpoint($point, $type: max) {
+  $delta: 0;
+
+  @if $type==max {
+    $delta: 0.1;
+  }
+
+  @if type-of($point)==number {
+    @media (#{$type}-width: $point - $delta + px) {
+      @content;
+    }
+  }
+
+  @else {
+    $breakpoint: map-get($breakpoints, #{$point});
+    $breakpointValue: $breakpoint - $delta + px;
+
+    @media (#{$type}-width: $breakpointValue) {
+      @content;
+    }
+  }
+}

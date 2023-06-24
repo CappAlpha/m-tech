@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint", "@jambit/typed-redux-saga"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": ["./tsconfig.*?.json"]
+  },
+  "overrides": [
+    {
+      "files": ["*.config.js", "build/*.js"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "unicorn/prefer-module": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["node_modules", "public/_nextPublic/scripts"],
+  "rules": {
+    "@jambit/typed-redux-saga/use-typed-effects": ["error", "macro"],
+    "@jambit/typed-redux-saga/delegate-effects": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off",
+    "react/jsx-no-bind": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "react/no-array-index-key": "off",
+    "arrow-body-style": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "unicorn/prefer-spread": "off",
+    "unicorn/no-useless-undefined": "off",
+    "unicorn/empty-brace-spaces": "off",
+    "unicorn/no-array-callback-reference": "off",
+    "unicorn/numeric-separators-style": "off",
+    "unicorn/no-abusive-eslint-disable": "off",
+    // useEffect(function nameEffect(){})
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowNamedFunctions": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-console": "error"
+    // "jest/no-focused-tests": "error"
+  }
+}

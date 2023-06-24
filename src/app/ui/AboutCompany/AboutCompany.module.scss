@@ -1,0 +1,82 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 50px;
+
+  .title {
+    width: 100%;
+    max-width: 700px;
+
+    color: #000;
+    font-size: 89px;
+    line-height: 82px;
+  }
+
+  .container {
+    width: 100%;
+    
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 800px;
+
+      .subtitle {
+        color: #335899;
+        font-size: 20px;
+        line-height: 82px;
+      }
+      .count {
+        color: #000;
+        font-size: 50px;
+        line-height: 82px;
+      }
+      .description {
+        width: 100%;
+        max-width: 410px;
+
+        color: #000;
+        font-size: 20px;
+        line-height: 42px;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 810px;
+      padding: 50px;
+
+      border-radius: 57px;
+      background-color: #162249;
+
+      img {
+        width: 142px;
+        height: 142px;
+        border-radius: 142px;
+        background: #d9d9d9;
+      }
+
+      .review {
+        width: 100%;
+        max-width: 830px;
+
+        color: #fff;
+        font-size: 30px;
+        line-height: 42px;
+      }
+
+      .author {
+        color: #eaddd0;
+        font-size: 20px;
+        font-family: Grandis;
+        line-height: 82px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+  }
+}
