@@ -6,14 +6,14 @@ export const heroBlock = {
 
 export const header = { tel: '+7 924 ХХХ ХХХ ХХ' }
 
-export const aboutCompanyTitle = {title: '30 лет развития ИТ-индустрии'}
+export const aboutBlockTitle = { title: '30 лет развития ИТ-индустрии' }
 
-export const aboutCompany = //[
-  {
-    subtitle: 'Сотрудников',
-    count: 4000,
-    description: 'Команда профессионалов IBS объединяет более 4000 человек — консультантов, архитекторов, аналитиков, инженеров и программистов.',
-  }
+export const aboutBlock = //[
+{
+  subtitle: 'Сотрудников',
+  count: 4000,
+  description: 'Команда профессионалов IBS объединяет более 4000 человек — консультантов, архитекторов, аналитиков, инженеров и программистов.',
+}
 //   {
 //     subtitle: 'Suspendisse tempus',
 //     count: 13,

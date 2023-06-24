@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  padding: 40px;
 
   background-color: #999;
 
@@ -21,10 +22,12 @@
   }
 
   .container {
+    width: 100%;
+
     position: absolute;
     bottom: 0;
 
-    padding-left: 277px;
+    padding-left: 237px;
     padding-bottom: 132px;
 
     .title {
@@ -39,6 +42,8 @@
 
     .bottomBlock {
       display: flex;
+      justify-content: space-between;
+      width: 100%;
 
       .button {
         padding: 25px 65px;
@@ -52,16 +57,17 @@
         font-size: 35px;
       }
 
-      .button:hover{
+      .button:hover {
         transform: translate3d(3px, -4px, 0);
         transition: transform 0.1s linear;
       }
 
-      .button:active{opacity: 0.6;}
+      .button:active {
+        opacity: 0.6;
+      }
 
       .description {
-        margin-left: 630px;
-        width: 100%;
+        padding-right: 46px;
         max-width: 545px;
 
         color: #fff;
@@ -71,6 +77,6 @@
     }
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
   }
 }

@@ -11,7 +11,8 @@ export interface Props {
 export const HeroBlock: FC<Props> = ({ title, button, description }) => {
   return (
     <div className={styles.root}>
-      <div className={styles.introBg}><video preload="auto" muted loop src='/assets/video/heroBlock/backgroundVideo.mp4' autoPlay></video></div>   
+      <div className={styles.introBg}><video preload="auto" muted loop autoPlay src='/public/video/heroBlock/backgroundVideo.mp4' />
+      </div>
 
       <div className={styles.container}>
         <div className={styles.title}>{title}</div>

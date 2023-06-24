@@ -2,13 +2,22 @@
 
 html,
 body {
-  width: 100%;
-  // font-family: "Gilroy";
   font-weight: 500;
   font-size: 14px;
   color: var(--color-main);
+
   user-select: none;
+  width: 100%;
+  min-width: 320px;
   min-height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {

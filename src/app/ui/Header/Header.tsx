@@ -2,7 +2,10 @@ import cn from 'classnames';
 import { FC, useEffect, useRef, useState } from "react";
 
 import styles from "./Header.module.scss";
-import { Logo, hamburgerMenu } from "../../../../assets";
+import {
+  Logo,
+  HamburgerMenu,
+} from '@/app/ui/shared/Icon';
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 100;
 
@@ -14,7 +17,7 @@ interface Props {
   tel: string;
 }
 
-export const Header: FC<Props> = ({  headerStyle, tel }) => {
+export const Header: FC<Props> = ({ headerStyle, tel }) => {
 
   const [opened, setOpened] = useState(false);
   const [fixed, setFixed] = useState(true);
@@ -52,15 +55,13 @@ export const Header: FC<Props> = ({  headerStyle, tel }) => {
 
   const closeMenu = () => setOpened(false);
 
-  //useBlockScroll([opened, isTablet]);
-
   return (
     <header className={styles.root}>
       <div className={styles.container}>
-        <img src={Logo} alt="Logo"/> 
+        <Logo className={styles.logo} alt="Logo" />
         <div className={styles.right}>
-          <div className={styles.tel}></div>
-          <img src={hamburgerMenu} alt="Menu"/>
+          <div className={styles.tel}>{tel}</div>
+          <HamburgerMenu className={styles.hamburgerMenu} alt="Menu" />
         </div>
       </div>
     </header>
