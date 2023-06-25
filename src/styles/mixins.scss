@@ -1,8 +1,10 @@
 // Media-queries breakpoints
-$breakpoints: (mobile: 640,
+$breakpoints: (
+  mobile: 640,
   mobile-m: 800,
   tablet: 1024,
   desktop: 1440,
+  desktop-big: 1600,
 );
 
 @mixin breakpoint($point, $type: max) {
@@ -12,13 +14,11 @@ $breakpoints: (mobile: 640,
     $delta: 0.1;
   }
 
-  @if type-of($point)==number {
+  @if type-of($point) ==number {
     @media (#{$type}-width: $point - $delta + px) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     $breakpoint: map-get($breakpoints, #{$point});
     $breakpointValue: $breakpoint - $delta + px;
 

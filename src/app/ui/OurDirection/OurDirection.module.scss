@@ -1,0 +1,88 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 50px;
+
+  .title {
+    width: 100%;
+
+    color: #000;
+    font-size: 89px;
+    line-height: 82px;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    padding: 0 170px 0 190px;
+
+    margin-top: 60px;
+  }
+}
+
+@include breakpoint(desktop-big) {
+  .root {
+    .title {
+      font-size: 89px;
+    }
+
+    .wrap {
+      padding: 0;
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .root {
+    .title {
+      font-size: 72px;
+    }
+
+    .wrap {
+      padding: 0;
+      column-gap: 40px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .root {
+    .title {
+      font-size: 62px;
+    }
+
+    .wrap {
+      column-gap: 30px;
+    }
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .root {
+    .title {
+      font-size: 48px;
+    }
+
+    .wrap {
+      margin-top: 40px;
+
+      column-gap: 30px;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .root {
+    .title {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .wrap {
+      margin-left: 0;
+    }
+  }
+}

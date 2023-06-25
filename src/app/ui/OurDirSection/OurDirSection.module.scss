@@ -1,0 +1,108 @@
+.ourDirSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  position: relative;
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 30px;
+
+    color: #000;
+    font-size: 40px;
+  }
+
+  .title::after {
+    content: "";
+    width: 23px;
+    height: 23px;
+
+    position: absolute;
+    left: -40px;
+    top: 10px;
+
+    background: #335899;
+  }
+
+  .description {
+    margin-bottom: 30px;
+
+    color: #000;
+    font-size: 20px;
+    line-height: 42px;
+  }
+}
+
+@include breakpoint(desktop) {
+  .ourDirSection {
+    max-width: 420px;
+
+    .title {
+      margin-bottom: 20px;
+
+      font-size: 34px;
+    }
+
+    .title::after {
+      top: 9px;
+    }
+
+    .description {
+      margin-bottom: 30px;
+
+      font-size: 18px;
+      line-height: 42px;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .ourDirSection {
+    max-width: 300px;
+
+    .title {
+      margin-bottom: 10px;
+
+      font-size: 28px;
+    }
+
+    .title::after {
+      width: 16px;
+      height: 16px;
+
+      left: -36px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .ourDirSection {
+    max-width: 240px;
+
+    .title {
+      margin-bottom: 10px;
+
+      font-size: 24px;
+    }
+
+    .title::after {
+      left: -32px;
+      top: 6px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+}

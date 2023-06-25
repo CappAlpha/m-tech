@@ -19,28 +19,10 @@
 
     .left {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
       width: 100%;
-      max-width: 600px;
-
-      .subtitle {
-        color: #335899;
-        font-size: 20px;
-        line-height: 82px;
-      }
-      .count {
-        color: #000;
-        font-size: 50px;
-        line-height: 82px;
-      }
-      .description {
-        width: 100%;
-        max-width: 300px;
-
-        color: #000;
-        font-size: 20px;
-        line-height: 42px;
-      }
+      margin-top: 40px;
     }
 
     .right {
@@ -48,32 +30,35 @@
       flex-direction: column;
       width: 100%;
       max-width: 910px;
-      padding: 50px;
+      margin-left: 50px;
+      padding: 38px 38px;
 
       border-radius: 57px;
       background-color: #162249;
 
       img {
+        margin-bottom: 31px;
         width: 142px;
         height: 142px;
+        object-fit: cover;
+
         border-radius: 142px;
         background: #d9d9d9;
       }
 
       .review {
+        margin-bottom: 60px;
         width: 100%;
-        max-width: 830px;
 
         color: #fff;
         font-size: 30px;
         line-height: 42px;
       }
 
-      .author {
+      .author,
+      .title {
         color: #eaddd0;
         font-size: 20px;
-        font-family: Grandis;
-        line-height: 82px;
       }
     }
   }
