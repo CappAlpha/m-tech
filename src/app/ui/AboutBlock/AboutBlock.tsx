@@ -14,7 +14,7 @@ export const AboutBlock: FC<Props> = ({ title, subtitle, count, description }) =
     <div className={styles.root}>
       <div className={styles.title}>{title}</div>
 
-      <div className={styles.container}>
+      <div className={styles.wrap}>
         <div className={styles.left}>
           <div className={styles.subtitle}>{subtitle}</div>
           <div className={styles.count}>{count}</div>

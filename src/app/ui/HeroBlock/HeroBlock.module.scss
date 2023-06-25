@@ -19,7 +19,7 @@
     }
   }
 
-  .container {
+  .wrap {
     width: 100%;
 
     position: absolute;
@@ -79,7 +79,7 @@
 
 @include breakpoint(desktop) {
   .root {
-    .container {
+    .wrap {
       padding-left: 100px;
 
       .title {
@@ -105,7 +105,7 @@
 
 @include breakpoint(tablet) {
   .root {
-    .container {
+    .wrap {
       padding-left: 30px;
 
       .title {
@@ -139,7 +139,7 @@
 
 @include breakpoint(mobile-m) {
   .root {
-    .container {
+    .wrap {
       padding-left: 0;
       .title {
         max-width: 300px;
@@ -173,7 +173,7 @@
 @include breakpoint(mobile) {
   .root {
     padding: 20px;
-    .container {
+    .wrap {
       flex-wrap: wrap;
 
       .title {

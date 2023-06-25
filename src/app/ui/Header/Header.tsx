@@ -4,64 +4,42 @@ import { FC, useEffect, useRef, useState } from "react";
 import styles from "./Header.module.scss";
 import {
   Logo,
-  HamburgerMenu,
+  Burger,
+  Close,
 } from '@/app/ui/shared/Icon';
 
-const MIN_SCROLL_FOR_FIXED_HEADER = 100;
-
-export type HeaderStyle = 'whiteBg';
+import { navMenu } from '@/app/feature/IndexPage/mock';
+import { NavSection } from '../NavSection';
 
 interface Props {
-  //header: HeaderData;
-  headerStyle?: HeaderStyle;
   tel: string;
 }
 
-export const Header: FC<Props> = ({ headerStyle, tel }) => {
+export const Header: FC<Props> = ({ tel }) => {
 
   const [opened, setOpened] = useState(false);
-  const [fixed, setFixed] = useState(true);
-  const [isOnTop, setIsOnTop] = useState(true);
-
-  const oldScroll = useRef(0);
-  //const isTablet = useTablet(false);
-
-  const onScroll = () => {
-    const scrollTop = window.scrollY;
-
-    if (opened) {
-      oldScroll.current = scrollTop;
-      return;
-    }
-
-    if (oldScroll.current > scrollTop || scrollTop < MIN_SCROLL_FOR_FIXED_HEADER) {
-      setFixed(true);
-    } else {
-      setFixed(false);
-    }
-
-    setIsOnTop(scrollTop < MIN_SCROLL_FOR_FIXED_HEADER);
-
-    oldScroll.current = scrollTop;
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, [opened]);
 
   const closeMenu = () => setOpened(false);
 
   return (
     <header className={styles.root}>
-      <div className={styles.container}>
+      <div className={styles.wrap}>
         <Logo className={styles.logo} alt="Logo" />
         <div className={styles.right}>
           <div className={styles.tel}>{tel}</div>
-          <HamburgerMenu className={styles.hamburgerMenu} alt="Menu" />
+          <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} alt="Menu" />
+        </div>
+      </div>
+      <div className={cn(styles.nav, opened && styles.opened)}>
+        {navMenu.map(({ title }) => (
+          <NavSection
+            key={title}
+            title={title}
+            onClickItem={closeMenu}
+          />
+        ))}
+        <div className={styles.closeBtn} onClick={() => setOpened(false)}>
+          <Close className={styles.closeIcon} />
         </div>
       </div>
     </header>
