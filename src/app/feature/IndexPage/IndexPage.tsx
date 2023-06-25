@@ -6,6 +6,7 @@ import { Header } from "@/app/ui/Header";
 import { aboutBlockTitle, header, heroBlock, ourDirTitle } from "./mock";
 import { AboutBlock } from "@/app/ui/AboutBlock";
 import { OurDirection } from "@/app/ui/OurDirection";
+import { Ticker } from "@/app/ui/Ticker";
 
 
 export const IndexPage: FC = () => {
@@ -16,6 +17,7 @@ export const IndexPage: FC = () => {
       <AboutBlock title={aboutBlockTitle.title} />
       {/* <OutProject /> */}
       <OurDirection title={ourDirTitle.title} />
+      <Ticker />
     </div>
   );
 };
