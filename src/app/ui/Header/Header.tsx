@@ -62,6 +62,7 @@ export const Header: FC<Props> = ({ tel, header }) => {
           <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} />
         </div>
       </div>
+
       <div className={cn(styles.nav, opened && styles.opened)}>
         {header.map(({ title }) => (
           <NavSection

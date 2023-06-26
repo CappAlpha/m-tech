@@ -99,3 +99,7 @@ export const ourDirSection = [
     description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
   },
 ]
+
+export const vacanciesTitle = {
+  title: 'Вакансии',
+}

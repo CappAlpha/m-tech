@@ -6,7 +6,9 @@ import { Header } from "@/app/ui/Header";
 import { AboutBlock } from "@/app/ui/AboutBlock";
 import { OurDirection } from "@/app/ui/OurDirection";
 import { Ticker } from "@/app/ui/Ticker";
-import { aboutBlockTitle, header, navMenu, heroBlock, ourDirTitle, ourDirSection } from "./mock";
+import { Vacancies } from "@/app/ui/Vacancies";
+import { aboutBlockTitle, header, navMenu, heroBlock, ourDirTitle, ourDirSection, vacanciesTitle } from "./mock";
+
 
 export const IndexPage: FC = () => {
   return (
@@ -17,6 +19,7 @@ export const IndexPage: FC = () => {
       {/* <OutProject /> */}
       <OurDirection title={ourDirTitle.title} ourDirSection={ourDirSection} />
       <Ticker />
+      {/* <Vacancies title={vacanciesTitle.title} /> */}
     </div>
   );
 };
