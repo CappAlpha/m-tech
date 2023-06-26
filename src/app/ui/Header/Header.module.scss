@@ -71,6 +71,16 @@
   }
 }
 
+.fixed {
+  transition: position 0.2s linear;
+  position: fixed;
+}
+
+.darkned {
+  transition: position 0.2s linear;
+  display: none;
+}
+
 @include breakpoint(mobile-m) {
   .root {
     .wrap {
