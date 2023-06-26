@@ -1,22 +1,23 @@
 .ticker {
-  width: 100%;
+  height: 65px;
   position: relative;
   overflow: hidden;
 
   background-color: #eaddd0;
 
-  height: 65px;
   .wrap {
+    display: -webkit-box;
     display: flex;
     align-items: center;
-    height: 100%;
 
-    animation: ticker 15s linear infinite;
+    width: calc(698.25px * 8);
+    height: 100%;
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
 
     .tickItm {
-      padding: 0 30px;
-      white-space: nowrap;
-      flex-shrink: 0;
+      text-align: center;
+      padding: 0 25px;
 
       color: #000;
       font-size: 30px;
@@ -24,11 +25,24 @@
   }
 }
 
-@keyframes ticker {
+@-webkit-keyframes scroll {
   0% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
-  to {
-    transform: translateX(-20%);
+  100% {
+    -webkit-transform: translateX(calc(-698.25px * 4));
+    transform: translateX(calc(-698.25px * 4));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-698.25px * 4));
+    transform: translateX(calc(-698.25px * 4));
   }
 }

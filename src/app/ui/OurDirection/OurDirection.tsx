@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
 import styles from './OurDirection.module.scss';
-import { ourDirSection } from '@/app/feature/IndexPage/mock';
 import { OurDirSection } from '../OurDirSection';
 
 export interface Props {
+  ourDirSection: Array<({ title: string, description: string })>;
   title: string;
 }
 
-export const OurDirection: FC<Props> = ({ title }) => {
+export const OurDirection: FC<Props> = ({ title, ourDirSection }) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}>{title}</div>

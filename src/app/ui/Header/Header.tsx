@@ -8,14 +8,14 @@ import {
   Close,
 } from '@/app/ui/shared/Icon';
 
-import { navMenu } from '@/app/feature/IndexPage/mock';
 import { NavSection } from '../NavSection';
 
 interface Props {
+  header: Array<({ title: string })>;
   tel: string;
 }
 
-export const Header: FC<Props> = ({ tel }) => {
+export const Header: FC<Props> = ({ tel, header }) => {
 
   const [opened, setOpened] = useState(false);
 
@@ -31,7 +31,7 @@ export const Header: FC<Props> = ({ tel }) => {
         </div>
       </div>
       <div className={cn(styles.nav, opened && styles.opened)}>
-        {navMenu.map(({ title }) => (
+        {header.map(({ title }) => (
           <NavSection
             key={title}
             title={title}
