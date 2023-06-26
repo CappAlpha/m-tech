@@ -1,6 +1,7 @@
 .aboutTextSection {
   width: 100%;
   max-width: 340px;
+  margin-left: 4px;
 
   .subtitle {
     color: #335899;
@@ -23,8 +24,8 @@
 }
 
 .aboutTextSection:nth-child(2) {
-  max-width: 340px;
-  margin-right: 40px;
+  max-width: 400px;
+  margin-right: 27px;
 }
 
 .aboutTextSection:last-child {

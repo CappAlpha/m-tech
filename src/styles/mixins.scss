@@ -4,7 +4,7 @@ $breakpoints: (
   mobile-m: 800,
   tablet: 1024,
   desktop: 1440,
-  desktop-big: 1600,
+  desktop-big: 1900,
 );
 
 @mixin breakpoint($point, $type: max) {

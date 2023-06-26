@@ -4,6 +4,7 @@ import styles from './NavSection.module.scss';
 
 export interface Props {
   title: string;
+  onClickItem: () => void;
 }
 
 export const NavSection: FC<Props> = ({ title }) => {

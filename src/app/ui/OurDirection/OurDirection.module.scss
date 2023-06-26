@@ -1,7 +1,7 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 50px;
+  padding: 80px 44px;
 
   .title {
     width: 100%;
@@ -14,11 +14,11 @@
   .wrap {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: space-between;
 
-    padding: 0 170px 0 190px;
-
-    margin-top: 60px;
+    padding-left: 183px;
+    padding-right: 174px;
+    margin-top: 87px;
   }
 }
 

@@ -31,7 +31,7 @@ export const AboutBlock: FC<Props> = ({ title }) => {
           <img src="" alt="" />
           <div className={styles.review}>“Компания трансформирует понимание современной экономики и технологическую экспертизу в решения, повышающие эффективность управления и конкурентоспособность компаний в цифровую эпоху.”</div>
           <div className={styles.author}>Григорий Кочаров</div>
-          <div className={styles.title}>Генеральный директор группы компаний IBS</div>
+          <div className={styles.rTitle}>Генеральный директор группы компаний IBS</div>
         </div>
       </div>
     </div>

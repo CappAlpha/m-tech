@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useState } from "react";
 
 import styles from "./Header.module.scss";
 import {
@@ -24,10 +24,10 @@ export const Header: FC<Props> = ({ tel }) => {
   return (
     <header className={styles.root}>
       <div className={styles.wrap}>
-        <Logo className={styles.logo} alt="Logo" />
+        <Logo className={styles.logo} />
         <div className={styles.right}>
           <div className={styles.tel}>{tel}</div>
-          <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} alt="Menu" />
+          <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} />
         </div>
       </div>
       <div className={cn(styles.nav, opened && styles.opened)}>

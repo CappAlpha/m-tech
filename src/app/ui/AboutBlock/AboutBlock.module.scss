@@ -1,11 +1,11 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 50px;
+  padding: 80px 45px;
 
   .title {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
 
     color: #000;
     font-size: 89px;
@@ -22,22 +22,23 @@
       justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     .right {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 910px;
+      height: 100%;
+      padding: 38px 38px 70px;
+      margin-top: 15px;
       margin-left: 50px;
-      padding: 38px 38px;
 
       border-radius: 57px;
       background-color: #162249;
 
       img {
-        margin-bottom: 31px;
+        margin-bottom: 27px;
         width: 142px;
         height: 142px;
         object-fit: cover;
@@ -47,8 +48,8 @@
       }
 
       .review {
-        margin-bottom: 60px;
-        width: 100%;
+        margin-bottom: 75px;
+        max-width: 860px;
 
         color: #fff;
         font-size: 30px;
@@ -56,9 +57,13 @@
       }
 
       .author,
-      .title {
+      .rTitle {
         color: #eaddd0;
         font-size: 20px;
+      }
+
+      .author {
+        margin-bottom: 17px;
       }
     }
   }
