@@ -12,6 +12,7 @@ import { NavSection } from '../NavSection';
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 100;
 
+
 interface Props {
   header: Array<({ title: string })>;
   tel: string;

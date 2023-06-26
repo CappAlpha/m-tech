@@ -22,7 +22,7 @@ export const navMenu = [
   },
 ]
 
-export const header = { tel: '+7 924 ХХХ ХХХ ХХ' }
+export const headerTel = { tel: '+7 924 ХХХ ХХХ ХХ' }
 
 export const heroBlock = {
   title: 'IT–СТРАТЕГИИ ДЛЯ АВТОМАТИЗАЦИИ БИЗНЕСА',

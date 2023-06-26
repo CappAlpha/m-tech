@@ -32,3 +32,99 @@
   max-width: 800px;
   margin-top: 50px;
 }
+
+@include breakpoint(desktop) {
+  .aboutTextSection {
+    max-width: 400px;
+    margin-left: 4px;
+
+    .subtitle {
+      font-size: 18px;
+    }
+
+    .count {
+      margin-top: 30px;
+
+      font-size: 42px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 42px;
+    }
+  }
+
+  .aboutTextSection:nth-child(2) {
+    max-width: 360px;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+
+  .aboutTextSection:last-child {
+    margin-top: 50px;
+  }
+}
+
+@include breakpoint(tablet) {
+  .aboutTextSection {
+    max-width: 360px;
+    margin-left: 4px;
+
+    .subtitle {
+      font-size: 16px;
+    }
+
+    .count {
+      margin-top: 30px;
+
+      font-size: 36px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+
+  .aboutTextSection:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .aboutTextSection:last-child {
+    margin-top: 30px;
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .aboutTextSection {
+    max-width: 600px;
+    margin-left: 4px;
+
+    .subtitle {
+      font-size: 16px;
+    }
+
+    .count {
+      margin-top: 30px;
+
+      font-size: 36px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+
+  .aboutTextSection:nth-child(2) {
+    margin-top: 30px;
+    max-width: 800px;
+  }
+
+  .aboutTextSection:last-child {
+    margin-top: 30px;
+  }
+}

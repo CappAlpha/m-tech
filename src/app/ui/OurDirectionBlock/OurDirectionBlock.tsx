@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './OurDirection.module.scss';
+import styles from './OurDirectionBlock.module.scss';
 import { OurDirSection } from '../OurDirSection';
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
   title: string;
 }
 
-export const OurDirection: FC<Props> = ({ title, ourDirSection }) => {
+export const OurDirectionBlock: FC<Props> = ({ title, ourDirSection }) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}>{title}</div>

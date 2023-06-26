@@ -67,7 +67,157 @@
       }
     }
   }
+}
 
-  @include breakpoint(tablet) {
+@include breakpoint(desktop) {
+  .root {
+    .title {
+      max-width: 700px;
+
+      font-size: 72px;
+    }
+
+    .wrap {
+      .right {
+        padding: 38px 38px 70px;
+        margin-top: 15px;
+        margin-left: 50px;
+
+        img {
+          margin-bottom: 27px;
+          width: 100px;
+          height: 100px;
+
+          border-radius: 142px;
+        }
+
+        .review {
+          margin-bottom: 50px;
+
+          font-size: 22px;
+          line-height: 36px;
+        }
+
+        .author,
+        .rTitle {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .root {
+    .title {
+      max-width: 600px;
+
+      font-size: 62px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      .left {
+        margin-top: 60px;
+      }
+
+      .right {
+        padding: 38px 38px 70px;
+        margin-top: 15px;
+        margin-left: 0;
+
+        img {
+          margin-bottom: 27px;
+          width: 80px;
+          height: 80px;
+
+          border-radius: 142px;
+        }
+
+        .review {
+          margin-bottom: 30px;
+
+          font-size: 18px;
+          line-height: 32px;
+        }
+
+        .author,
+        .rTitle {
+          font-size: 14px;
+        }
+
+        .rTitle {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .root {
+    .title {
+      max-width: 400px;
+
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+
+      .left {
+        margin-top: 40px;
+      }
+
+      .right {
+        padding: 38px 38px 60px;
+        margin-top: 40px;
+
+        .review {
+          margin-bottom: 30px;
+
+          font-size: 16px;
+          line-height: 28px;
+        }
+
+        .author,
+        .rTitle {
+          font-size: 12px;
+        }
+
+        .rTitle {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .root {
+    padding: 80px 20px;
+    .wrap {
+      .right {
+        padding: 20px 20px 40px;
+        margin-top: 40px;
+
+        .review {
+          margin-bottom: 30px;
+
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        .author,
+        .rTitle {
+          font-size: 12px;
+        }
+
+        .rTitle {
+          max-width: 160px;
+        }
+      }
+    }
   }
 }

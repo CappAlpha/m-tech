@@ -9,10 +9,10 @@ export interface Props {
 
 export const NavSection: FC<Props> = ({ title }) => {
   return (
-    <header className={styles.root}>
+    <div className={styles.root}>
       <nav className={styles.wrap}>
         <a href='#' className={styles.title}>{title}</a>
       </nav>
-    </header>
+    </div>
   );
 }
