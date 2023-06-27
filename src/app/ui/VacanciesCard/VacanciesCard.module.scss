@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 457px;
+  height: 207px;
+  padding: 30px;
+
+  cursor: pointer;
+
+  border-radius: 28px;
+  background-color: #162249;
+
+  .title {
+    margin-bottom: 28px;
+
+    color: #fff;
+    font-size: 40px;
+  }
+
+  .work {
+    color: #fff;
+    font-size: 20px;
+  }
+}

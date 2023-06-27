@@ -9,6 +9,7 @@ import {
 } from '@/app/ui/shared/Icon';
 
 import { NavSection } from '../NavSection';
+import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 100;
 
@@ -53,6 +54,8 @@ export const Header: FC<Props> = ({ tel, header }) => {
       window.removeEventListener('scroll', onScroll);
     };
   }, [opened]);
+
+  useBlockScroll([opened]);
 
   return (
     <header className={cn(styles.root, fixed && styles.fixed, !isOnTop && styles.darkened)}>

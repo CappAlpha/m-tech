@@ -12,6 +12,111 @@
   }
 
   .wrap {
+    margin-top: 85px;
+    margin-left: 131px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    column-gap: 100px;
+    row-gap: 200px;
+
+    .titleAll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 420px;
+      max-height: 83px;
+      padding: 15px;
+      margin-top: 124px;
+      margin-right: 50px;
+
+      border-radius: 20px;
+      background-color: #335899;
+
+      cursor: pointer;
+
+      color: #fff;
+      font-size: 35px;
+    }
+  }
+}
+
+@include breakpoint(desktop-big) {
+  .root {
+    .title {
+      font-size: 89px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      margin: 85px 0 0;
+
+      row-gap: 100px;
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .root {
+    .title {
+      font-size: 72px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      margin-top: 85px;
+
+      row-gap: 100px;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .root {
+    .title {
+      font-size: 62px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      .titleAll {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile-m) {
+  .root {
+    .title {
+      font-size: 48px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      margin-top: 45px;
+
+      row-gap: 80px;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .root {
+    .title {
+      font-size: 40px;
+      line-height: 82px;
+    }
+
+    .wrap {
+      margin-top: 40px;
+      row-gap: 50px;
+
+      .titleAll {
+        font-size: 26px;
+      }
+    }
   }
 }

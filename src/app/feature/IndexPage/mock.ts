@@ -103,3 +103,36 @@ export const ourDirSection = [
 export const vacanciesTitle = {
   title: 'Вакансии',
 }
+
+export const vacanciesCards = [
+  {
+    title: 'IT',
+    work: 'Work',
+    link: 'https://hh.ru',
+  },
+  {
+    title: 'IT',
+    work: 'Work',
+    link: 'https://hh.ru',
+  },
+  {
+    title: 'IT',
+    work: 'Work',
+    link: 'https://hh.ru',
+  },
+  {
+    title: 'IT',
+    work: 'Work',
+    link: 'https://hh.ru',
+  },
+  {
+    title: 'IT',
+    work: 'Work',
+    link: 'https://hh.ru',
+  },
+]
+
+export const vacanciesAll = {
+  title: 'все вакансии',
+  link: 'https://hh.ru',
+}
