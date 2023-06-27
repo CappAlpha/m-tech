@@ -50,26 +50,14 @@ export const aboutTextSection = [
   }
 ]
 
-export const aboutReviewSection = [
-  {
-    logo: '',
-    description: 'Команда профессионалов IBS объединяет более 4000 человек — консультантов, архитекторов, аналитиков, инженеров и программистов.',
-    name: 'Григорий Кочаров',
-    title: 'Генеральный директор группы компаний IBS',
-  },
-  {
-    logo: '',
-    description: '',
-    name: '',
-    title: '',
-  },
-  {
-    logo: '',
-    description: '',
-    name: '',
-    title: '',
-  },
-]
+export const aboutReviewSection =
+{
+  logo: '',
+  review: '“Компания трансформирует понимание современной экономики и технологическую экспертизу в решения, повышающие эффективность управления и конкурентоспособность компаний в цифровую эпоху.”',
+  nameA: 'Григорий Кочаров',
+  titleA: 'Генеральный директор группы компаний IBS',
+}
+
 
 export const ourDirTitle = { title: 'Наши направления' }
 
@@ -135,4 +123,26 @@ export const vacanciesCards = [
 export const vacanciesAll = {
   title: 'все вакансии',
   link: 'https://hh.ru',
+}
+
+export const footerBlockLeft = {
+  title: 'Контакты IBS',
+  company: 'ООО «ИБС Экспертиза»',
+  include: 'Входит в состав группы компаний IBS',
+  address: 'Россия, 127434, город Москва, Дмитровское шоссе,дом 9-Б, эт. 5 пом. XIII, ком. 6',
+  tel: 'Телефон: +7 (495) 967-80-80 /',
+  fax: 'Факс: +7 (495) 967-80-81',
+  mailTitle: 'E-mail: ',
+  mail: 'ibs@ibs.ru',
+}
+
+export const footerBlockRight = {
+  data: 'Персональные данные и правовые аспекты',
+  linkData: '',
+  info: 'Сведения о cookies-файлах Раскрытие информации — Интерфакс',
+  linkInfo: '',
+  map: 'Карта сайта',
+  linkMap: '',
+  policy1: 'This site is protected by reCAPTCHA and the Google',
+  policy2: 'Privacy Policy and Terms of Service apply.',
 }

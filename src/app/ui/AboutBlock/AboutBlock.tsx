@@ -7,9 +7,14 @@ import { AboutTextSection } from "../AboutSectionText";
 
 export interface Props {
   title: string;
+
+  logo: string;
+  review: string;
+  nameA: string;
+  titleA: string;
 }
 
-export const AboutBlock: FC<Props> = ({ title }) => {
+export const AboutBlock: FC<Props> = ({ title, logo, review, nameA, titleA }) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}>{title}</div>
@@ -28,10 +33,10 @@ export const AboutBlock: FC<Props> = ({ title }) => {
 
 
         <div className={styles.right}>
-          <img src="" alt="" />
-          <div className={styles.review}>“Компания трансформирует понимание современной экономики и технологическую экспертизу в решения, повышающие эффективность управления и конкурентоспособность компаний в цифровую эпоху.”</div>
-          <div className={styles.author}>Григорий Кочаров</div>
-          <div className={styles.rTitle}>Генеральный директор группы компаний IBS</div>
+          <img src={logo} />
+          <div className={styles.review}>{review}</div>
+          <div className={styles.name}>{nameA}</div>
+          <div className={styles.titleA}>{titleA}</div>
         </div>
       </div>
     </div>
