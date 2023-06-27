@@ -16,8 +16,9 @@ export const IndexPage: FC = () => {
       <Header tel={headerTel.tel} header={navMenu} />
       <HeroBlock title={heroBlock.title} button={heroBlock.button} description={heroBlock.description} />
       <AboutBlock title={aboutBlockTitle.title} />
-      {/* <OutProject /> */}
+      {/* <OutProjectBLock /> */}
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
+      {/* <IndustrySolutionBlock /> */}
       <Ticker />
       <VacanciesBlock title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
     </div>

@@ -40,6 +40,15 @@
       color: #fff;
       font-size: 35px;
     }
+
+    .titleAll:hover {
+      transform: translate3d(10px, -10px, 0);
+      transition: transform 0.2s linear;
+    }
+
+    .titleAll:active {
+      opacity: 0.6;
+    }
   }
 }
 
