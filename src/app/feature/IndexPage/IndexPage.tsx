@@ -8,7 +8,8 @@ import { OurDirectionBlock } from "@/app/ui/OurDirectionBlock";
 import { Ticker } from "@/app/ui/Ticker";
 import { VacanciesBlock } from "@/app/ui/VacanciesBlock";
 import { FooterBlock } from "@/app/ui/FooterBlock";
-import { aboutBlockTitle, headerTel, navMenu, heroBlock, ourDirTitle, ourDirSection, vacanciesTitle, vacanciesCards, vacanciesAll, footerBlockLeft, footerBlockRight, aboutReviewSection } from "./mock";
+import { OurProjBlock } from "@/app/ui/OurProjBlock";
+import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, vacanciesTitle, vacanciesCards, vacanciesAll, footerBlockLeft, footerBlockRight } from "./mock";
 
 export const IndexPage: FC = () => {
   return (
@@ -16,7 +17,7 @@ export const IndexPage: FC = () => {
       <Header tel={headerTel.tel} header={navMenu} />
       <HeroBlock title={heroBlock.title} button={heroBlock.button} description={heroBlock.description} />
       <AboutBlock title={aboutBlockTitle.title} logo={aboutReviewSection.logo} review={aboutReviewSection.review} nameA={aboutReviewSection.nameA} titleA={aboutReviewSection.titleA} />
-      {/* <OutProjectBLock /> */}
+      <OurProjBlock title={ourProjTitle.title} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
       {/* <IndustrySolutionBlock /> */}
       <Ticker />

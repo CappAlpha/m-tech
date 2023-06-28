@@ -1,0 +1,59 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 45px;
+
+  .title {
+    width: 100%;
+    max-width: 800px;
+
+    color: #000;
+    font-size: 89px;
+    line-height: 82px;
+  }
+
+  .wrap {
+    margin-top: 61px;
+    display: flex;
+    flex-direction: column;
+
+    .imgWrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        max-width: 280px;
+        max-height: 272px;
+        box-sizing: border-box;
+
+        border-radius: 45px;
+        filter: grayscale(100%);
+        border: 11px solid transparent;
+      }
+
+      img:hover {
+        filter: grayscale(0%);
+        border: 11px solid #335899;
+        transition: filter 0.1s linear, border 0.1s linear;
+      }
+    }
+
+    .textWrap {
+      margin-top: 40px;
+      max-width: 900px;
+
+      .titleB {
+        color: #000;
+        font-size: 40px;
+        line-height: 82px;
+      }
+
+      .description {
+        color: #000;
+        font-size: 20px;
+        line-height: 42px;
+      }
+    }
+  }
+}
