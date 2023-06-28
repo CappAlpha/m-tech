@@ -39,7 +39,8 @@
       }
 
       img {
-        display: none;
+        transition: opacity 0.5s ease;
+        opacity: 0;
 
         position: absolute;
         top: 0px;
@@ -58,8 +59,8 @@
       }
 
       img {
-        transition: display 0.1s linear;
-        display: block;
+        transition: opacity 0.5s ease;
+        opacity: 1;
         filter: grayscale(100%);
       }
     }
