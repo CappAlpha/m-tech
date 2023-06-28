@@ -94,6 +94,17 @@ export const ourDirSection = [
   },
 ]
 
+export const IndustrySolutionTitle = {
+  title: 'Отраслевые решения',
+}
+
+export const IndustrySolutionCard = [
+  {
+    contact: '',
+    link: '',
+  },
+]
+
 export const vacanciesTitle = {
   title: 'Вакансии',
 }
