@@ -42,7 +42,7 @@ export const HeroForm = () => {
     <div className={styles.root}>
       {formState === 'init' && (
         <>
-          <h2 className={styles.title}>Оценка вашей квартиры</h2>
+          <h2 className={styles.title}>Обсудить задачу</h2>
           <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
             <div className={styles.fields}>
               <input {...register('name')} />

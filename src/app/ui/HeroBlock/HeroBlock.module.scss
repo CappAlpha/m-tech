@@ -75,6 +75,51 @@
       }
     }
   }
+
+  .form {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 732px;
+    height: 100vh;
+    overflow-y: scroll;
+
+    background-color: #fff;
+    transition: display 0.2s linear;
+
+    pointer-events: none;
+  }
+
+  .opened {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+
+    z-index: 20;
+    pointer-events: auto;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    padding: 13px;
+    cursor: pointer;
+    .closeIcon {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @include breakpoint(desktop) {
