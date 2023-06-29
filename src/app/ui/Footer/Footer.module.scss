@@ -4,85 +4,107 @@
 
   background-color: #162249;
 
-  .logo {
-    margin-bottom: 55px;
+  @include breakpoint(tablet) {
+    padding: 40px;
   }
+}
 
-  .wrap {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.logo {
+  margin-bottom: 55px;
+}
 
-    .left {
-      display: flex;
-      flex-direction: column;
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
-      .title {
-        color: #fff;
-        font-size: 30px;
-        line-height: 42px;
-      }
+.left {
+  display: flex;
+  flex-direction: column;
+}
 
-      .company,
-      .include,
-      .address,
-      .tel,
-      .fax,
-      .mailTitle,
-      .mail,
-      a {
-        color: #fff;
-        font-size: 20px;
-        line-height: 42px;
-        margin-top: 42px;
-      }
+.title {
+  color: #fff;
+  font-size: 30px;
+  line-height: 42px;
 
-      .company {
-        max-width: 400px;
-      }
-
-      .address {
-        max-width: 500px;
-      }
-
-      .fax,
-      .include {
-        margin-top: 0;
-      }
-
-      .mail {
-        display: flex;
-
-        a {
-          margin-top: 0;
-          text-decoration: underline;
-          padding-left: 6px;
-        }
-      }
-    }
-
-    .right {
-      display: flex;
-      flex-direction: column;
-      text-align: right;
-
-      .data,
-      .info,
-      .map,
-      .policy {
-        color: #fff;
-        font-size: 20px;
-        line-height: 42px;
-        margin-top: 42px;
-      }
-
-      .data {
-        margin-top: 82px;
-      }
-
-      .policy:last-child {
-        margin-top: 0;
-      }
-    }
+  @include breakpoint(tablet) {
+    font-size: 26px;
   }
+}
+
+.company,
+.include,
+.address,
+.tel,
+.fax,
+.mailTitle,
+.mail,
+.mailTo {
+  margin-top: 42px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 42px;
+
+  @include breakpoint(tablet) {
+    margin-top: 32px;
+
+    font-size: 16px;
+  }
+}
+
+.company {
+  max-width: 400px;
+}
+
+.address {
+  max-width: 500px;
+}
+
+.fax,
+.include {
+  margin-top: 0;
+}
+
+.mail {
+  display: flex;
+}
+
+.mailTo {
+  margin-top: 0;
+  text-decoration: underline;
+  padding-left: 6px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.data,
+.info,
+.map,
+.policy {
+  margin-top: 42px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 42px;
+
+  @include breakpoint(tablet) {
+    margin-top: 32px;
+
+    font-size: 16px;
+  }
+}
+
+.data {
+  margin-top: 82px;
+}
+
+.policy:last-child {
+  margin-top: 0;
 }

@@ -38,7 +38,7 @@ export const Footer: FC<Props> = ({ title, company, include, address, tel, fax, 
           <div className={styles.fax}>{fax}</div>
           <div className={styles.mail}>
             <div>{mailTitle}</div>
-            <a href={`mailto:${mail}`}>{mail}</a>
+            <a className={styles.mailTo} href={`mailto:${mail}`}>{mail}</a>
           </div>
         </div>
         <div className={styles.right}>

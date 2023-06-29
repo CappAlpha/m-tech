@@ -116,4 +116,17 @@
 }
 
 .darkened {
+  &:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: -100px;
+    bottom: -82px;
+    position: absolute;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a1a33), to(hsla(0, 0%, 100%, 0)));
+    background: linear-gradient(180deg, #1a1a33, hsla(0, 0%, 100%, 0));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a33",endColorstr="#00ffffff",GradientType=0);
+    z-index: 1;
+  }
 }
