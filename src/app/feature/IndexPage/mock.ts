@@ -142,7 +142,7 @@ export const vacanciesAll = {
   link: 'https://hh.ru',
 }
 
-export const footerBlockLeft = {
+export const footerLeft = {
   title: 'Контакты IBS',
   company: 'ООО «ИБС Экспертиза»',
   include: 'Входит в состав группы компаний IBS',
@@ -153,13 +153,13 @@ export const footerBlockLeft = {
   mail: 'ibs@ibs.ru',
 }
 
-export const footerBlockRight = {
+export const footerRight = {
   data: 'Персональные данные и правовые аспекты',
   linkData: '',
   info: 'Сведения о cookies-файлах Раскрытие информации — Интерфакс',
   linkInfo: '',
   map: 'Карта сайта',
   linkMap: '',
-  policy1: 'This site is protected by reCAPTCHA and the Google',
-  policy2: 'Privacy Policy and Terms of Service apply.',
+  policyFirst: 'This site is protected by reCAPTCHA and the Google',
+  policySecond: 'Privacy Policy and Terms of Service apply.',
 }

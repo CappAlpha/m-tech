@@ -2,87 +2,65 @@
   width: 100%;
   min-height: 100vh;
   padding: 80px 44px;
+}
 
-  .title {
-    width: 100%;
+.title {
+  width: 100%;
 
-    color: #000;
+  color: #000;
+  font-size: 89px;
+  line-height: 82px;
+
+  @include breakpoint(desktop-big) {
     font-size: 89px;
-    line-height: 82px;
   }
 
-  .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    padding-left: 183px;
-    padding-right: 174px;
-    margin-top: 87px;
+  @include breakpoint(desktop) {
+    font-size: 72px;
   }
-}
 
-@include breakpoint(desktop-big) {
-  .root {
-    .title {
-      font-size: 89px;
-    }
+  @include breakpoint(tablet) {
+    font-size: 62px;
+  }
 
-    .wrap {
-      padding: 0;
-    }
+  @include breakpoint(mobile-m) {
+    font-size: 48px;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 40px;
+    line-height: 48px;
   }
 }
 
-@include breakpoint(desktop) {
-  .root {
-    .title {
-      font-size: 72px;
-    }
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    .wrap {
-      padding: 0;
-      column-gap: 40px;
-      margin-left: 20px;
-    }
+  padding-left: 183px;
+  padding-right: 174px;
+  margin-top: 87px;
+
+  @include breakpoint(desktop-big) {
+    padding: 0;
   }
-}
 
-@include breakpoint(tablet) {
-  .root {
-    .title {
-      font-size: 62px;
-    }
-
-    .wrap {
-      column-gap: 30px;
-    }
+  @include breakpoint(desktop) {
+    padding: 0;
+    column-gap: 40px;
+    margin-left: 20px;
   }
-}
 
-@include breakpoint(mobile-m) {
-  .root {
-    .title {
-      font-size: 48px;
-    }
-
-    .wrap {
-      margin-top: 40px;
-
-      column-gap: 30px;
-    }
+  @include breakpoint(tablet) {
+    column-gap: 30px;
   }
-}
 
-@include breakpoint(mobile) {
-  .root {
-    .title {
-      font-size: 40px;
-      line-height: 48px;
-    }
+  @include breakpoint(mobile-m) {
+    margin-top: 40px;
+  }
 
-    .wrap {
-      margin-left: 0;
-    }
+  @include breakpoint(mobile) {
+    margin-left: 0;
   }
 }

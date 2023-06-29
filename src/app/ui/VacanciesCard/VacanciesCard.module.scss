@@ -10,19 +10,6 @@
 
   border-radius: 28px;
   background-color: #162249;
-
-  .title {
-    margin-bottom: 28px;
-
-    color: #fff;
-    font-size: 40px;
-  }
-
-  .work {
-    color: #fff;
-    font-size: 20px;
-    line-height: 32px;
-  }
 }
 
 .root:hover {
@@ -34,13 +21,23 @@
   opacity: 0.6;
 }
 
-@include breakpoint(mobile) {
-  .root {
-    .title {
-      font-size: 32px;
-    }
-    .work {
-      font-size: 14px;
-    }
+.title {
+  margin-bottom: 28px;
+
+  color: #fff;
+  font-size: 40px;
+
+  @include breakpoint(mobile) {
+    font-size: 32px;
+  }
+}
+
+.work {
+  color: #fff;
+  font-size: 20px;
+  line-height: 32px;
+
+  @include breakpoint(mobile) {
+    font-size: 14px;
   }
 }

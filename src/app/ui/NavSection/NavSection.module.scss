@@ -1,14 +1,21 @@
 .root {
   margin-top: 20px;
   padding-bottom: 20px;
+}
 
-  .wrap {
-    display: flex;
+.wrap {
+  display: flex;
+}
 
-    .title {
-      color: #162249;
-      font-size: 32px;
-      line-height: 32px;
-    }
+.title {
+  color: #162249;
+  font-size: 32px;
+  line-height: 32px;
+
+  @include breakpoint(mobile-m) {
+    padding-bottom: 60px;
+
+    font-size: 24px;
+    line-height: 24px;
   }
 }

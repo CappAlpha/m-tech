@@ -4,256 +4,246 @@
   position: relative;
   padding: 40px;
 
-  .introBg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .wrap {
-    width: 100%;
-
-    position: absolute;
-    bottom: 0;
-
-    padding-left: 237px;
-    padding-bottom: 132px;
-
-    .title {
-      width: 100%;
-      max-width: 560px;
-      margin-bottom: 50px;
-
-      color: #fff;
-      font-size: 61px;
-      line-height: 61px;
-    }
-
-    .bottomBlock {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      max-height: 80px;
-
-      .button {
-        padding: 15px 70px;
-
-        cursor: pointer;
-        border: 0px #eaddd0;
-        border-radius: 20px;
-        background: #eaddd0;
-
-        color: #162249;
-        font-size: 35px;
-      }
-
-      .button:hover {
-        transform: translate3d(3px, -4px, 0);
-        transition: transform 0.1s linear;
-      }
-
-      .button:active {
-        opacity: 0.6;
-      }
-
-      .description {
-        margin-right: 73px;
-        max-width: 540px;
-
-        color: #fff;
-        font-size: 20px;
-        line-height: 20px;
-      }
-    }
-  }
-
-  .form {
-    transition: opacity 0.5s ease;
-    opacity: 0;
-
-    position: fixed;
-    right: 0;
-    top: 0;
-
+  @include breakpoint(mobile) {
     padding: 20px;
-    display: flex;
+  }
+}
+
+.introBg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrap {
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+
+  padding-left: 237px;
+  padding-bottom: 132px;
+
+  @include breakpoint(desktop) {
+    padding-left: 100px;
+  }
+
+  @include breakpoint(tablet) {
+    padding-left: 30px;
+  }
+
+  @include breakpoint(mobile-m) {
+    padding-left: 0;
+  }
+
+  @include breakpoint(mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.title {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 50px;
+
+  color: #fff;
+  font-size: 61px;
+  line-height: 61px;
+
+  @include breakpoint(desktop) {
+    max-width: 400px;
+    margin-bottom: 50px;
+
+    font-size: 50px;
+    line-height: 54px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 300px;
+    margin-bottom: 50px;
+
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-width: 300px;
+    margin-bottom: 40px;
+
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: 260px;
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.bottomBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 80px;
+
+  @include breakpoint(desktop) {
+    max-height: 70px;
+  }
+
+  @include breakpoint(tablet) {
+    max-height: 60px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-height: 60px;
+  }
+
+  @include breakpoint(mobile) {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    max-height: 100px;
+  }
+}
+
+.button {
+  padding: 15px 70px;
+
+  cursor: pointer;
+  border: 0px #eaddd0;
+  border-radius: 20px;
+  background: #eaddd0;
+
+  color: #162249;
+  font-size: 35px;
+
+  @include breakpoint(desktop) {
+    padding: 15px 45px;
+
+    font-size: 28px;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 15px 30px;
+
+    font-size: 24px;
+  }
+
+  @include breakpoint(mobile-m) {
+    padding: 15px 20px;
+
+    font-size: 18px;
+  }
+
+  @include breakpoint(mobile) {
+    width: 50%;
+    max-width: 200px;
+    padding: 15px 20px;
+
+    font-size: 14px;
+  }
+}
+
+.button:hover {
+  transform: translate3d(3px, -4px, 0);
+  transition: transform 0.1s linear;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.description {
+  margin-right: 73px;
+  max-width: 540px;
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+
+  @include breakpoint(desktop) {
+    max-width: 490px;
+    font-size: 18px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 430px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-width: 325px;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @include breakpoint(mobile) {
     width: 100%;
-    max-width: 732px;
-    height: 100vh;
-    overflow-y: scroll;
+    max-width: 280px;
 
-    background-color: #fff;
-    transition: display 0.2s linear;
+    margin-top: 20px;
+    padding-right: 0px;
 
-    pointer-events: none;
-  }
-
-  .opened {
-    transition: opacity 0.5s ease;
-    opacity: 1;
-
-    z-index: 20;
-    pointer-events: auto;
-  }
-
-  .closeBtn {
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    padding: 13px;
-    cursor: pointer;
-    .closeIcon {
-      width: 100%;
-      height: 100%;
-    }
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
-@include breakpoint(desktop) {
-  .root {
-    .wrap {
-      padding-left: 100px;
+.form {
+  transition: opacity 0.5s ease;
+  opacity: 0;
 
-      .title {
-        max-width: 400px;
-        margin-bottom: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
 
-        font-size: 50px;
-        line-height: 54px;
-      }
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 732px;
+  height: 100vh;
+  overflow-y: scroll;
 
-      .bottomBlock {
-        max-height: 70px;
+  background-color: #fff;
+  transition: display 0.2s linear;
 
-        .button {
-          padding: 15px 45px;
-
-          font-size: 28px;
-        }
-        .description {
-          max-width: 490px;
-          font-size: 18px;
-        }
-      }
-    }
-  }
+  pointer-events: none;
 }
 
-@include breakpoint(tablet) {
-  .root {
-    .wrap {
-      padding-left: 30px;
+.opened {
+  transition: opacity 0.5s ease;
+  opacity: 1;
 
-      .title {
-        max-width: 300px;
-        margin-bottom: 50px;
-
-        font-size: 40px;
-        line-height: 46px;
-      }
-
-      .bottomBlock {
-        max-height: 60px;
-
-        .button {
-          padding: 15px 30px;
-
-          font-size: 24px;
-        }
-
-        .description {
-          max-width: 430px;
-
-          font-size: 16px;
-          line-height: 18px;
-        }
-      }
-    }
-  }
+  z-index: 20;
+  pointer-events: auto;
 }
 
-@include breakpoint(mobile-m) {
-  .root {
-    .wrap {
-      padding-left: 0;
-      .title {
-        max-width: 300px;
-        margin-bottom: 40px;
+.closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
 
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      .bottomBlock {
-        max-height: 60px;
-
-        .button {
-          padding: 15px 20px;
-
-          font-size: 18px;
-        }
-
-        .description {
-          max-width: 325px;
-
-          font-size: 12px;
-          line-height: 18px;
-        }
-      }
-    }
-  }
+  padding: 13px;
+  cursor: pointer;
 }
 
-@include breakpoint(mobile) {
-  .root {
-    padding: 20px;
-    .wrap {
-      flex-wrap: wrap;
-
-      .title {
-        max-width: 260px;
-        margin-bottom: 20px;
-
-        font-size: 28px;
-        line-height: 40px;
-      }
-
-      .bottomBlock {
-        flex-direction: column;
-        max-height: 100px;
-
-        .button {
-          width: 50%;
-          max-width: 200px;
-          padding: 15px 20px;
-
-          font-size: 14px;
-        }
-
-        .description {
-          width: 100%;
-          max-width: 280px;
-
-          margin-top: 20px;
-          padding-right: 0px;
-
-          font-size: 12px;
-          line-height: 18px;
-        }
-      }
-    }
-  }
+.closeIcon {
+  width: 100%;
+  height: 100%;
 }

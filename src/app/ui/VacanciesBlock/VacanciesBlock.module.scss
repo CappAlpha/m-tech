@@ -2,130 +2,99 @@
   width: 100%;
   min-height: 100vh;
   padding: 80px 43px;
+}
 
-  .title {
-    width: 100%;
+.title {
+  width: 100%;
 
-    color: #000;
-    font-size: 89px;
-    line-height: 82px;
+  color: #000;
+  font-size: 89px;
+  line-height: 82px;
+
+  @include breakpoint(desktop) {
+    font-size: 72px;
   }
 
-  .wrap {
+  @include breakpoint(tablet) {
+    font-size: 62px;
+  }
+
+  @include breakpoint(mobile-m) {
+    font-size: 48px;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 40px;
+  }
+}
+
+.wrap {
+  margin-top: 85px;
+  margin-left: 131px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  column-gap: 100px;
+  row-gap: 200px;
+
+  @include breakpoint(desktop-big) {
+    margin: 85px 0 0;
+
+    row-gap: 100px;
+  }
+
+  @include breakpoint(desktop) {
     margin-top: 85px;
-    margin-left: 131px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 
-    column-gap: 100px;
-    row-gap: 200px;
+    row-gap: 100px;
+  }
 
-    .titleAll {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 420px;
-      max-height: 83px;
-      padding: 15px;
-      margin-top: 124px;
-      margin-right: 50px;
+  @include breakpoint(mobile-m) {
+    margin-top: 45px;
 
-      border-radius: 20px;
-      background-color: #335899;
+    row-gap: 80px;
+  }
 
-      cursor: pointer;
-
-      color: #fff;
-      font-size: 35px;
-    }
-
-    .titleAll:hover {
-      transform: translate3d(10px, -10px, 0);
-      transition: transform 0.2s linear;
-    }
-
-    .titleAll:active {
-      opacity: 0.6;
-    }
+  @include breakpoint(mobile) {
+    margin-top: 40px;
+    row-gap: 50px;
   }
 }
 
-@include breakpoint(desktop-big) {
-  .root {
-    .title {
-      font-size: 89px;
-      line-height: 82px;
-    }
+.titleAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  max-height: 83px;
+  padding: 15px;
+  margin-top: 124px;
+  margin-right: 50px;
 
-    .wrap {
-      margin: 85px 0 0;
+  border-radius: 20px;
+  background-color: #335899;
 
-      row-gap: 100px;
-    }
+  cursor: pointer;
+
+  color: #fff;
+  font-size: 35px;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 26px;
   }
 }
 
-@include breakpoint(desktop) {
-  .root {
-    .title {
-      font-size: 72px;
-      line-height: 82px;
-    }
-
-    .wrap {
-      margin-top: 85px;
-
-      row-gap: 100px;
-    }
-  }
+.titleAll:hover {
+  transform: translate3d(10px, -10px, 0);
+  transition: transform 0.2s linear;
 }
 
-@include breakpoint(tablet) {
-  .root {
-    .title {
-      font-size: 62px;
-      line-height: 82px;
-    }
-
-    .wrap {
-      .titleAll {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@include breakpoint(mobile-m) {
-  .root {
-    .title {
-      font-size: 48px;
-      line-height: 82px;
-    }
-
-    .wrap {
-      margin-top: 45px;
-
-      row-gap: 80px;
-    }
-  }
-}
-
-@include breakpoint(mobile) {
-  .root {
-    .title {
-      font-size: 40px;
-      line-height: 82px;
-    }
-
-    .wrap {
-      margin-top: 40px;
-      row-gap: 50px;
-
-      .titleAll {
-        font-size: 26px;
-      }
-    }
-  }
+.titleAll:active {
+  opacity: 0.6;
 }

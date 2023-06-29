@@ -9,9 +9,9 @@ import { OurDirectionBlock } from "@/app/ui/OurDirectionBlock";
 import { IndustrySolutionBlock } from "@/app/ui/IndustrySolutionBlock";
 import { Ticker } from "@/app/ui/Ticker";
 import { VacanciesBlock } from "@/app/ui/VacanciesBlock";
-import { FooterBlock } from "@/app/ui/FooterBlock";
+import { Footer } from "@/app/ui/Footer";
 
-import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, vacanciesTitle, vacanciesCards, vacanciesAll, footerBlockLeft, footerBlockRight } from "./mock";
+import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, vacanciesTitle, vacanciesCards, vacanciesAll, footerLeft, footerRight } from "./mock";
 
 
 export const IndexPage: FC = () => {
@@ -25,7 +25,7 @@ export const IndexPage: FC = () => {
       <IndustrySolutionBlock title={IndustrySolutionTitle.title} />
       <Ticker />
       <VacanciesBlock title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
-      <FooterBlock title={footerBlockLeft.title} company={footerBlockLeft.company} include={footerBlockLeft.include} address={footerBlockLeft.address} tel={footerBlockLeft.tel} fax={footerBlockLeft.fax} mailTitle={footerBlockLeft.mailTitle} mail={footerBlockLeft.mail} data={footerBlockRight.data} linkData={footerBlockRight.linkData} info={footerBlockRight.info} linkInfo={footerBlockRight.linkInfo} map={footerBlockRight.map} linkMap={footerBlockRight.linkMap} policy1={footerBlockRight.policy1} policy2={footerBlockRight.policy2} />
+      <Footer title={footerLeft.title} company={footerLeft.company} include={footerLeft.include} address={footerLeft.address} tel={footerLeft.tel} fax={footerLeft.fax} mailTitle={footerLeft.mailTitle} mail={footerLeft.mail} data={footerRight.data} linkData={footerRight.linkData} info={footerRight.info} linkInfo={footerRight.linkInfo} map={footerRight.map} linkMap={footerRight.linkMap} policyFirst={footerRight.policyFirst} policySecond={footerRight.policySecond} />
     </div>
   );
 };

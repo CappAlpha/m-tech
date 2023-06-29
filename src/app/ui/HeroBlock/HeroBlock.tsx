@@ -20,7 +20,7 @@ export const HeroBlock: FC<Props> = ({ title, button, description }) => {
   return (
     <div className={styles.root}>
       <div className={styles.introBg}>
-        <video preload="auto" muted loop autoPlay src='/video/backgroundVideo.mp4'></video>
+        <video className={styles.bgVideo} preload="auto" muted loop autoPlay src='/video/background-video.mp4'></video>
       </div>
 
       <div className={styles.wrap}>
@@ -31,6 +31,7 @@ export const HeroBlock: FC<Props> = ({ title, button, description }) => {
         </div>
       </div>
 
+      {/* сделать всё это в хиро блоке */}
       <div className={cn(styles.form, opened && styles.opened)}>
         <HeroForm />
         <div className={styles.closeBtn} onClick={() => setOpened(false)}>

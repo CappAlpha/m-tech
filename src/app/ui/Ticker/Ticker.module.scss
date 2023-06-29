@@ -4,25 +4,25 @@
   overflow: hidden;
 
   background-color: #eaddd0;
+}
 
-  .wrap {
-    display: -webkit-box;
-    display: flex;
-    align-items: center;
+.wrap {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
 
-    width: calc(698.25px * 8);
-    height: 100%;
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 40s linear infinite;
+  width: calc(698.25px * 8);
+  height: 100%;
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+}
 
-    .tickItm {
-      text-align: center;
-      padding: 0 25px;
+.tickItm {
+  text-align: center;
+  padding: 0 25px;
 
-      color: #000;
-      font-size: 30px;
-    }
-  }
+  color: #000;
+  font-size: 30px;
 }
 
 @-webkit-keyframes scroll {

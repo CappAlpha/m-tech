@@ -48,7 +48,7 @@ export const HeroForm = () => {
               <input {...register('name')} />
               {Boolean(errors.name) && <span>{errors?.name?.message}</span>}
             </div>
-            <button>Отправить</button>
+            <button className={styles.button}>Отправить</button>
           </form>
         </>
       )}

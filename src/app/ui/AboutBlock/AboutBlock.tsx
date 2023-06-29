@@ -33,7 +33,7 @@ export const AboutBlock: FC<Props> = ({ title, logo, review, nameA, titleA }) =>
 
 
         <div className={styles.right}>
-          <img src={logo} />
+          <img className={styles.img} src={logo} />
           <div className={styles.review}>{review}</div>
           <div className={styles.name}>{nameA}</div>
           <div className={styles.titleA}>{titleA}</div>

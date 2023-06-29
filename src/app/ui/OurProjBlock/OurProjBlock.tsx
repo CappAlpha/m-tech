@@ -15,12 +15,12 @@ export const OurProjBlock: FC<Props> = ({ title }) => {
 
       <div className={styles.wrap}>
         <div className={styles.imgWrap}>
-          <img src='/img/ourProj/proj1.png' />
-          <img src='/img/ourProj/proj2.png' />
-          <img src='/img/ourProj/proj3.png' />
-          <img src='/img/ourProj/proj4.png' />
-          <img src='/img/ourProj/proj5.png' />
-          <img src='/img/ourProj/proj6.png' />
+          <img className={styles.img} src='/img/ourProj/proj1.png' />
+          <img className={styles.img} src='/img/ourProj/proj2.png' />
+          <img className={styles.img} src='/img/ourProj/proj3.png' />
+          <img className={styles.img} src='/img/ourProj/proj4.png' />
+          <img className={styles.img} src='/img/ourProj/proj5.png' />
+          <img className={styles.img} src='/img/ourProj/proj6.png' />
         </div>
         <div className={styles.textWrap}>
           <div className={styles.titleB}>Lorem ipsum</div>

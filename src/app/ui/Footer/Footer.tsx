@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './FooterBlock.module.scss';
+import styles from './Footer.module.scss';
 import { Logo } from '../shared/Icon';
 
 export interface Props {
@@ -19,11 +19,11 @@ export interface Props {
   linkInfo: string;
   map: string;
   linkMap: string;
-  policy1: string;
-  policy2: string;
+  policyFirst: string;
+  policySecond: string;
 }
 
-export const FooterBlock: FC<Props> = ({ title, company, include, address, tel, fax, mailTitle, mail, data, linkData, info, linkInfo, map, linkMap, policy1, policy2 }) => {
+export const Footer: FC<Props> = ({ title, company, include, address, tel, fax, mailTitle, mail, data, linkData, info, linkInfo, map, linkMap, policyFirst, policySecond }) => {
   return (
     <div className={styles.root}>
       <Logo className={styles.logo} />
@@ -45,8 +45,8 @@ export const FooterBlock: FC<Props> = ({ title, company, include, address, tel, 
           <a href={linkData} className={styles.data}>{data}</a>
           <a href={linkInfo} className={styles.info}>{info}</a>
           <a href={linkMap} className={styles.map}>{map}</a>
-          <div className={styles.policy}>{policy1}</div>
-          <div className={styles.policy}>{policy2}</div>
+          <div className={styles.policy}>{policyFirst}</div>
+          <div className={styles.policy}>{policySecond}</div>
         </div>
       </div>
     </div >

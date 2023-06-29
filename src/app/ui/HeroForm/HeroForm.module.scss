@@ -1,32 +1,33 @@
 .root {
-  .title {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 150px;
+}
 
-    color: #000;
-    font-size: 61px;
-    line-height: 61px;
-  }
+.title {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 150px;
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 160px;
+  color: #000;
+  font-size: 61px;
+  line-height: 61px;
+}
 
-    button {
-      padding: 25px 110px;
-      max-height: 83px;
-      width: 420px;
-      max-width: 420px;
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
+}
 
-      cursor: pointer;
-      border: 0px #335899;
-      border-radius: 20px;
-      background: #335899;
+.button {
+  padding: 25px 110px;
+  max-height: 83px;
+  width: 420px;
+  max-width: 420px;
 
-      color: #fff;
-      font-size: 35px;
-    }
-  }
+  cursor: pointer;
+  border: 0px #335899;
+  border-radius: 20px;
+  background: #335899;
+
+  color: #fff;
+  font-size: 35px;
 }
