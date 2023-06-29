@@ -30,25 +30,12 @@
 
 .wrap {
   margin-top: 85px;
-  margin-left: 131px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   column-gap: 100px;
-  row-gap: 200px;
-
-  @include breakpoint(desktop-big) {
-    margin: 85px 0 0;
-
-    row-gap: 100px;
-  }
-
-  @include breakpoint(desktop) {
-    margin-top: 85px;
-
-    row-gap: 100px;
-  }
+  row-gap: 100px;
 
   @include breakpoint(mobile-m) {
     margin-top: 45px;
@@ -67,11 +54,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 420px;
-  max-height: 83px;
+  max-width: 457px;
+  height: 207px;
   padding: 15px;
-  margin-top: 124px;
-  margin-right: 50px;
 
   border-radius: 20px;
   background-color: #335899;
@@ -80,10 +65,6 @@
 
   color: #fff;
   font-size: 35px;
-
-  @include breakpoint(tablet) {
-    margin: 0;
-  }
 
   @include breakpoint(mobile) {
     font-size: 26px;
