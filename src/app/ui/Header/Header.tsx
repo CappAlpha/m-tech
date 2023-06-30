@@ -5,7 +5,6 @@ import styles from "./Header.module.scss";
 import {
   Logo,
   Burger,
-  Close,
 } from '@/app/ui/shared/Icon';
 
 import { NavSection } from '../NavSection';
@@ -67,18 +66,14 @@ export const Header: FC<Props> = ({ tel, header }) => {
         </div>
       </div>
 
-      <div className={cn(styles.nav, opened && styles.opened)}>
-        {header.map(({ title }) => (
-          <NavSection
-            key={title}
-            title={title}
-            onClickItem={closeMenu}
-          />
-        ))}
-        <div className={styles.closeBtn} onClick={() => setOpened(false)}>
-          <Close className={styles.closeIcon} />
-        </div>
-      </div>
+      {header.map(({ title }) => (
+        <NavSection
+          key={title}
+          title={title}
+          onClickItem={closeMenu}
+          opened={opened}
+        />
+      ))}
     </header>
   );
 }

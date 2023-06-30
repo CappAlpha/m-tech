@@ -1,16 +1,40 @@
 .root {
-  margin-top: 20px;
-  padding-bottom: 20px;
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  transition: all 0.5s ease;
+  transform: translateY(-100%);
 }
 
 .wrap {
   display: flex;
 }
 
+.opened {
+  transform: translateY(0%);
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  background-color: #fff;
+
+  @include breakpoint(mobile-m) {
+    justify-content: start;
+  }
+}
+
 .title {
   color: #162249;
   font-size: 32px;
-  line-height: 32px;
 
   @include breakpoint(mobile-m) {
     padding-bottom: 60px;
@@ -18,4 +42,18 @@
     font-size: 24px;
     line-height: 24px;
   }
+}
+
+.closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  padding: 13px;
+  cursor: pointer;
+}
+
+.closeIcon {
+  width: 100%;
+  height: 100%;
 }

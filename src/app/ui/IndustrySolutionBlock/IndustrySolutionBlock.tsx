@@ -13,10 +13,10 @@ export const IndustrySolutionBlock: FC<Props> = ({ title }) => {
       <div className={styles.title}>{title}</div>
 
       <div className={styles.wrap}>
-        <div className={styles.block}><MangazeyaDevelopment className={styles.logo} /> <img className={styles.img} src='/img/indSol/agro.jpg' /></div>
-        <div className={styles.block}><MangazeyaGaz className={styles.logo} /><img className={styles.img} src='/img/indSol/agro.jpg' /></div>
-        <div className={styles.block}><MangazeyaMining className={styles.logo} /><img className={styles.img} src='/img/indSol/agro.jpg' /></div>
-        <div className={styles.block}><MangazeyaGaz className={styles.logo} /><img className={styles.img} src='/img/indSol/agro.jpg' /></div>
+        <div className={styles.block}><MangazeyaDevelopment className={styles.logo} /> <img className={styles.img} src='/img/industrySolution/agro.jpg' /></div>
+        <div className={styles.block}><MangazeyaGaz className={styles.logo} /><img className={styles.img} src='/img/industrySolution/agro.jpg' /></div>
+        <div className={styles.block}><MangazeyaMining className={styles.logo} /><img className={styles.img} src='/img/industrySolution/agro.jpg' /></div>
+        <div className={styles.block}><MangazeyaAgro className={styles.logo} /><img className={styles.img} src='/img/industrySolution/agro.jpg' /></div>
       </div>
     </div >
   );
