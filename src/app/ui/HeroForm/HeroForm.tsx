@@ -1,20 +1,22 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import cn from 'classnames';
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form/dist/types';
 
 import { Form as FormI, schema } from './schema';
 
 import styles from './HeroForm.module.scss';
+import { Close } from '../shared/Icon';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
-export interface FormProps {
-  prop?: string;
+export interface Props {
+  onClickItem: () => void;
+  opened: boolean;
 }
 
-export const HeroForm = () => {
+export const HeroForm: FC<Props> = ({ opened, onClickItem }) => {
   const [formState, setFormState] = useState<FormState>('init');
 
   const {
@@ -39,9 +41,10 @@ export const HeroForm = () => {
   };
 
   return (
-    <div className={styles.root}>
+
+    <div className={cn(styles.root, opened && styles.opened)}>
       {formState === 'init' && (
-        <>
+        <div className={styles.formWrap}>
           <h2 className={styles.title}>Обсудить задачу</h2>
           <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
             <div className={styles.fields}>
@@ -50,7 +53,10 @@ export const HeroForm = () => {
             </div>
             <button className={styles.button}>Отправить</button>
           </form>
-        </>
+          <div className={styles.closeBtn} onClick={() => onClickItem()}>
+            <Close className={styles.closeIcon} />
+          </div>
+        </div>
       )}
     </div>
   );

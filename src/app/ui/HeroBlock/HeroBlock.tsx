@@ -1,9 +1,7 @@
-import cn from 'classnames';
 import { FC, useState } from "react";
 
 import styles from "./HeroBlock.module.scss";
 import { HeroForm } from '../HeroForm';
-import { Close } from '../shared/Icon';
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
 export interface Props {
@@ -14,6 +12,8 @@ export interface Props {
 
 export const HeroBlock: FC<Props> = ({ title, button, description }) => {
   const [opened, setOpened] = useState(false);
+
+  const closeForm = () => setOpened(false);
 
   useBlockScroll([opened]);
 
@@ -31,13 +31,8 @@ export const HeroBlock: FC<Props> = ({ title, button, description }) => {
         </div>
       </div>
 
-      {/* сделать всё это в хиро блоке */}
-      <div className={cn(styles.form, opened && styles.opened)}>
-        <HeroForm />
-        <div className={styles.closeBtn} onClick={() => setOpened(false)}>
-          <Close className={styles.closeIcon} />
-        </div>
-      </div>
+      <HeroForm opened={opened} onClickItem={closeForm} />
+
     </div>
   );
 };

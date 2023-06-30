@@ -92,3 +92,33 @@
     z-index: 1;
   }
 }
+
+.navWrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  padding: 20px;
+
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  transition: all 0.5s ease;
+  transform: translateY(-100%);
+}
+
+.opened {
+  transform: translateY(0%);
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  background-color: #fff;
+
+  @include breakpoint(mobile-m) {
+    justify-content: start;
+  }
+}
