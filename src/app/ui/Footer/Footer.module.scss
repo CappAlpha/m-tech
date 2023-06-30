@@ -6,6 +6,18 @@
 
   @include breakpoint(tablet) {
     padding: 40px;
+    height: 630px;
+  }
+
+  @include breakpoint(mobile-m) {
+    padding: 20px;
+    height: 500px;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 10px;
+    height: 100%;
+    max-height: 600px;
   }
 }
 
@@ -32,6 +44,10 @@
   @include breakpoint(tablet) {
     font-size: 26px;
   }
+
+  @include breakpoint(mobile-m) {
+    font-size: 20px;
+  }
 }
 
 .company,
@@ -52,6 +68,16 @@
     margin-top: 32px;
 
     font-size: 16px;
+  }
+
+  @include breakpoint(mobile-m) {
+    margin-top: 32px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: 24px;
   }
 }
 
@@ -106,8 +132,18 @@
 
   @include breakpoint(tablet) {
     margin-top: 32px;
-
+    line-height: 24px;
     font-size: 16px;
+  }
+
+  @include breakpoint(mobile-m) {
+    margin-top: 32px;
+
+    font-size: 12px;
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: 24px;
   }
 }
 
@@ -127,6 +163,10 @@
 
 .data {
   margin-top: 82px;
+
+  @include breakpoint(mobile-m) {
+    margin-top: 72px;
+  }
 }
 
 .policy:last-child {
