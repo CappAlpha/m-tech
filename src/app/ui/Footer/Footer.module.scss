@@ -76,6 +76,14 @@
   margin-top: 0;
   text-decoration: underline;
   padding-left: 6px;
+
+  &:hover {
+    color: #335899;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .right {
@@ -98,6 +106,18 @@
     margin-top: 32px;
 
     font-size: 16px;
+  }
+}
+
+.data,
+.info,
+.map {
+  &:hover {
+    color: #335899;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

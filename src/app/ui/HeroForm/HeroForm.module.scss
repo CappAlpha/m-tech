@@ -35,8 +35,14 @@
 }
 
 .closeIcon {
+  fill: #335899;
+
   width: 100%;
   height: 100%;
+
+  &:hover {
+    fill: #1f6bad;
+  }
 }
 
 .title {
