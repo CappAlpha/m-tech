@@ -77,6 +77,8 @@
   text-decoration: underline;
   padding-left: 6px;
 
+  transition: all 0.2s linear;
+
   &:hover {
     color: #335899;
   }
@@ -112,6 +114,8 @@
 .data,
 .info,
 .map {
+  transition: all 0.2s linear;
+
   &:hover {
     color: #335899;
   }
