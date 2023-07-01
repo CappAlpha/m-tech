@@ -13,18 +13,29 @@ export interface Props {
 export const OurProjSection: FC<Props> = ({ img, title, description, first }) => {
   return (
     <div className={styles.root}>
-      <div className={cn(styles.imgWrap, first && styles.imgWrapF)}>
-        <div className={styles.imgItm}>
+      <div className={styles.imgWrap}>
+        <div className={
+          cn(
+            styles.imgItm,
+            first && styles.imgItmF,
+            !first && styles.imgItmA
+          )}>
           <img className={styles.img} src={img} />
         </div>
       </div>
 
 
-      <div className={cn(styles.textWrap, first && styles.textWrapF)}>
+      <div className={
+        cn(
+          styles.textWrap,
+          first && styles.textWrapF,
+          !first && styles.textWrapA
+        )}>
         <div className={styles.title}>
           {title}
         </div>
-        <div className={styles.description}>        {description}
+        <div className={styles.description}>
+          {description}
         </div>
       </div>
     </div>

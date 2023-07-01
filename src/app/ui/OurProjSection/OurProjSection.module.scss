@@ -1,20 +1,19 @@
 .root {
-  width: 100%;
-  //height: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 61px;
 
-  &:hover .textWrap {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.imgWrap {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  //margin-right: 40px;
+}
+
+.imgWrap {
+  max-width: 280px;
+  height: 272px;
+  display: flex;
   justify-content: space-between;
+  border-radius: 45px;
 }
 
 .imgItm {
@@ -25,7 +24,6 @@
   max-width: 280px;
   max-height: 272px;
   position: relative;
-  filter: grayscale(100%);
 
   .img {
     object-fit: cover;
@@ -37,17 +35,48 @@
     outline: 11px solid #335899;
     outline-offset: -11px;
     filter: grayscale(0%);
-    cursor: pointer;
   }
+}
+
+.imgItmF {
+  filter: grayscale(0%);
+  outline: 11px solid #335899;
+  outline-offset: -11px;
+  cursor: pointer;
+
+  &:focus-within {
+    filter: grayscale(100%);
+    outline: none;
+  }
+}
+
+.imgItmA {
+  filter: grayscale(100%);
+  cursor: pointer;
 }
 
 .textWrap {
   position: absolute;
-  top: 300px;
+  top: 350px;
   left: 0;
 
   display: none;
-  width: 900px;
+  max-width: 900px;
+}
+
+.textWrapF {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+
+.imgWrap:hover + .textWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgWrap:hover .textWrapF {
+  display: none;
 }
 
 .title {

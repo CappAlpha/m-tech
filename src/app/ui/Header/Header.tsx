@@ -69,7 +69,7 @@ export const Header: FC<Props> = ({ tel, header }) => {
       <div className={cn(styles.navWrap, opened && styles.opened)}>
         {header.map(({ title }) => (
           <NavSection
-            key={title}
+            id={title}
             title={title}
             onClickItem={closeMenu}
           />

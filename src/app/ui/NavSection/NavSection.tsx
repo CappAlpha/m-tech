@@ -6,13 +6,14 @@ import { Close } from '../shared/Icon';
 export interface Props {
   title: string;
   onClickItem: () => void;
+  id: string;
 }
 
-export const NavSection: FC<Props> = ({ title, onClickItem }) => {
+export const NavSection: FC<Props> = ({ title, id, onClickItem }) => {
 
 
   return (
-    <div className={styles.root}>
+    <div id={id} className={styles.root}>
       <div className={styles.wrap}>
         <a className={styles.title} onClick={() => onClickItem()}>
           {title}</a>
