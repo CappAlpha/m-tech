@@ -20,7 +20,7 @@ export const IndexPage: FC = () => {
       <Header tel={headerTel.tel} header={navMenu} />
       <HeroBlock title={heroBlock.title} button={heroBlock.button} description={heroBlock.description} />
       <AboutBlock title={aboutBlockTitle.title} logo={aboutReviewSection.logo} review={aboutReviewSection.review} nameA={aboutReviewSection.nameA} titleA={aboutReviewSection.titleA} />
-      <OurProjBlock title={ourProjTitle.title} />
+      <OurProjBlock title={ourProjTitle.title} ourProjContent={ourProjContent} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
       <IndustrySolutionBlock title={IndustrySolutionTitle.title} />
       <Ticker tickerArr={tickerArr}

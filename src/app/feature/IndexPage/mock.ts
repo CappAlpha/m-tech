@@ -60,10 +60,44 @@ export const aboutReviewSection =
 
 export const ourProjTitle = { title: 'Наши проекты' }
 
-export const ourProjContent = [{
-  titleB: 'Lorem ipsum',
-  description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
-}]
+export const ourProjContent = [
+  {
+    first: true,
+    img: '/img/ourProject/proj1.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+  {
+    first: false,
+    img: '/img/ourProject/proj2.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+  {
+    first: false,
+    img: '/img/ourProject/proj3.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+  {
+    first: false,
+    img: '/img/ourProject/proj4.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+  {
+    first: false,
+    img: '/img/ourProject/proj5.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+  {
+    first: false,
+    img: '/img/ourProject/proj6.png',
+    title: 'Lorem ipsum',
+    description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet.',
+  },
+]
 
 export const ourDirTitle = { title: 'Наши направления' }
 
