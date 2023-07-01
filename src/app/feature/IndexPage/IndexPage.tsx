@@ -23,7 +23,11 @@ export const IndexPage: FC = () => {
       <OurProjBlock title={ourProjTitle.title} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
       <IndustrySolutionBlock title={IndustrySolutionTitle.title} />
-      <Ticker tickerArr={tickerArr} wordFirst={ticker.wordFirst} wordSecond={ticker.wordSecond} wordThird={ticker.wordThird} />
+      <Ticker tickerArr={tickerArr}
+      // wordFirst={ticker.wordFirst} 
+      // wordSecond={ticker.wordSecond} 
+      // wordThird={ticker.wordThird} 
+      />
       <VacanciesBlock title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
       <Footer title={footerLeft.title} company={footerLeft.company} include={footerLeft.include} address={footerLeft.address} tel={footerLeft.tel} fax={footerLeft.fax} mailTitle={footerLeft.mailTitle} mail={footerLeft.mail} data={footerRight.data} linkData={footerRight.linkData} info={footerRight.info} linkInfo={footerRight.linkInfo} map={footerRight.map} linkMap={footerRight.linkMap} policyFirst={footerRight.policyFirst} policySecond={footerRight.policySecond} />
     </div>
