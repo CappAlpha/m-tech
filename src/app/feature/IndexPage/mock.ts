@@ -105,6 +105,25 @@ export const IndustrySolutionCard = [
   },
 ]
 
+export const ticker = [{
+  tag: 'ответственность',
+  wordFirst: 'ответственность',
+  wordSecond: 'честность',
+  wordThird: 'результат',
+}]
+
+export const tickerArr = [
+  'ответственность',
+  'честность',
+  'результат',
+  'ответственность',
+  'честность',
+  'результат',
+  'ответственность',
+  'честность',
+  'результат',
+]
+
 export const vacanciesTitle = {
   title: 'Вакансии',
 }

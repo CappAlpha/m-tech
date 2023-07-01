@@ -9,10 +9,12 @@ export interface Props {
 }
 
 export const NavSection: FC<Props> = ({ title, onClickItem }) => {
+
+
   return (
     <div className={styles.root}>
       <div className={styles.wrap}>
-        <a href='#' className={styles.title} onClick={() => onClickItem()}>
+        <a className={styles.title} onClick={() => onClickItem()}>
           {title}</a>
       </div>
       <div className={styles.closeBtn} onClick={() => onClickItem()}>

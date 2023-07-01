@@ -1,11 +1,13 @@
-import { Tag } from './Tag/Tag';
+import { FC } from 'react';
+import { Tag } from '../Tag';
 import styles from './Ticker.module.scss';
+import { number } from 'yup';
 
-const TAGS = ['ответственность', 'честность', 'результат'];
 const DURATION = 25000;
 
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+min: number;
+
+const random = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min;
 
 const InfiniteLoopSlider = ({ children, duration }) => {
   return (
@@ -18,25 +20,30 @@ const InfiniteLoopSlider = ({ children, duration }) => {
       <div className={styles.inner}>
         {children}
         {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
       </div>
     </div>
   );
 };
 
-export const Ticker = () => (
+interface Props {
+  tickerArr: Array<any>;
+  ticker: Array<({
+    tag: string;
+    wordFirst: string,
+    wordSecond: string,
+    wordThird: string
+  })>;
+  wordFirst: string;
+  wordSecond: string;
+  wordThird: string;
+}
+
+export const Ticker: FC<Props> = ({ tickerArr }) => (
   <div className={styles.root}>
     <div className={styles.tagList}>
-      <InfiniteLoopSlider duration={random(DURATION - 5000, DURATION + 5000)}>
-        {shuffle(TAGS).map((tag) => (
-          <Tag text={tag} key={tag} />
-        ))}
-      </InfiniteLoopSlider>
+      <InfiniteLoopSlider duration={random(DURATION - 5000, DURATION + 5000)} children={tickerArr.map((tag) => (
+        <Tag text={tag} key={tag} />
+      ))} />
     </div>
   </div>
 );
