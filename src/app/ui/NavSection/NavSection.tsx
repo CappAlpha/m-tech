@@ -7,10 +7,9 @@ export interface Props {
   title: string;
   name: string;
   onClickItem: (name: string) => void;
-  onCloseItem: () => void;
 }
 
-export const NavSection: FC<Props> = ({ title, name, onClickItem, onCloseItem }) => {
+export const NavSection: FC<Props> = ({ title, name, onClickItem }) => {
 
 
   return (
@@ -19,7 +18,9 @@ export const NavSection: FC<Props> = ({ title, name, onClickItem, onCloseItem })
         <a className={styles.title} onClick={() => onClickItem(name)}>
           {title}</a>
       </div>
-      <div className={styles.closeBtn} onClick={() => onCloseItem()}>
+      <div className={styles.closeBtn}
+        //@ts-ignore
+        onClick={() => onClickItem()}>
         <Close className={styles.closeIcon} />
       </div>
     </div>

@@ -11,15 +11,23 @@ import { Ticker } from "@/app/ui/Ticker";
 import { VacanciesBlock } from "@/app/ui/VacanciesBlock";
 import { Footer } from "@/app/ui/Footer";
 
-import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, tickerArr, vacanciesTitle, vacanciesCards, vacanciesAll, footerLeft, footerRight } from "./mock";
+import {
+  headerTel, navMenu,
+  heroBlock,
+  form,
+  aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle,
+  tickerArr,
+  vacanciesTitle, vacanciesCards, vacanciesAll,
+  footerLeft, footerRight
+} from "./mock";
 
 
 export const IndexPage: FC = () => {
   return (
     <div className={styles.root}>
       <Header tel={headerTel.tel} header={navMenu} />
-      <HeroBlock title={heroBlock.title} button={heroBlock.button} description={heroBlock.description} />
-      <AboutBlock title={aboutBlockTitle.title} logo={aboutReviewSection.logo} review={aboutReviewSection.review} nameA={aboutReviewSection.nameA} titleA={aboutReviewSection.titleA} />
+      <HeroBlock title={heroBlock.title} button={heroBlock.button} description={heroBlock.description} formTitle={form.title} formPolicy={form.text} formPolicyLink={form.link} formLinkText={form.linkText} />
+      <AboutBlock title={aboutBlockTitle.title} img={aboutReviewSection.img} review={aboutReviewSection.review} nameA={aboutReviewSection.nameA} titleA={aboutReviewSection.titleA} />
       <OurProjBlock title={ourProjTitle.title} ourProjContent={ourProjContent} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
       <IndustrySolutionBlock title={IndustrySolutionTitle.title} />

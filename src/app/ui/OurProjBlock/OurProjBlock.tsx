@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import styles from './OurProjBlock.module.scss';
 import { OurProjSection } from '../OurProjSection';
@@ -9,6 +9,11 @@ export interface Props {
 }
 
 export const OurProjBlock: FC<Props> = ({ title, ourProjContent }) => {
+
+  const [opened, setOpened] = useState(false);
+
+  const closeAfterChange = () => setOpened(false);
+
   return (
     <div className={styles.root} id='projects'>
       <div className={styles.title}>{title}</div>
@@ -16,7 +21,7 @@ export const OurProjBlock: FC<Props> = ({ title, ourProjContent }) => {
 
       <div className={styles.wrap}>
         {ourProjContent.map(({ img, title, description, first }) => (
-          <OurProjSection key={title} img={img} title={title} description={description} first={first} />
+          <OurProjSection key={title} img={img} title={title} description={description} first={first} opened={opened} onClickItm={closeAfterChange} />
         ))}
       </div>
     </div>

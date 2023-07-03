@@ -8,13 +8,13 @@ import { AboutTextSection } from "../AboutSectionText";
 export interface Props {
   title: string;
 
-  logo: string;
+  img: string;
   review: string;
   nameA: string;
   titleA: string;
 }
 
-export const AboutBlock: FC<Props> = ({ title, logo, review, nameA, titleA }) => {
+export const AboutBlock: FC<Props> = ({ title, img, review, nameA, titleA }) => {
   return (
     <div className={styles.root} id="about">
       <div className={styles.title}>{title}</div>
@@ -33,7 +33,7 @@ export const AboutBlock: FC<Props> = ({ title, logo, review, nameA, titleA }) =>
 
 
         <div className={styles.right}>
-          <img className={styles.img} src={logo} />
+          <img className={styles.img} src={img} />
           <div className={styles.review}>{review}</div>
           <div className={styles.name}>{nameA}</div>
           <div className={styles.titleA}>{titleA}</div>

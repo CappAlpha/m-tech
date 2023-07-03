@@ -8,9 +8,13 @@ export interface Props {
   title: string;
   description: string;
   button: string;
+  formTitle: string;
+  formPolicy: string;
+  formPolicyLink: string;
+  formLinkText: string;
 }
 
-export const HeroBlock: FC<Props> = ({ title, button, description }) => {
+export const HeroBlock: FC<Props> = ({ title, button, description, formTitle, formPolicy, formPolicyLink, formLinkText }) => {
   const [opened, setOpened] = useState(false);
 
   const closeForm = () => setOpened(false);
@@ -32,7 +36,7 @@ export const HeroBlock: FC<Props> = ({ title, button, description }) => {
           </div>
         </div>
       </div>
-      <HeroForm opened={opened} onClickItem={closeForm} />
+      <HeroForm title={formTitle} text={formPolicy} link={formPolicyLink} linkText={formLinkText} opened={opened} onClickItem={closeForm} />
     </>
   );
 };

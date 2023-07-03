@@ -31,10 +31,6 @@
   right: 0;
   top: 0;
 
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 732px;
   height: 100vh;
@@ -46,6 +42,11 @@
   transform: translateX(100%);
 
   background-color: #fff;
+}
+
+.formWrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .opened {
@@ -81,10 +82,10 @@
   width: 100%;
   max-width: 600px;
   margin-top: 150px;
+  padding-left: 71px;
 
   color: #000;
   font-size: 61px;
-  line-height: 61px;
 }
 
 .form {
@@ -93,10 +94,73 @@
   margin-top: 160px;
 }
 
-.button {
-  padding: 25px 110px;
-  max-height: 83px;
-  width: 420px;
+.fields {
+  width: 100%;
+  max-width: 589px;
+  margin-left: 71px;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+
+  .inputTitle {
+    margin-bottom: 8px;
+
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .input {
+    border: none;
+    border-bottom: 3px solid #162249;
+
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .span {
+    color: red;
+    font-size: 16px;
+  }
+}
+
+.formNav {
+  margin: 70px 0;
+  display: flex;
+
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+
+  .sEmail {
+    margin-left: 14px;
+    cursor: pointer;
+  }
+
+  .sTel {
+    margin-left: 14px;
+    cursor: pointer;
+  }
+}
+
+.buttonDisabled {
+  margin: 91px 0 38px 50px;
+  padding: 15px 110px 20px;
+  height: 83px;
   max-width: 420px;
 
   cursor: pointer;
@@ -106,4 +170,36 @@
 
   color: #fff;
   font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.button {
+  opacity: 1;
+  background: #335899;
+}
+
+.policy {
+  margin-left: 50px;
+  max-width: 600px;
+
+  color: #162249;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.link {
+  color: #335899;
+
+  &:hover {
+    transition: color 0.2s linear;
+    color: #162249;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
