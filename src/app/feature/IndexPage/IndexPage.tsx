@@ -15,7 +15,8 @@ import {
   headerTel, navMenu,
   heroBlock,
   form,
-  aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle,
+  aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, IndustrySolutionImages,
+  IndustrySolutionPresentation,
   tickerArr,
   vacanciesTitle, vacanciesCards, vacanciesAll,
   footerLeft, footerRight
@@ -30,7 +31,16 @@ export const IndexPage: FC = () => {
       <AboutBlock title={aboutBlockTitle.title} img={aboutReviewSection.img} review={aboutReviewSection.review} nameA={aboutReviewSection.nameA} titleA={aboutReviewSection.titleA} />
       <OurProjBlock title={ourProjTitle.title} ourProjContent={ourProjContent} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
-      <IndustrySolutionBlock title={IndustrySolutionTitle.title} />
+      <IndustrySolutionBlock title={IndustrySolutionTitle.title}
+        titleFirst={IndustrySolutionPresentation.titleFirst}
+        linkFirst={IndustrySolutionPresentation.linkFirst}
+        titleSecond={IndustrySolutionPresentation.titleSecond}
+        linkSecond={IndustrySolutionPresentation.linkSecond}
+        titleThird={IndustrySolutionPresentation.titleThird}
+        linkThird={IndustrySolutionPresentation.linkThird}
+        titleFourth={IndustrySolutionPresentation.titleFourth}
+        linkFourth={IndustrySolutionPresentation.linkFourth}
+        imgFirst={IndustrySolutionImages.imgFirst} imgSecond={IndustrySolutionImages.imgSecond} imgThird={IndustrySolutionImages.imgThird} imgFourth={IndustrySolutionImages.imgFourth} />
       <Ticker tickerArr={tickerArr} />
       <VacanciesBlock title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
       <Footer title={footerLeft.title} company={footerLeft.company} include={footerLeft.include} address={footerLeft.address} tel={footerLeft.tel} fax={footerLeft.fax} mailTitle={footerLeft.mailTitle} mail={footerLeft.mail} data={footerRight.data} linkData={footerRight.linkData} info={footerRight.info} linkInfo={footerRight.linkInfo} />

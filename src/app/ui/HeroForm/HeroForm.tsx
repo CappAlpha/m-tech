@@ -65,7 +65,7 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
                 <div className={styles.inputWrap}>
                   <div className={styles.formNav}>Связаться по
                     <div className={styles.buttons}>
-                      <div className={styles.sEmail}>
+                      <div className={styles.sEmail} >
                         почте
                       </div>
                       <div className={styles.sTel} >

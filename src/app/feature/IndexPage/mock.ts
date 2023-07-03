@@ -148,11 +148,23 @@ export const IndustrySolutionTitle = {
   title: 'Отраслевые решения',
 }
 
-export const IndustrySolutionCard = [
-  {
-    link: '',
-  },
-]
+export const IndustrySolutionPresentation = {
+  titleFirst: 'Скачать презентацию',
+  linkFirst: '',
+  titleSecond: 'Скачать презентацию',
+  linkSecond: '',
+  titleThird: 'Скачать презентацию',
+  linkThird: '',
+  titleFourth: 'Скачать презентацию',
+  linkFourth: '',
+}
+
+export const IndustrySolutionImages = {
+  imgFirst: '/img/industrySolution/agro.jpg',
+  imgSecond: '/img/industrySolution/agro.jpg',
+  imgThird: '/img/industrySolution/agro.jpg',
+  imgFourth: '/img/industrySolution/agro.jpg',
+}
 
 export const tickerArr = [
   'ответственность',
