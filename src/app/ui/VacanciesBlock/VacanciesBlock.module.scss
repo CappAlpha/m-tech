@@ -34,18 +34,15 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  column-gap: 100px;
-  row-gap: 100px;
+  column-gap: 40px;
+  row-gap: 40px;
 
   @include breakpoint(mobile-m) {
     margin-top: 45px;
-
-    row-gap: 80px;
   }
 
   @include breakpoint(mobile) {
     margin-top: 40px;
-    row-gap: 50px;
   }
 }
 

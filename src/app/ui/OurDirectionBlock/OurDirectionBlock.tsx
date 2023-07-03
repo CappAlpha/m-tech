@@ -10,7 +10,7 @@ export interface Props {
 
 export const OurDirectionBlock: FC<Props> = ({ title, ourDirSection }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id='directions'>
       <div className={styles.title}>{title}</div>
 
       <div className={styles.wrap}>

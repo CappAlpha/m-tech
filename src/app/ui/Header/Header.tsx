@@ -14,7 +14,7 @@ const MIN_SCROLL_FOR_FIXED_HEADER = 100;
 
 
 interface Props {
-  header: Array<({ title: string })>;
+  header: Array<({ title: string, name: string })>;
   tel: string;
 }
 
@@ -25,7 +25,10 @@ export const Header: FC<Props> = ({ tel, header }) => {
   const [isOnTop, setIsOnTop] = useState(true);
 
   const oldScroll = useRef(0);
-  const closeMenu = () => setOpened(false);
+  const onClickEvents = (name: string) => {
+    setOpened(false)
+    document.querySelector(`#${name}`)?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   const onScroll = () => {
     const scrollTop = window.scrollY;
@@ -67,11 +70,11 @@ export const Header: FC<Props> = ({ tel, header }) => {
       </div>
 
       <div className={cn(styles.navWrap, opened && styles.opened)}>
-        {header.map(({ title }) => (
+        {header.map(({ title, name }) => (
           <NavSection
-            id={title}
             title={title}
-            onClickItem={closeMenu}
+            name={name}
+            onClickItem={onClickEvents}
           />
         ))}
       </div>

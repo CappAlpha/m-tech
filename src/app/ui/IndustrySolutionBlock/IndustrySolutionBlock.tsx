@@ -9,7 +9,7 @@ export interface Props {
 
 export const IndustrySolutionBlock: FC<Props> = ({ title }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id='solutions'>
       <div className={styles.title}>{title}</div>
 
       <div className={styles.wrap}>

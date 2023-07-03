@@ -121,9 +121,7 @@
 }
 
 .data,
-.info,
-.map,
-.policy {
+.info {
   margin-top: 42px;
 
   color: #fff;
@@ -148,8 +146,7 @@
 }
 
 .data,
-.info,
-.map {
+.info {
   transition: all 0.2s linear;
 
   &:hover {
@@ -167,8 +164,4 @@
   @include breakpoint(mobile-m) {
     margin-top: 72px;
   }
-}
-
-.policy:last-child {
-  margin-top: 0;
 }

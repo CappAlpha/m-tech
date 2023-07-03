@@ -1,25 +1,32 @@
 export const navMenu = [
   {
     title: 'О нас',
+    name: 'about',
   },
   {
     title: 'Наши направления',
+    name: 'directions',
   },
   {
     title: 'Отраслевые решения',
+    name: 'solutions',
   },
   {
     title: 'Наши проекты',
+    name: 'projects',
   },
   {
     title: 'Вакансии компании',
+    name: 'vacancies',
   },
-  {
-    title: 'Будь в курсе',
-  },
-  {
-    title: 'Контакты ',
-  },
+  // {
+  //   title: 'Будь в курсе',
+  //   name: 'aware',
+  // },
+  // {
+  //   title: 'Контакты ',
+  //   name: 'contacts',
+  // },
 ]
 
 export const headerTel = { tel: '+7 924 ХХХ ХХХ ХХ' }
@@ -134,17 +141,9 @@ export const IndustrySolutionTitle = {
 
 export const IndustrySolutionCard = [
   {
-    contact: '',
     link: '',
   },
 ]
-
-export const ticker = [{
-  tag: 'ответственность',
-  wordFirst: 'ответственность',
-  wordSecond: 'честность',
-  wordThird: 'результат',
-}]
 
 export const tickerArr = [
   'ответственность',
@@ -211,8 +210,4 @@ export const footerRight = {
   linkData: '',
   info: 'Сведения о cookies-файлах Раскрытие информации — Интерфакс',
   linkInfo: '',
-  map: 'Карта сайта',
-  linkMap: '',
-  policyFirst: 'This site is protected by reCAPTCHA and the Google',
-  policySecond: 'Privacy Policy and Terms of Service apply.',
 }

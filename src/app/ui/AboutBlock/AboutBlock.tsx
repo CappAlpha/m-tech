@@ -16,7 +16,7 @@ export interface Props {
 
 export const AboutBlock: FC<Props> = ({ title, logo, review, nameA, titleA }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id="about">
       <div className={styles.title}>{title}</div>
 
       <div className={styles.wrap}>

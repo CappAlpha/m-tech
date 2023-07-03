@@ -12,6 +12,7 @@ export const InfiniteLoopSlider: FC<Props> = ({ children, duration }) => {
     <div
       className={styles.loopSlider}
       style={{
+        //@ts-ignore
         '--duration': `${duration}ms`
       }}
     >

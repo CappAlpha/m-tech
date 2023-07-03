@@ -17,13 +17,9 @@ export interface Props {
   linkData: string;
   info: string;
   linkInfo: string;
-  map: string;
-  linkMap: string;
-  policyFirst: string;
-  policySecond: string;
 }
 
-export const Footer: FC<Props> = ({ title, company, include, address, tel, fax, mailTitle, mail, data, linkData, info, linkInfo, map, linkMap, policyFirst, policySecond }) => {
+export const Footer: FC<Props> = ({ title, company, include, address, tel, fax, mailTitle, mail, data, linkData, info, linkInfo }) => {
   return (
     <div className={styles.root}>
       <Logo className={styles.logo} />
@@ -44,9 +40,6 @@ export const Footer: FC<Props> = ({ title, company, include, address, tel, fax, 
         <div className={styles.right}>
           <a href={linkData} className={styles.data}>{data}</a>
           <a href={linkInfo} className={styles.info}>{info}</a>
-          <a href={linkMap} className={styles.map}>{map}</a>
-          <div className={styles.policy}>{policyFirst}</div>
-          <div className={styles.policy}>{policySecond}</div>
         </div>
       </div>
     </div >

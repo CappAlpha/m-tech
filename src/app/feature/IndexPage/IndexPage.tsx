@@ -11,7 +11,7 @@ import { Ticker } from "@/app/ui/Ticker";
 import { VacanciesBlock } from "@/app/ui/VacanciesBlock";
 import { Footer } from "@/app/ui/Footer";
 
-import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, ticker, vacanciesTitle, vacanciesCards, vacanciesAll, footerLeft, footerRight, tickerArr } from "./mock";
+import { headerTel, navMenu, heroBlock, aboutBlockTitle, aboutReviewSection, ourProjTitle, ourProjContent, ourDirTitle, ourDirSection, IndustrySolutionTitle, tickerArr, vacanciesTitle, vacanciesCards, vacanciesAll, footerLeft, footerRight } from "./mock";
 
 
 export const IndexPage: FC = () => {
@@ -23,13 +23,9 @@ export const IndexPage: FC = () => {
       <OurProjBlock title={ourProjTitle.title} ourProjContent={ourProjContent} />
       <OurDirectionBlock title={ourDirTitle.title} ourDirSection={ourDirSection} />
       <IndustrySolutionBlock title={IndustrySolutionTitle.title} />
-      <Ticker tickerArr={tickerArr}
-      // wordFirst={ticker.wordFirst} 
-      // wordSecond={ticker.wordSecond} 
-      // wordThird={ticker.wordThird} 
-      />
+      <Ticker tickerArr={tickerArr} />
       <VacanciesBlock title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
-      <Footer title={footerLeft.title} company={footerLeft.company} include={footerLeft.include} address={footerLeft.address} tel={footerLeft.tel} fax={footerLeft.fax} mailTitle={footerLeft.mailTitle} mail={footerLeft.mail} data={footerRight.data} linkData={footerRight.linkData} info={footerRight.info} linkInfo={footerRight.linkInfo} map={footerRight.map} linkMap={footerRight.linkMap} policyFirst={footerRight.policyFirst} policySecond={footerRight.policySecond} />
+      <Footer title={footerLeft.title} company={footerLeft.company} include={footerLeft.include} address={footerLeft.address} tel={footerLeft.tel} fax={footerLeft.fax} mailTitle={footerLeft.mailTitle} mail={footerLeft.mail} data={footerRight.data} linkData={footerRight.linkData} info={footerRight.info} linkInfo={footerRight.linkInfo} />
     </div>
   );
 };

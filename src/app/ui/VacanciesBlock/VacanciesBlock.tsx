@@ -12,7 +12,7 @@ export interface Props {
 
 export const VacanciesBlock: FC<Props> = ({ vacanciesCards, title, titleAll, linkAll }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id='vacancies'>
       <div className={styles.title}>{title}</div>
 
       <div className={styles.wrap}>

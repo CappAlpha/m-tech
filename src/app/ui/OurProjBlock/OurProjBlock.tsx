@@ -10,7 +10,7 @@ export interface Props {
 
 export const OurProjBlock: FC<Props> = ({ title, ourProjContent }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id='projects'>
       <div className={styles.title}>{title}</div>
 
 

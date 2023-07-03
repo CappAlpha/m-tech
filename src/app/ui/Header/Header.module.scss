@@ -2,15 +2,39 @@
   display: flex;
   width: 100%;
   padding: 50px;
+
   position: fixed;
-  z-index: 20;
+  z-index: 15;
   left: 0;
   top: 0;
+
   transition: all 0.5s ease;
   transform: translateY(-100%);
 
   @include breakpoint(mobile-m) {
-    padding: 0;
+    padding: 0 0 20px;
+  }
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+}
+
+.darkened {
+  &:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: -100px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    background: #162249;
+    z-index: 1;
   }
 }
 
@@ -19,7 +43,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  z-index: 20;
+
+  z-index: 15;
 
   @include breakpoint(mobile-m) {
     margin-top: 40px;
@@ -56,6 +81,7 @@
 
   color: #fff;
   font-size: 25px;
+
   @include breakpoint(mobile-m) {
     padding-right: 36px;
 
@@ -71,28 +97,6 @@
   cursor: pointer;
 }
 
-.fixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translateY(0);
-}
-
-.darkened {
-  &:after {
-    content: "";
-    display: block;
-    left: 0;
-    top: -100px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-
-    background: #162249;
-    z-index: 1;
-  }
-}
-
 .navWrap {
   position: fixed;
   right: 0;
@@ -103,6 +107,7 @@
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  pointer-events: none;
 
   transition: all 0.5s ease;
   transform: translateY(-100%);
@@ -117,6 +122,8 @@
   z-index: 20;
 
   background-color: #fff;
+
+  pointer-events: auto;
 
   @include breakpoint(mobile-m) {
     justify-content: start;
