@@ -47,13 +47,17 @@ export const HeroForm: FC<Props> = ({ opened, onClickItem }) => {
         {formState === 'init' && (
           <div className={styles.formWrap}>
             <h2 className={styles.title}>Обсудить задачу</h2>
+
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
                 <input {...register('name')} />
                 {Boolean(errors.name) && <span>{errors?.name?.message}</span>}
+
               </div>
+
               <button className={styles.button}>Отправить</button>
             </form>
+
             <div className={styles.closeBtn} onClick={() => onClickItem()}>
               <Close className={styles.closeIcon} />
             </div>
