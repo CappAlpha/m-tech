@@ -12,7 +12,7 @@ export const OurProjBlock: FC<Props> = ({ title, ourProjContent }) => {
 
   const [opened, setOpened] = useState(false);
 
-  const closeAfterChange = () => setOpened(false);
+  const closeAfterChange = () => setOpened(true);
 
   return (
     <div className={styles.root} id='projects'>

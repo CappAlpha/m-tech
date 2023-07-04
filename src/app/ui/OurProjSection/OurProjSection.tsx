@@ -18,7 +18,8 @@ export const OurProjSection: FC<Props> = ({ img, title, description, first, open
     <div className={styles.root}>
       <div className={styles.imgWrap}>
         <div className={cn(styles.imgItm, opened && styles.imgItmOpened)}
-          onClick={() => onClickItm()}>
+          onClick={() => onClickItm()}
+        >
           <img className={styles.img} src={img} />
         </div>
       </div>

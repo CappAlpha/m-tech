@@ -1,5 +1,4 @@
 .root {
-  display: flex;
   width: 100%;
   padding: 50px;
 
@@ -24,8 +23,11 @@
 }
 
 .darkened {
+  opacity: 0;
+
   &:after {
     content: "";
+    opacity: 1;
     display: block;
     left: 0;
     top: -100px;
@@ -33,9 +35,15 @@
     position: absolute;
     width: 100%;
 
-    background: #162249;
     z-index: 1;
   }
+}
+
+.header {
+}
+
+.blueBg {
+  background: #162249;
 }
 
 .wrap {

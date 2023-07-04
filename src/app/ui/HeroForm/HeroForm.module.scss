@@ -114,6 +114,9 @@
   }
 
   .input {
+    width: 100%;
+    max-width: 589px;
+
     border: none;
     border-bottom: 3px solid #162249;
 
@@ -146,17 +149,16 @@
 .buttons {
   display: flex;
 
-  .sEmail {
-    margin-left: 14px;
-    cursor: pointer;
-  }
-
+  .sEmail,
   .sTel {
     margin-left: 14px;
     cursor: pointer;
   }
 }
 
+.buttons .active {
+  border: 2px solid #000;
+}
 .buttonDisabled {
   margin: 91px 0 38px 50px;
   padding: 15px 110px 20px;

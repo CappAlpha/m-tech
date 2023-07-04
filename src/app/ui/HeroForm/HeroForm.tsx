@@ -4,10 +4,12 @@ import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form/dist/types';
 
+
 import { Form as FormI, schema } from './schema';
 
 import styles from './HeroForm.module.scss';
 import { Close } from '../shared/Icon';
+import { TabList, Tab, TabPanel, Tabs } from 'react-tabs';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
@@ -26,7 +28,6 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors, isValid },
   } = useForm<FormI>({
     // @ts-ignore
@@ -45,6 +46,8 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
     // console.log(data)
   };
 
+  const [activeTab, setActiveTab] = useState("tab1");
+
   return (
     <div className={styles.root}>
       <div className={cn(styles.bgD, opened && styles.bg)} onClick={() => onClickItem()}></div>
@@ -62,26 +65,30 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
                   {Boolean(errors.name) && <span className={styles.span}>{errors?.name?.message}</span>}
                 </div>
 
-                <div className={styles.inputWrap}>
+                <Tabs className={styles.inputWrap}>
                   <div className={styles.formNav}>Связаться по
-                    <div className={styles.buttons}>
-                      <div className={styles.sEmail} >
+                    <TabList className={styles.buttons}>
+                      <Tab className={cn('sEmail', activeTab === "tab1" ? 'active' : '')}>
                         почте
-                      </div>
-                      <div className={styles.sTel} >
+                      </Tab>
+                      <Tab className={cn(styles.sTel, activeTab === "tab2" ? "active" : "")} >
                         телефону
-                      </div>
-                    </div>
+                      </Tab>
+                    </TabList>
                   </div>
 
-                  <div className={styles.inputTitle}>E-mail*</div>
-                  <input className={styles.input} {...register('email')} />
-                  {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
+                  <TabPanel>
+                    <div className={styles.inputTitle}>E-mail*</div>
+                    <input className={styles.input} {...register('email')} />
+                    {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
+                  </TabPanel>
 
-                  {/* <div className={styles.inputTitle}>Телефон*</div>
-                  <input className={styles.input} {...register('tel')} />
-                  {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>} */}
-                </div>
+                  <TabPanel>
+                    <div className={styles.inputTitle}>Телефон*</div>
+                    <input className={styles.input} {...register('tel')} />
+                    {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
+                  </TabPanel>
+                </Tabs>
               </div>
 
               <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>Отправить</button>
