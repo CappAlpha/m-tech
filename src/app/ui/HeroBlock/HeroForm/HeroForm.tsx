@@ -61,7 +61,6 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
     // }
   }
 
-
   return (
     <div className={styles.root}>
       <div className={cn(styles.bgD, opened && styles.bg)} onClick={() => onClickItem()}></div>
@@ -91,14 +90,11 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
                     </TabList>
                   </div>
 
-
-
                   <TabPanel>
                     <div className={styles.inputTitle}>E-mail*</div>
                     <input className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </TabPanel>
-
 
                   <TabPanel>
                     <div className={styles.inputTitle}>Телефон*</div>
