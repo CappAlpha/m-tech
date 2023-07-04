@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import styles from './OurDirectionBlock.module.scss';
-import { OurDirSection } from '../OurDirSection';
+import { OurDirSection } from './OurDirSection';
 
 export interface Props {
   ourDirSection: Array<({ title: string, description: string })>;

@@ -23,11 +23,8 @@
 }
 
 .darkened {
-  opacity: 0;
-
   &:after {
     content: "";
-    opacity: 1;
     display: block;
     left: 0;
     top: -100px;
@@ -35,15 +32,9 @@
     position: absolute;
     width: 100%;
 
-    z-index: 1;
+    z-index: -1;
+    background: #162249;
   }
-}
-
-.header {
-}
-
-.blueBg {
-  background: #162249;
 }
 
 .wrap {
@@ -109,7 +100,6 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: -1;
   padding: 20px;
 
   width: 100%;

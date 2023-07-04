@@ -3,7 +3,7 @@ import { FC } from "react";
 import styles from "./AboutBlock.module.scss";
 
 import { aboutTextSection } from "@/app/feature/IndexPage/mock";
-import { AboutTextSection } from "../AboutSectionText";
+import { AboutTextSection } from "./AboutSectionText";
 
 export interface Props {
   title: string;

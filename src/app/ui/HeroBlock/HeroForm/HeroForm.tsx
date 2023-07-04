@@ -8,7 +8,7 @@ import { SubmitHandler } from 'react-hook-form/dist/types';
 import { Form as FormI, schema } from './schema';
 
 import styles from './HeroForm.module.scss';
-import { Close } from '../shared/Icon';
+import { Close } from '../../shared/Icon';
 import { TabList, Tab, TabPanel, Tabs } from 'react-tabs';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
@@ -46,7 +46,21 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
     // console.log(data)
   };
 
-  const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState<'email' | 'phone'>("email");
+
+  // const [activeBtn, setActiveBtn] = useState<isValidEmail, isValidPhone>(true);
+
+  const setTab = (tabs: 'email' | 'phone') => {
+    setActiveTab(tabs);
+
+    // if (tabs === 'email') {
+    //   isValidEmail = false;
+    // }
+    // else {
+    //   isValidPhone = true;
+    // }
+  }
+
 
   return (
     <div className={styles.root}>
@@ -68,20 +82,23 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
                 <Tabs className={styles.inputWrap}>
                   <div className={styles.formNav}>Связаться по
                     <TabList className={styles.buttons}>
-                      <Tab className={cn('sEmail', activeTab === "tab1" ? 'active' : '')}>
+                      <Tab className={cn(styles.sEmail, activeTab === "email" && styles.active)} onClick={() => setTab('email')}>
                         почте
                       </Tab>
-                      <Tab className={cn(styles.sTel, activeTab === "tab2" ? "active" : "")} >
+                      <Tab className={cn(styles.sTel, activeTab === "phone" && styles.active)} onClick={() => setTab('phone')}>
                         телефону
                       </Tab>
                     </TabList>
                   </div>
+
+
 
                   <TabPanel>
                     <div className={styles.inputTitle}>E-mail*</div>
                     <input className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </TabPanel>
+
 
                   <TabPanel>
                     <div className={styles.inputTitle}>Телефон*</div>

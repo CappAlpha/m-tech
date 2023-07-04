@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import styles from './VacanciesBlock.module.scss';
-import { VacanciesCard } from '../VacanciesCard';
+import { VacanciesCard } from './VacanciesCard';
 
 export interface Props {
   vacanciesCards: Array<({ title: string, work: string, link: string })>;

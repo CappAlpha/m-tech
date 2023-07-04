@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 import styles from './OurProjBlock.module.scss';
-import { OurProjSection } from '../OurProjSection';
+import { OurProjSection } from './OurProjSection';
 
 export interface Props {
   title: string;

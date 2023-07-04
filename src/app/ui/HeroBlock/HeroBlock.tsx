@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 import styles from "./HeroBlock.module.scss";
-import { HeroForm } from '../HeroForm';
+import { HeroForm } from './HeroForm';
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
 export interface Props {

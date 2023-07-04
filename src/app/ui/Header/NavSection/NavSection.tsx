@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import styles from './NavSection.module.scss';
-import { Close } from '../shared/Icon';
+import { Close } from '../../shared/Icon';
 
 export interface Props {
   title: string;
