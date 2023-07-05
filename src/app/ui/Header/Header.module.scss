@@ -6,6 +6,7 @@
   z-index: 15;
   left: 0;
   top: 0;
+  right: 0;
 
   transition: all 0.5s ease;
   transform: translateY(-100%);
@@ -13,17 +14,9 @@
   @include breakpoint(mobile-m) {
     padding: 0 0 20px;
   }
-}
 
-.fixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translateY(0);
-}
-
-.darkened {
-  &:after {
+  &::after {
+    opacity: 0;
     content: "";
     display: block;
     left: 0;
@@ -32,8 +25,20 @@
     position: absolute;
     width: 100%;
 
+    transition: 0.3s;
     z-index: -1;
+    transition-delay: 0.33s;
     background: #162249;
+  }
+}
+
+.fixed {
+  transform: translateY(0%);
+}
+
+.root.darkened {
+  &::after {
+    opacity: 1;
   }
 }
 
