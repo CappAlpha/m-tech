@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import styles from './VacanciesCard.module.scss';
 
-export interface Props {
+interface Props {
   title: string;
   work: string;
   link: string;

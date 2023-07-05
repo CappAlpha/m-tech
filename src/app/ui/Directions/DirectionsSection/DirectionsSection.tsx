@@ -1,15 +1,15 @@
 import { FC } from 'react';
 
-import styles from './OurDirSection.module.scss';
+import styles from './DirectionsSection.module.scss';
 
-export interface Props {
+interface Props {
   title: string;
   description: string;
 }
 
-export const OurDirSection: FC<Props> = ({ title, description }) => {
+export const DirectionsSection: FC<Props> = ({ title, description }) => {
   return (
-    <div className={styles.ourDirSection}>
+    <div className={styles.root}>
       <div className={styles.title}>{title}</div>
       <div className={styles.description}>{description}</div>
     </div>

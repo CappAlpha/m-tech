@@ -13,16 +13,21 @@ import { TabList, Tab, TabPanel, Tabs } from 'react-tabs';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
-export interface Props {
+interface form {
   title: string;
-  onClickItem: () => void;
-  opened: boolean;
+  textBtn: string;
   text: string;
   link: string;
   linkText: string;
 }
 
-export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onClickItem }) => {
+interface Props {
+  form: form;
+  opened: boolean;
+  onClickItem: () => void;
+}
+
+export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   const [formState, setFormState] = useState<FormState>('init');
 
   const {
@@ -66,8 +71,9 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
       <div className={cn(styles.bgD, opened && styles.bg)} onClick={() => onClickItem()}></div>
       <div className={cn(styles.formRoot, opened && styles.opened)}>
         {formState === 'init' && (
+
           <div className={styles.formWrap}>
-            <h2 className={styles.title}>{title}</h2>
+            <h2 className={styles.title}>{form.title}</h2>
 
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
@@ -104,12 +110,12 @@ export const HeroForm: FC<Props> = ({ title, opened, text, link, linkText, onCli
                 </Tabs>
               </div>
 
-              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>Отправить</button>
+              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>{form.textBtn}</button>
             </form>
 
             <div className={styles.policy}>
-              {text}
-              <a href={link} className={styles.link}>{linkText}</a>
+              {form.text}
+              <a href={form.link} className={styles.link}>{form.linkText}</a>
             </div>
 
             <div className={styles.closeBtn} onClick={() => onClickItem()}>

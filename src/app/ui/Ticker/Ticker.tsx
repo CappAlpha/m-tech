@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import { Tag } from './Tag';
+
 import styles from './Ticker.module.scss';
+
+import { Tag } from './Tag';
 import { InfiniteLoopSlider } from './InfiniteLoopSlider';
 
 const DURATION = 25000;

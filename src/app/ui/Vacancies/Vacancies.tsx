@@ -1,16 +1,22 @@
 import { FC } from 'react';
 
-import styles from './VacanciesBlock.module.scss';
+import styles from './Vacancies.module.scss';
 import { VacanciesCard } from './VacanciesCard';
 
-export interface Props {
-  vacanciesCards: Array<({ title: string, work: string, link: string })>;
+interface VacanciesCards {
+  title: string;
+  work: string;
+  link: string
+}
+
+interface Props {
+  vacanciesCards: VacanciesCards[];
   title: string;
   titleAll: string;
   linkAll: string;
 }
 
-export const VacanciesBlock: FC<Props> = ({ vacanciesCards, title, titleAll, linkAll }) => {
+export const Vacancies: FC<Props> = ({ vacanciesCards, title, titleAll, linkAll }) => {
   return (
     <div className={styles.root} id='vacancies'>
       <div className={styles.title}>{title}</div>

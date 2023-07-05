@@ -1,25 +1,20 @@
 import { FC } from 'react';
 
-import styles from './IndustrySolutionBlock.module.scss';
+import styles from './Solutions.module.scss';
 import { MangazeyaDevelopment, MangazeyaGaz, MangazeyaMining, MangazeyaAgro } from '../shared/Icon';
 
-export interface Props {
+interface Solutions {
+  img: string;
   title: string;
-  imgFirst?: string;
-  imgSecond?: string;
-  imgThird?: string;
-  imgFourth?: string;
-  titleFirst: string;
-  linkFirst: string;
-  titleSecond: string;
-  linkSecond: string;
-  titleThird: string;
-  linkThird: string;
-  titleFourth: string;
-  linkFourth: string;
+  link: string;
 }
 
-export const IndustrySolutionBlock: FC<Props> = ({ title, imgFirst, imgSecond, imgThird, imgFourth, titleFirst, linkFirst, titleSecond, linkSecond, titleThird, linkThird, titleFourth, linkFourth }) => {
+interface Props {
+  title: string;
+  solutions: Solutions[];
+}
+
+export const Solutions: FC<Props> = ({ title, solutions }) => {
   return (
     <div className={styles.root} id='solutions'>
       <div className={styles.title}>{title}</div>
@@ -27,20 +22,20 @@ export const IndustrySolutionBlock: FC<Props> = ({ title, imgFirst, imgSecond, i
       <div className={styles.wrap}>
         <div className={styles.block}>
           <MangazeyaDevelopment className={styles.logo} />
-          <img className={styles.img} src={imgFirst} />
+          <img className={styles.img} src={solutions[0].img} />
           <div className={styles.buttonWrap}>
             <button className={styles.button}>
-              <a href={linkFirst} className={styles.presentation}>{titleFirst}</a>
+              <a href={solutions[0].link} className={styles.presentation}>{solutions[0].title}</a>
             </button>
           </div>
         </div>
 
         <div className={styles.block}>
           <MangazeyaGaz className={styles.logo} />
-          <img className={styles.img} src={imgSecond} />
+          <img className={styles.img} src={solutions[1].img} />
           <div className={styles.buttonWrap}>
             <button className={styles.button}>
-              <a href={linkSecond} className={styles.presentation}>{titleSecond}
+              <a href={solutions[1].link} className={styles.presentation}>{solutions[1].title}
               </a>
             </button>
           </div>
@@ -48,20 +43,20 @@ export const IndustrySolutionBlock: FC<Props> = ({ title, imgFirst, imgSecond, i
 
         <div className={styles.block}>
           <MangazeyaMining className={styles.logo} />
-          <img className={styles.img} src={imgThird} />
+          <img className={styles.img} src={solutions[2].img} />
           <div className={styles.buttonWrap}>
             <button className={styles.button}>
-              <a href={linkThird} className={styles.presentation}>{titleThird}</a>
+              <a href={solutions[2].link} className={styles.presentation}>{solutions[2].title}</a>
             </button>
           </div>
         </div>
 
         <div className={styles.block}>
           <MangazeyaAgro className={styles.logo} />
-          <img className={styles.img} src={imgFourth} />
+          <img className={styles.img} src={solutions[3].img} />
           <div className={styles.buttonWrap}>
             <button className={styles.button}>
-              <a href={linkFourth} className={styles.presentation}>{titleFourth}
+              <a href={solutions[3].link} className={styles.presentation}>{solutions[3].title}
               </a>
             </button>
           </div>

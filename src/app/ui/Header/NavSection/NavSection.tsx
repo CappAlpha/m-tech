@@ -3,7 +3,7 @@ import { FC } from 'react';
 import styles from './NavSection.module.scss';
 import { Close } from '../../shared/Icon';
 
-export interface Props {
+interface Props {
   title: string;
   name: string;
   onClickItem: (name: string) => void;

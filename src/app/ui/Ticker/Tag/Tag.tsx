@@ -5,4 +5,4 @@ interface Props {
   text: string;
 }
 
-export const Tag: FC<Props> = ({ text }) => <div className={styles.tag}>{text}</div>;
+export const Tag: FC<Props> = ({ text }) => <div className={styles.root}>{text}</div>;

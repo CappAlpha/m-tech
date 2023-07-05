@@ -1,20 +1,29 @@
 import { FC, useState } from "react";
 
-import styles from "./HeroBlock.module.scss";
+import styles from "./Hero.module.scss";
 import { HeroForm } from './HeroForm';
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
-export interface Props {
+interface form {
+  title: string;
+  textBtn: string;
+  text: string;
+  link: string;
+  linkText: string;
+}
+
+interface Hero {
   title: string;
   description: string;
   button: string;
-  formTitle: string;
-  formPolicy: string;
-  formPolicyLink: string;
-  formLinkText: string;
 }
 
-export const HeroBlock: FC<Props> = ({ title, button, description, formTitle, formPolicy, formPolicyLink, formLinkText }) => {
+interface Props {
+  hero: Hero;
+  form: form,
+}
+
+export const Hero: FC<Props> = ({ hero, form }) => {
   const [opened, setOpened] = useState(false);
 
   const closeForm = () => setOpened(false);
@@ -29,14 +38,14 @@ export const HeroBlock: FC<Props> = ({ title, button, description, formTitle, fo
         </div>
 
         <div className={styles.wrap}>
-          <div className={styles.title}>{title}</div>
+          <div className={styles.title}>{hero.title}</div>
           <div className={styles.bottomBlock}>
-            <button className={styles.button} onClick={() => setOpened(true)}>{button}</button>
-            <div className={styles.description}>{description}</div>
+            <button className={styles.button} onClick={() => setOpened(true)}>{hero.button}</button>
+            <div className={styles.description}>{hero.description}</div>
           </div>
         </div>
       </div>
-      <HeroForm title={formTitle} text={formPolicy} link={formPolicyLink} linkText={formLinkText} opened={opened} onClickItem={closeForm} />
+      <HeroForm form={form} opened={opened} onClickItem={closeForm} />
     </>
   );
 };

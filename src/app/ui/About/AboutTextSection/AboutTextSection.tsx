@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import styles from './AboutTextSection.module.scss';
 
-export interface Props {
+interface Props {
   subtitle: string;
   count: number;
   description: string;

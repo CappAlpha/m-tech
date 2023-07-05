@@ -5,11 +5,18 @@ import { Images } from './Images';
 import { Info } from './Info'
 
 interface Projects {
+  img: string;
   title: string;
-  projects: { img: string, title: string, description: string, id: number }[]
+  description: string;
+  id: number;
 }
 
-export const Projects: FC<Projects> = ({ title, projects }) => {
+interface Props {
+  title: string;
+  projects: Projects[];
+}
+
+export const Projects: FC<Props> = ({ title, projects }) => {
 
   const [setImage, setsetImage] = useState(projects[0]);
 

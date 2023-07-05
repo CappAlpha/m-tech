@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import styles from './InfiniteLoopSlider.module.scss';
 
-export interface Props {
+interface Props {
   children: Array<any>;
   duration: number;
 }
@@ -10,7 +10,7 @@ export interface Props {
 export const InfiniteLoopSlider: FC<Props> = ({ children, duration }) => {
   return (
     <div
-      className={styles.loopSlider}
+      className={styles.root}
       style={{
         //@ts-ignore
         '--duration': `${duration}ms`
