@@ -113,6 +113,18 @@ export const projects = [
     description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet. 6',
     id: 5,
   },
+  // {
+  //   img: '/img/projects/proj3.png',
+  //   title: 'Lorem ipsum 7',
+  //   description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet. 6',
+  //   id: 6,
+  // },
+  // {
+  //   img: '/img/projects/proj2.png',
+  //   title: 'Lorem ipsum 8',
+  //   description: 'Et leo duis ut diam quam. Purus in massa tempor nec feugiat nisl pretium fusce. Lobortis feugiat vivamus at augue eget. Sit amet dictum sit amet justo donec enim. Pellentesque habitant morbi tristique senectus et netus etEt malesuada fames ac turpis egestas maecenas. Maecenas volutpat blandit aliquam etiam erat velit. A arcu cursus vitae congue. A diam maecenas sed enim ut. Condimentum mattis pellentesque id nibh tortor id. Elit sed vulputate mi sit amet mauris commodo quis. Urna duis convallis convallis tellus id interdum velit laoreet. 6',
+  //   id: 7,
+  // },
 ]
 
 export const directionsTitle = { title: 'Наши направления' }

@@ -13,8 +13,7 @@ import { Footer } from "@/app/ui/Footer";
 
 import {
   headerTel, navMenu,
-  hero,
-  form,
+  hero, form,
   aboutTitle, aboutTextSection, aboutReviewSection,
   projectsTitle, projects,
   directionsTitle, directionsSection,

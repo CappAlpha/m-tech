@@ -2,6 +2,10 @@
   width: 100%;
   min-height: 100vh;
   padding: 80px 45px;
+
+  @include breakpoint(mobile-m) {
+    padding: 80px 20px;
+  }
 }
 
 .wrap {
@@ -18,4 +22,24 @@
   color: #000;
   font-size: 89px;
   line-height: 82px;
+
+  @include breakpoint(desktop) {
+    max-width: 700px;
+
+    font-size: 72px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 600px;
+
+    font-size: 62px;
+    line-height: 82px;
+  }
+
+  @include breakpoint(mobile-m) {
+    max-width: 400px;
+
+    font-size: 40px;
+    line-height: 46px;
+  }
 }

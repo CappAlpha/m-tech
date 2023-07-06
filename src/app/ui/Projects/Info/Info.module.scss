@@ -17,10 +17,30 @@
   color: #000;
   font-size: 40px;
   line-height: 82px;
+
+  @include breakpoint(tablet) {
+    font-size: 36px;
+  }
+  @include breakpoint(mobile-m) {
+    font-size: 32px;
+  }
 }
 
 .description {
   color: #000;
   font-size: 20px;
   line-height: 42px;
+
+  @include breakpoint(tablet) {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  @include breakpoint(mobile-m) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 14px;
+    line-height: 28px;
+  }
 }

@@ -29,7 +29,10 @@ export const Projects: FC<Props> = ({ title, projects }) => {
       <div className={styles.wrap}>
         <div className={styles.title}>{title}</div>
 
+
         <Images images={projects} onClickImage={onClickImage} />
+
+
         <Info title={setImage.title} description={setImage.description} />
       </div>
     </div>
