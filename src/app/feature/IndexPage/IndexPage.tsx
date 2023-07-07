@@ -9,6 +9,8 @@ import { Directions } from "@/app/ui/Directions";
 import { Solutions } from "@/app/ui/Solutions";
 import { Ticker } from "@/app/ui/Ticker";
 import { Vacancies } from "@/app/ui/Vacancies";
+
+import { Contacts } from "@/app/ui/Contacts";
 import { Footer } from "@/app/ui/Footer";
 
 import {
@@ -20,6 +22,7 @@ import {
   solutionsTitle, solutions,
   tickerArr,
   vacanciesTitle, vacanciesCards, vacanciesAll,
+  contactsTitle,
   footerLeft, footerRight,
 } from "./mock";
 
@@ -34,6 +37,8 @@ export const IndexPage: FC = () => {
       <Solutions title={solutionsTitle.title} solutions={solutions} />
       <Ticker tickerArr={tickerArr} />
       <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
+      {/* <Aware /> */}
+      <Contacts title={contactsTitle.title} form={form} />
       <Footer footerLeft={footerLeft} footerRight={footerRight} />
     </div>
   );

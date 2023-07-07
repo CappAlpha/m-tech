@@ -97,14 +97,14 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                   </div>
 
                   <TabPanel>
-                    <div className={styles.inputTitle}>E-mail*</div>
-                    <input className={styles.input} {...register('email')} />
+                    <label className={styles.inputTitle}>E-mail*</label>
+                    <input type='email' className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </TabPanel>
 
                   <TabPanel>
-                    <div className={styles.inputTitle}>Телефон*</div>
-                    <input className={styles.input} {...register('tel')} />
+                    <label className={styles.inputTitle}>Телефон*</label>
+                    <input type="tel" className={styles.input} {...register('tel')} />
                     {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
                   </TabPanel>
                 </Tabs>
