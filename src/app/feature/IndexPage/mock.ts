@@ -39,6 +39,12 @@ export const hero = {
 
 export const form = {
   title: 'Обсудить задачу',
+  nameTitle: 'Ф.И.О*',
+  connectWith: 'Связаться по',
+  tabFirst: 'почте',
+  tabSecond: 'телефону',
+  emailTitle: 'E-mail*',
+  telTitle: 'Телефон*',
   textBtn: 'Отправить',
   text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
   link: '',
