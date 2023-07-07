@@ -79,23 +79,30 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
         {formState === 'init' && (
 
           <div className={styles.formWrap}>
-            <h2 className={styles.title}>{form.title}</h2>
+            <h2 className={styles.title}>{form.title}
+            </h2>
 
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
 
                 <div className={styles.inputWrap}>
-                  <div className={styles.inputTitle}>{form.nameTitle}</div>
+                  <label className={styles.inputTitle}>
+                    {form.nameTitle}
+                  </label>
+
                   <input className={styles.input} {...register('name')} />
                   {Boolean(errors.name) && <span className={styles.span}>{errors?.name?.message}</span>}
                 </div>
 
                 <Tabs className={styles.inputWrap}>
-                  <div className={styles.formNav}>{form.connectWith}
+                  <div className={styles.formNav}>
+                    {form.connectWith}
+
                     <TabList className={styles.buttons}>
                       <Tab className={cn(styles.sEmail, activeTab === "email" && styles.active)} onClick={() => setTab('email')}>
                         {form.tabFirst}
                       </Tab>
+
                       <Tab className={cn(styles.sTel, activeTab === "phone" && styles.active)} onClick={() => setTab('phone')}>
                         {form.tabSecond}
                       </Tab>
@@ -103,13 +110,19 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                   </div>
 
                   <TabPanel>
-                    <label className={styles.inputTitle}>{form.emailTitle}</label>
+                    <label className={styles.inputTitle}>
+                      {form.emailTitle}
+                    </label>
+
                     <input type='email' className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </TabPanel>
 
                   <TabPanel>
-                    <label className={styles.inputTitle}>{form.telTitle}</label>
+                    <label className={styles.inputTitle}>
+                      {form.telTitle}
+                    </label>
+
                     <input type="tel" className={styles.input} {...register('tel')} />
                     {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
                   </TabPanel>

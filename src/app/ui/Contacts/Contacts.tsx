@@ -12,6 +12,12 @@ export type FormState = 'loading' | 'error' | 'success' | 'init';
 
 interface form {
   title: string;
+  nameTitle: string;
+  connectWith: string;
+  tabFirst: string;
+  tabSecond: string;
+  emailTitle: string;
+  telTitle: string;
   textBtn: string;
   text: string;
   link: string;
@@ -51,27 +57,52 @@ export const Contacts: FC<Props> = ({ title, form }) => {
     <div className={styles.root} id="contacts">
       <div className={styles.title}>{title}</div>
 
+      <div className={styles.description}>
+        Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону
+      </div>
+
+      <div className={styles.tel}>
+        +7 924 XXX XX XX
+      </div>
+
       <div className={styles.formRoot}>
         {formState === 'init' && (
           <div className={styles.formWrap}>
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
+                <div className={styles.contacts}>
+                  Контактные данные
+                </div>
 
                 <div className={styles.inputWraps}>
                   <div className={styles.inputWrap}>
-                    <div className={styles.inputTitle}>Ф.И.О*</div>
+                    <label className={styles.inputTitle}>
+                      {form.nameTitle}
+                    </label>
                     <input className={styles.input} {...register('name')} />
                     {Boolean(errors.name) && <span className={styles.span}>{errors?.name?.message}</span>}
                   </div>
 
                   <div className={styles.inputWrap}>
-                    <label className={styles.inputTitle}>E-mail*</label>
+                    <label className={styles.inputTitle}>
+                      {form.emailTitle}
+                    </label>
                     <input type='email' className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </div>
 
                   <div className={styles.inputWrap}>
-                    <label className={styles.inputTitle}>Телефон*</label>
+                    <label className={styles.inputTitle}>
+                      Компания*
+                    </label>
+                    <input type='text' className={styles.input} {...register('company')} />
+                    {Boolean(errors.company) && <span className={styles.span}>{errors?.company?.message}</span>}
+                  </div>
+
+                  <div className={styles.inputWrap}>
+                    <label className={styles.inputTitle}>
+                      {form.telTitle}
+                    </label>
                     <input type="tel" className={styles.input} {...register('tel')} />
                     {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
                   </div>
