@@ -117,13 +117,12 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
               {form.text}
               <a href={form.link} className={styles.link}>{form.linkText}</a>
             </div>
-
-            <div className={styles.closeBtn} onClick={() => onClickItem()}>
-              <Close className={styles.closeIcon} />
-            </div>
           </div>
         )
         }
+        <div className={styles.closeBtn} onClick={() => onClickItem()}>
+          <Close className={styles.closeIcon} />
+        </div>
       </div >
     </div >
   );

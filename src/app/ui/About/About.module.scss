@@ -181,13 +181,9 @@
 
 .titleA {
   @include breakpoint(tablet) {
-    max-width: 200px;
+    max-width: 400px;
   }
   @include breakpoint(mobile-m) {
     max-width: 400px;
-  }
-
-  @include breakpoint(mobile) {
-    max-width: 160px;
   }
 }

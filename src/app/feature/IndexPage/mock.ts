@@ -150,23 +150,22 @@ export const solutionsTitle = {
 
 export const solutions = [
   {
-    icon: 'MangazeyaGaz',
-    img: '/img/solutions/agro.jpg',
+    video: '/video/solutions/mangazeya-development.mp4',
     title: 'Скачать презентацию',
     link: '',
   },
   {
-    img: '/img/solutions/agro.jpg',
+    video: '/video/solutions/mangazeya-gaz.mp4',
     title: 'Скачать презентацию',
     link: '',
   },
   {
-    img: '/img/solutions/agro.jpg',
+    video: '/video/solutions/mangazeya-technology.mp4',
     title: 'Скачать презентацию',
     link: '',
   },
   {
-    img: '/img/solutions/agro.jpg',
+    video: '/video/solutions/mangazeya-agro.mp4',
     title: 'Скачать презентацию',
     link: '',
   },

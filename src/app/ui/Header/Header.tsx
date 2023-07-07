@@ -5,9 +5,9 @@ import styles from "./Header.module.scss";
 import {
   Logo,
   Burger,
+  Close,
 } from '@/app/ui/shared/Icon';
 
-import { NavSection } from './NavSection';
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 120;
@@ -68,14 +68,23 @@ export const Header: FC<Props> = ({ tel, header }) => {
         </div>
       </div>
 
-      <div className={cn(styles.navWrap, opened && styles.opened)}>
-        {header.map(({ title, name }) => (
-          <NavSection
-            title={title}
-            name={name}
-            onClickItem={onClickEvents}
-          />
-        ))}
+      <div className={cn(styles.navRoot, opened && styles.opened)}>
+        <div className={styles.navScroll}>
+          <div className={styles.navWrap}>
+            {header.map(({ title, name }) => (
+              <div className={styles.navItem}>
+                <a className={styles.navTitle} onClick={() => onClickEvents(name)}>
+                  {title}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.closeBtn}
+          //@ts-ignore
+          onClick={() => setOpened(false)}>
+          <Close className={styles.closeIcon} />
+        </div>
       </div>
     </header>
   );

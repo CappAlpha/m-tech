@@ -33,8 +33,7 @@
 
   width: 100%;
   max-width: 732px;
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100%;
   z-index: 20;
   pointer-events: none;
 
@@ -60,29 +59,33 @@
 .formWrap {
   display: flex;
   flex-direction: column;
+
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .opened {
   transform: translateX(0%);
-  z-index: 20;
 
   pointer-events: auto;
 }
 
 .closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+
   position: absolute;
   right: 0;
   top: 0;
 
-  padding: 13px;
   cursor: pointer;
 }
 
 .closeIcon {
   fill: #335899;
-
-  width: 100%;
-  height: 100%;
 
   transition: all 0.2s linear;
 
@@ -273,6 +276,7 @@
 
 .policy {
   margin-left: 50px;
+  padding-bottom: 20px;
   max-width: 600px;
 
   color: #162249;
