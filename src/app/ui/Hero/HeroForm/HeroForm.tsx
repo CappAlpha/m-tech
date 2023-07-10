@@ -39,12 +39,16 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isDirty },
   } = useForm<FormI>({
     // @ts-ignore
     resolver: yupResolver(schema),
     mode: 'onSubmit',
     reValidateMode: 'onChange',
+    shouldUnregister: true,
+    defaultValues: {
+      tel: '+7',
+    }
   });
 
   const submit: SubmitHandler<FormI> = (data) => {
@@ -65,12 +69,17 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
     setActiveTab(tabs);
 
     // if (tabs === 'email') {
-    //   isValidEmail = false;
+    //   isValid = true;
+    // }
+    // if (tabs === 'phone') {
+    //   isValid = true;
     // }
     // else {
-    //   isValidPhone = true;
+    //   isValid = false;
     // }
   }
+
+
 
   return (
     <div className={styles.root}>
@@ -129,7 +138,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                 </Tabs>
               </div>
 
-              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>{form.textBtn}</button>
+              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isDirty || !isValid}> {form.textBtn}</button>
             </form>
 
             <div className={styles.policy}>

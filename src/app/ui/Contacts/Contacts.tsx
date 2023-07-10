@@ -79,6 +79,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                     <label className={styles.inputTitle}>
                       {form.nameTitle}
                     </label>
+
                     <input className={styles.input} {...register('name')} />
                     {Boolean(errors.name) && <span className={styles.span}>{errors?.name?.message}</span>}
                   </div>
@@ -87,6 +88,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                     <label className={styles.inputTitle}>
                       {form.emailTitle}
                     </label>
+
                     <input type='email' className={styles.input} {...register('email')} />
                     {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
                   </div>
@@ -95,6 +97,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                     <label className={styles.inputTitle}>
                       Компания*
                     </label>
+
                     <input type='text' className={styles.input} {...register('company')} />
                     {Boolean(errors.company) && <span className={styles.span}>{errors?.company?.message}</span>}
                   </div>
@@ -103,6 +106,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                     <label className={styles.inputTitle}>
                       {form.telTitle}
                     </label>
+
                     <input type="tel" className={styles.input} {...register('tel')} />
                     {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
                   </div>

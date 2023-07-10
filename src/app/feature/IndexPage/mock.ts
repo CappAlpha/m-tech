@@ -228,6 +228,8 @@ export const vacanciesAll = {
 
 export const contactsTitle = { title: 'Обсудить задачу' }
 
+export const awareTitle = { title: 'Будь в курсе' }
+
 export const footerLeft = {
   title: 'Контакты IBS',
   company: 'ООО «ИБС Экспертиза»',
