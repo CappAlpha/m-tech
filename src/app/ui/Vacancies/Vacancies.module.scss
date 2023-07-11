@@ -38,10 +38,12 @@
   column-gap: 40px;
   row-gap: 40px;
 
+  @include breakpoint(desktop) {
+    column-gap: 25px;
+  }
   @include breakpoint(mobile-m) {
     margin-top: 45px;
   }
-
   @include breakpoint(mobile) {
     margin-top: 40px;
   }
@@ -65,8 +67,19 @@
   color: #fff;
   font-size: 35px;
 
+  @include breakpoint(tablet) {
+    max-width: 340px;
+    height: 180px;
+    font-size: 32px;
+  }
+  @include breakpoint(mobile-m) {
+    max-width: 457px;
+    height: 207px;
+    font-size: 35px;
+  }
   @include breakpoint(mobile) {
     font-size: 26px;
+    height: 180px;
   }
 }
 

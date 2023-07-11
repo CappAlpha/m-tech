@@ -12,6 +12,18 @@
 
   border-radius: 28px;
   background-color: #162249;
+
+  @include breakpoint(tablet) {
+    max-width: 340px;
+    height: 180px;
+  }
+  @include breakpoint(mobile-m) {
+    max-width: 457px;
+    height: 207px;
+  }
+  @include breakpoint(mobile) {
+    height: 180px;
+  }
 }
 
 .root:hover {
@@ -29,6 +41,12 @@
   color: #fff;
   font-size: 40px;
 
+  @include breakpoint(tablet) {
+    font-size: 32px;
+  }
+  @include breakpoint(mobile-m) {
+    font-size: 38px;
+  }
   @include breakpoint(mobile) {
     font-size: 32px;
   }

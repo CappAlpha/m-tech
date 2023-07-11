@@ -1,10 +1,11 @@
 import { FC, useState } from 'react';
 
 import styles from './Images.module.scss';
-import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { previewData } from 'next/dist/client/components/headers';
 
 interface Images {
   images: { img: string, title: string, id: number }[]
@@ -13,9 +14,6 @@ interface Images {
 
 
 export const Images: FC<Images> = ({ images, onClickImage }) => {
-
-  // const swiper = useSwiper();
-
   const [appState, changeState] = useState({
     activeObject: images[0],
     objects: images,
@@ -37,8 +35,8 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
     <div className={styles.root}>
       <Swiper breakpoints={{
         320: {
-          slidesPerView: 1,
-          spaceBetween: 20
+          slidesPerView: 1.5,
+          spaceBetween: 20,
         },
         600: {
           slidesPerView: 2,
@@ -71,10 +69,6 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
             </div>
           </SwiperSlide>
         ))}
-        {/* <div className={styles.btns}>
-          <div className={styles.btn} onClick={() => swiper.slidePrev()}></div>
-          <div className={styles.btn} onClick={() => swiper.slideNext()}></div>
-        </div> */}
       </Swiper>
     </div >
   )

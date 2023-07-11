@@ -5,6 +5,7 @@ export interface Form {
   email: string;
   company: string;
   phone: string;
+  text: string;
 }
 
 export const schema: yup.Schema<Form> = yup.object().shape({
@@ -12,4 +13,5 @@ export const schema: yup.Schema<Form> = yup.object().shape({
   email: yup.string().required('Заполните поле'),
   company: yup.string().required('Заполните поле'),
   phone: yup.string().required('Заполните поле'),
+  text: yup.string().length(1500),
 });

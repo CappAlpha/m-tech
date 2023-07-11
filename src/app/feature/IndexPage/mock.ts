@@ -226,9 +226,25 @@ export const vacanciesAll = {
   link: 'https://hh.ru',
 }
 
+export const awareTitle = { title: 'Будь в курсе' }
+
 export const contactsTitle = { title: 'Обсудить задачу' }
 
-export const awareTitle = { title: 'Будь в курсе' }
+export const formContacts = {
+  description: 'Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону',
+  phone: '+7 924 XXX XX XX',
+  contactsTitle: 'Контактные данные',
+  firstTitle: 'Ф.И.О*',
+  secondTitle: 'E-mail*',
+  thirdTitle: 'Компания*',
+  fourthTitle: 'Телефон*',
+  textTitle: 'Несколько слов о проекте',
+  descriptionTitle: 'Описание',
+  textBtn: 'Отправить',
+  text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
+  link: '',
+  linkText: ' c политикой об обработке персональных данных',
+}
 
 export const awareContent = [
   {
