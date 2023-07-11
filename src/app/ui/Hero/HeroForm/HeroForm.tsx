@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form/dist/types';
-
+import InputMask from 'react-input-mask';
 
 import { Form as FormI, schema } from './schema';
 
@@ -39,17 +39,12 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors, isValid },
   } = useForm<FormI>({
     // @ts-ignore
     resolver: yupResolver(schema),
     mode: 'onSubmit',
     reValidateMode: 'onChange',
-    shouldUnregister: true,
-    defaultValues: {
-      phone: '+7',
-    }
   });
 
   const submit: SubmitHandler<FormI> = (data) => {
@@ -67,13 +62,6 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   const setTab = (tabs: 'email' | 'phone') => {
     setActiveTab(tabs);
   }
-
-  // const name = watch('name');
-  // const email = watch('email');
-  // const phone = watch('phone');
-
-  // const isValidEm = email;
-  // const isValidTel = phone;
 
   return (
     <div className={styles.root}>
@@ -126,7 +114,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                       {form.phoneTitle}
                     </label>
 
-                    <input type="phone" className={styles.input} {...register('phone')} />
+                    <InputMask className={styles.input} {...register('phone')} mask="+7(999)999-99-99" maskChar=" " />
                     {Boolean(errors.phone) && <span className={styles.span}>{errors?.phone?.message}</span>}
                   </TabPanel>
                 </Tabs>

@@ -1,10 +1,11 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 45px;
+  padding: 0 45px;
+  margin-bottom: 80px;
 
   @include breakpoint(mobile) {
-    padding: 80px 20px;
+    padding: 0 20px;
   }
 }
 
@@ -39,7 +40,7 @@
 }
 
 .description,
-.tel {
+.phone {
   color: #000;
   font-size: 30px;
   font-style: normal;
@@ -89,6 +90,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 71px;
+
+  @include breakpoint(desktop) {
+    margin-top: 0;
+  }
 }
 
 .inputWrap {
@@ -100,6 +105,14 @@
 
   &:nth-child(3),
   &:nth-child(4) {
+    margin-top: 90px;
+  }
+
+  @include breakpoint(desktop-big) {
+    max-width: 600px;
+  }
+  @include breakpoint(desktop) {
+    max-width: 500px;
     margin-top: 90px;
   }
 }
@@ -141,7 +154,7 @@
 }
 
 .buttonDisabled {
-  margin: 140px 0 38px 50px;
+  margin: 140px 0 50px;
   padding: 15px 110px 20px;
   height: 83px;
   max-width: 420px;
@@ -158,15 +171,15 @@
   opacity: 0.8;
 
   @include breakpoint(mobile-m) {
-    padding: 15px 50px 20px;
-    height: 83px;
-    max-width: 340px;
-  }
-
-  @include breakpoint(mobile) {
+    font-size: 28px;
     margin: 60px auto 30px;
     padding: 15px 60px 20px;
-    height: 83px;
+    height: 75px;
+    max-width: 350px;
+  }
+  @include breakpoint(mobile) {
+    padding: 15px 60px 20px;
+    height: 70px;
     max-width: 300px;
   }
 }
@@ -181,7 +194,6 @@
 }
 
 .policy {
-  margin-left: 50px;
   max-width: 600px;
 
   color: #162249;
@@ -197,7 +209,7 @@
   @include breakpoint(mobile) {
     max-width: 300px;
     font-size: 14px;
-    margin: 0 auto;
+    //margin: 0 auto;
   }
 }
 
@@ -205,8 +217,8 @@
   color: #335899;
 
   &:hover {
-    transition: color 0.2s linear;
-    color: #162249;
+    transition: border-bottom 0.1s linear;
+    border-bottom: 2px solid #335899;
   }
 
   &:active {

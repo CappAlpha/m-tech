@@ -168,7 +168,8 @@
   transition: all 0.2s linear;
 
   &:hover {
-    color: #335899;
+    transition: border-bottom 0.1s linear;
+    border-bottom: 2px solid #335899;
   }
 
   &:active {

@@ -1,7 +1,8 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 45px;
+  padding: 0 45px;
+  margin-bottom: 80px;
 
   @include breakpoint(mobile) {
     padding: 80px 20px;

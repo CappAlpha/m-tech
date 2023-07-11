@@ -24,6 +24,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.45.0",
+    "react-input-mask": "2.0.4",
     "react-redux": "8.0.4",
     "react-tabs": "6.0.1",
     "redux-saga": "1.2.1",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@jambit/eslint-plugin-typed-redux-saga": "0.4.0",
     "@svgr/webpack": "6.5.0",
+    "@types/react-input-mask": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "5.54.1",
     "@typescript-eslint/parser": "5.54.1",
     "babel-plugin-macros": "3.1.0",

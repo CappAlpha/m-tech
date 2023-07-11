@@ -44,7 +44,7 @@ export const form = {
   tabFirst: 'почте',
   tabSecond: 'телефону',
   emailTitle: 'E-mail*',
-  telTitle: 'Телефон*',
+  phoneTitle: 'Телефон*',
   textBtn: 'Отправить',
   text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
   link: '',

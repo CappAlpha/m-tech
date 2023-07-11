@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form/dist/types';
+import InputMask from 'react-input-mask';
 
 import { Form as FormI, schema } from './schema';
 
@@ -17,7 +18,7 @@ interface form {
   tabFirst: string;
   tabSecond: string;
   emailTitle: string;
-  telTitle: string;
+  phoneTitle: string;
   textBtn: string;
   text: string;
   link: string;
@@ -61,7 +62,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
         Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону
       </div>
 
-      <div className={styles.tel}>
+      <div className={styles.phone}>
         +7 924 XXX XX XX
       </div>
 
@@ -104,11 +105,11 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
-                      {form.telTitle}
+                      {form.phoneTitle}
                     </label>
 
-                    <input type="tel" className={styles.input} {...register('tel')} />
-                    {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
+                    <InputMask className={styles.input} {...register('phone')} mask="+7(999)999-99-99" maskChar=" " />
+                    {Boolean(errors.phone) && <span className={styles.span}>{errors?.phone?.message}</span>}
                   </div>
                 </div>
 

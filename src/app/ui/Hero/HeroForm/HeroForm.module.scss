@@ -3,6 +3,8 @@
 }
 
 .bgD {
+  transition: opacity 0.3s ease;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -251,16 +253,20 @@
   font-weight: 400;
   opacity: 0.8;
 
-  @include breakpoint(mobile-m) {
-    padding: 15px 50px 20px;
-    height: 83px;
-    max-width: 340px;
-  }
-
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
+    font-size: 32px;
     margin: 60px auto 30px;
-    padding: 15px 60px 20px;
-    height: 83px;
+  }
+  @include breakpoint(mobile-m) {
+    margin: 60px auto 30px;
+    padding: 15px 80px 20px;
+    height: 75px;
+    max-width: 380px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 28px;
+    padding: 15px 80px 20px;
+    height: 70px;
     max-width: 300px;
   }
 }
@@ -300,8 +306,8 @@
   color: #335899;
 
   &:hover {
-    transition: color 0.2s linear;
-    color: #162249;
+    transition: border-bottom 0.1s linear;
+    border-bottom: 2px solid #335899;
   }
 
   &:active {

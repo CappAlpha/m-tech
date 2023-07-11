@@ -1,7 +1,7 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 43px 12px;
+  padding: 0 43px 12px;
 }
 
 .title {
@@ -103,6 +103,10 @@
     @include breakpoint(desktop-big) {
       border: none;
     }
+  }
+
+  @include breakpoint(mobile) {
+    max-height: 240px;
   }
 }
 
