@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 import styles from './Images.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,6 +13,8 @@ interface Images {
 
 
 export const Images: FC<Images> = ({ images, onClickImage }) => {
+
+  // const swiper = useSwiper();
 
   const [appState, changeState] = useState({
     activeObject: images[0],
@@ -69,6 +71,10 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
             </div>
           </SwiperSlide>
         ))}
+        {/* <div className={styles.btns}>
+          <div className={styles.btn} onClick={() => swiper.slidePrev()}></div>
+          <div className={styles.btn} onClick={() => swiper.slideNext()}></div>
+        </div> */}
       </Swiper>
     </div >
   )

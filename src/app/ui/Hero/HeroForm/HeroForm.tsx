@@ -20,7 +20,7 @@ interface form {
   tabFirst: string;
   tabSecond: string;
   emailTitle: string;
-  telTitle: string;
+  phoneTitle: string;
   textBtn: string;
   text: string;
   link: string;
@@ -39,7 +39,8 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid, isDirty },
+    watch,
+    formState: { errors, isValid },
   } = useForm<FormI>({
     // @ts-ignore
     resolver: yupResolver(schema),
@@ -47,7 +48,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
     reValidateMode: 'onChange',
     shouldUnregister: true,
     defaultValues: {
-      tel: '+7',
+      phone: '+7',
     }
   });
 
@@ -63,23 +64,16 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
 
   const [activeTab, setActiveTab] = useState<'email' | 'phone'>("email");
 
-  // const [activeBtn, setActiveBtn] = useState<isValidEmail, isValidPhone>(true);
-
   const setTab = (tabs: 'email' | 'phone') => {
     setActiveTab(tabs);
-
-    // if (tabs === 'email') {
-    //   isValid = true;
-    // }
-    // if (tabs === 'phone') {
-    //   isValid = true;
-    // }
-    // else {
-    //   isValid = false;
-    // }
   }
 
+  // const name = watch('name');
+  // const email = watch('email');
+  // const phone = watch('phone');
 
+  // const isValidEm = email;
+  // const isValidTel = phone;
 
   return (
     <div className={styles.root}>
@@ -112,7 +106,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                         {form.tabFirst}
                       </Tab>
 
-                      <Tab className={cn(styles.sTel, activeTab === "phone" && styles.active)} onClick={() => setTab('phone')}>
+                      <Tab className={cn(styles.sPhone, activeTab === "phone" && styles.active)} onClick={() => setTab('phone')}>
                         {form.tabSecond}
                       </Tab>
                     </TabList>
@@ -129,16 +123,16 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
 
                   <TabPanel>
                     <label className={styles.inputTitle}>
-                      {form.telTitle}
+                      {form.phoneTitle}
                     </label>
 
-                    <input type="tel" className={styles.input} {...register('tel')} />
-                    {Boolean(errors.tel) && <span className={styles.span}>{errors?.tel?.message}</span>}
+                    <input type="phone" className={styles.input} {...register('phone')} />
+                    {Boolean(errors.phone) && <span className={styles.span}>{errors?.phone?.message}</span>}
                   </TabPanel>
                 </Tabs>
               </div>
 
-              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isDirty || !isValid}> {form.textBtn}</button>
+              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}> {form.textBtn}</button>
             </form>
 
             <div className={styles.policy}>

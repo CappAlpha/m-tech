@@ -23,7 +23,7 @@ import {
   tickerArr,
   vacanciesTitle, vacanciesCards, vacanciesAll,
   contactsTitle,
-  awareTitle,
+  awareTitle, awareContent,
   footerLeft, footerRight,
 } from "./mock";
 
@@ -38,7 +38,7 @@ export const IndexPage: FC = () => {
       <Solutions title={solutionsTitle.title} solutions={solutions} />
       <Ticker tickerArr={tickerArr} />
       <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
-      <Aware title={awareTitle.title} />
+      <Aware title={awareTitle.title} aware={awareContent} />
       <Contacts title={contactsTitle.title} form={form} />
       <Footer footerLeft={footerLeft} footerRight={footerRight} />
     </div>

@@ -37,3 +37,48 @@
     line-height: 46px;
   }
 }
+
+.awareWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+.awareContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  // margin-left: 30px;
+
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.imgWrap {
+  width: 100%;
+  height: 100%;
+  border: 0px none #fff;
+  border-radius: 28px;
+  background: #162249;
+}
+
+.img {
+  border: 0px none #fff;
+  border-radius: 28px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+}
