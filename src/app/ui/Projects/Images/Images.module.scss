@@ -78,7 +78,6 @@
     background-repeat: no-repeat;
     width: 44px;
     height: 16px;
-
     &::after {
       font-size: 0;
     }
@@ -96,5 +95,9 @@
       position: absolute;
       font-size: 0;
     }
+  }
+
+  :global(.swiper-button-disabled) {
+    display: none;
   }
 }

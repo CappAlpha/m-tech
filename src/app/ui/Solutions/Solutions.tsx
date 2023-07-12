@@ -41,7 +41,9 @@ export const Solutions: FC<Props> = ({ title, solutions }) => {
             </button>
           </div>
         </div>
+      </div>
 
+      <div className={styles.wrap}>
         <div className={styles.block}>
           <MangazeyaMining className={styles.logo} />
           <video className={styles.video} src={solutions[2].video} preload="auto" muted loop autoPlay />

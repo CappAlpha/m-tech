@@ -5,6 +5,21 @@
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  a,
+  Link {
+    margin: 0 5px;
+    color: #335899;
+
+    &:hover {
+      transition: border-bottom 0.1s linear;
+      border-bottom: 2px solid #335899;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 
 .textWrap {

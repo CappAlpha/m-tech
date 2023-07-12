@@ -1,6 +1,5 @@
 .root {
   width: 100%;
-  min-height: 100vh;
   padding: 0 45px;
   margin-bottom: 80px;
 
@@ -96,7 +95,6 @@
     background-repeat: no-repeat;
     width: 44px;
     height: 16px;
-    z-index: 20;
 
     &::after {
       font-size: 0;
@@ -114,5 +112,8 @@
       position: absolute;
       font-size: 0;
     }
+  }
+  :global(.swiper-button-disabled) {
+    display: none;
   }
 }

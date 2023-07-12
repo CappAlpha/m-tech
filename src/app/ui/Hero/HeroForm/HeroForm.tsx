@@ -53,7 +53,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
       return;
     }
     setFormState('loading');
-    // console.log(data)
+    console.log(data)
   };
 
   const [activeTab, setActiveTab] = useState<'email' | 'phone'>("email");
