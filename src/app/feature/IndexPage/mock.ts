@@ -270,6 +270,7 @@ export const formContacts = {
   descriptionTitle: 'Описание',
   uploadText: 'Перетащите или',
   uploadButton: 'выберите файл',
+  uploadSuccess: 'Файл успешно загружен',
   textBtn: 'Отправить',
   text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
   link: '',

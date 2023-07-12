@@ -216,6 +216,7 @@
   display: flex;
   flex-direction: column;
 
+  transition: all 0.5s ease;
   width: 100%;
 }
 
@@ -225,6 +226,7 @@
   align-items: center;
   width: 100%;
   height: 212px;
+  opacity: 1;
 
   border: 3px dashed #162249;
 
@@ -235,6 +237,53 @@
   @include breakpoint(mobile) {
     height: 100px;
   }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.fileWrapUpload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 212px;
+
+  border: 3px solid #162249;
+
+  @include breakpoint(mobile-m) {
+    font-size: 24px;
+    height: 150px;
+  }
+  @include breakpoint(mobile) {
+    height: 100px;
+  }
+
+  .fileTextUpload {
+    display: block;
+
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+
+    @include breakpoint(mobile-m) {
+      font-size: 24px;
+    }
+    @include breakpoint(mobile) {
+      font-size: 16px;
+    }
+  }
+
+  .fileText,
+  .fileOpen {
+    display: none;
+    position: absolute;
+  }
+}
+
+.fileTextUpload {
+  display: none;
 }
 
 .fileText,

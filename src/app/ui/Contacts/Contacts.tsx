@@ -23,6 +23,7 @@ interface form {
   descriptionTitle: string;
   uploadText: string;
   uploadButton: string;
+  uploadSuccess: string;
   textBtn: string;
   text: string;
   link: string;
@@ -38,6 +39,7 @@ const limit = 1500;
 
 export const Contacts: FC<Props> = ({ title, form }) => {
   const [formState, setFormState] = useState<FormState>('init');
+  const [files, setFiles] = useState(null);
   const [num, setNum] = useState('');
 
   const {
@@ -60,6 +62,15 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
     // console.log(data)
   };
+
+  const handleDragOver = (e: any) => {
+    e.preventDefault();
+  }
+
+  const handleDrop = (e: any) => {
+    e.preventDefault();
+    setFiles(e.dataTransfer.files);
+  }
 
   const handleNumChange = (e: any) => {
     setNum(e.target.value.slice(0, limit));
@@ -147,15 +158,20 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                   </div>
                 </div>
 
-                <div className={styles.fileWrap}>
+                <div className={cn(!files && styles.fileWrap, files && styles.fileWrapUpload)} onDragOver={handleDragOver} onDrop={handleDrop}>
                   <div className={styles.fileText}>
                     {form.uploadText}
                   </div>
+                  <div className={styles.fileTextUpload}>
+                    {form.uploadSuccess}
+                  </div>
+
                   <input id='filesPick' className={styles.file} type='file' multiple {...register('files')} />
-                  <label htmlFor='filesPick' className={styles.fileOpen}>
+                  <label htmlFor='filesPick' className={styles.fileOpen} >
                     {form.uploadButton}
                   </label>
                 </div>
+
 
                 <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>{form.textBtn}</button>
               </div>
