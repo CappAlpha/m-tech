@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import styles from './Solutions.module.scss';
 import { MangazeyaDevelopment, MangazeyaGaz, MangazeyaMining, MangazeyaAgro } from '../shared/Icon';
+import Link from 'next/link';
 
 interface Solutions {
   video: string;
@@ -25,7 +26,7 @@ export const Solutions: FC<Props> = ({ title, solutions }) => {
           <video className={styles.video} src={solutions[0].video} preload="auto" muted loop autoPlay />
           <div className={styles.buttonWrap}>
             <button className={styles.button}>
-              <a href={solutions[0].link} className={styles.presentation}>{solutions[0].title}</a>
+              <Link href={solutions[0].link} className={styles.presentation}>{solutions[0].title}</Link>
             </button>
           </div>
         </div>

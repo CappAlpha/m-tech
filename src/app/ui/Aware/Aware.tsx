@@ -17,6 +17,9 @@ interface Props {
 }
 
 export const Aware: FC<Props> = ({ title, aware }) => {
+
+  const awareRev = aware.flat().reverse();
+
   return (
     <div className={styles.root} id="aware">
       <div className={styles.title}>{title}</div>
@@ -40,14 +43,15 @@ export const Aware: FC<Props> = ({ title, aware }) => {
         },
       }} navigation={true} modules={[Navigation]} className={styles.swiper}>
         <div className={styles.awareWrap}>
-          {aware.map(({ img, description, link }) => (
+          {awareRev.map(({ img, description, link }) => (
             <SwiperSlide>
               <div className={styles.awareContent}>
-                <Link target='blank' href={link}>
+                <Link target='_blank' href={link}>
                   <div className={styles.imgWrap}>
                     <img src={img} className={styles.img} />
                   </div>
-                  <div className={styles.description}>{description}</div>
+                  <div className={styles.description}>{description}
+                  </div>
                 </Link>
               </div>
             </SwiperSlide>

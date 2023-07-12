@@ -11,7 +11,7 @@ interface Props {
 
 export const VacanciesCard: FC<Props> = ({ title, work, link }) => {
   return (
-    <Link target='blank' href={link} className={styles.root}>
+    <Link target='_blank' href={link} className={styles.root}>
       <div className={styles.title}>{title}</div>
       <div className={styles.work}>{work}</div>
     </Link>

@@ -231,7 +231,7 @@ export const awareTitle = { title: 'Будь в курсе' }
 export const awareContent = [
   {
     img: 'https://placehold.co/600x400',
-    description: 'Vel facilisis volutpat est velit egestas dui id ornare.',
+    description: 'Vel facilisis volutpat est velit egestas dui id ornare. First',
     link: '',
   },
   {
@@ -251,7 +251,7 @@ export const awareContent = [
   },
   {
     img: 'https://placehold.co/900x900',
-    description: 'Molestie nunc non blandit massa enim nec dui.',
+    description: 'Molestie nunc non blandit massa enim nec dui. Last',
     link: '',
   },
 ]
@@ -268,6 +268,8 @@ export const formContacts = {
   fourthTitle: 'Телефон*',
   textTitle: 'Несколько слов о проекте',
   descriptionTitle: 'Описание',
+  uploadText: 'Перетащите или',
+  uploadButton: 'выберите файл',
   textBtn: 'Отправить',
   text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
   link: '',

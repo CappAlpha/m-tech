@@ -21,6 +21,8 @@ interface form {
   fourthTitle: string;
   textTitle: string;
   descriptionTitle: string;
+  uploadText: string;
+  uploadButton: string;
   textBtn: string;
   text: string;
   link: string;
@@ -36,6 +38,7 @@ const limit = 12;
 
 export const Contacts: FC<Props> = ({ title, form }) => {
   const [formState, setFormState] = useState<FormState>('init');
+  const [num, setNum] = useState('');
 
   const {
     register,
@@ -58,10 +61,8 @@ export const Contacts: FC<Props> = ({ title, form }) => {
     // console.log(data)
   };
 
-  const [num, setNum] = useState('');
-
-  const handleNumChange = (event: any) => {
-    setNum(event.target.value.slice(0, limit));
+  const handleNumChange = (e: any) => {
+    setNum(e.target.value.slice(0, limit));
   };
 
   return (
@@ -144,9 +145,13 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                 </div>
 
                 <div className={styles.fileWrap}>
-                  <div className={styles.fileText}>Перетащите или</div>
-                  <input id='inputFile' className={styles.file} type='file' multiple />
-                  <label htmlFor="inputFile" className={styles.fileOpen}>выберите файл</label>
+                  <div className={styles.fileText}>
+                    {form.uploadText}
+                  </div>
+                  <input id='filesPick' className={styles.file} type='file' multiple {...register('files')} />
+                  <label htmlFor='filesPick' className={styles.fileOpen}>
+                    {form.uploadButton}
+                  </label>
                 </div>
 
                 <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>{form.textBtn}</button>
