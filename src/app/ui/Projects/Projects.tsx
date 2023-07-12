@@ -17,7 +17,6 @@ interface Props {
 }
 
 export const Projects: FC<Props> = ({ title, projects }) => {
-
   const [setImage, setsetImage] = useState(projects[0]);
 
   const onClickImage = (id: number) => {

@@ -228,6 +228,34 @@ export const vacanciesAll = {
 
 export const awareTitle = { title: 'Будь в курсе' }
 
+export const awareContent = [
+  {
+    img: 'https://placehold.co/600x400',
+    description: 'Vel facilisis volutpat est velit egestas dui id ornare.',
+    link: '',
+  },
+  {
+    img: 'https://placehold.co/900x1200',
+    description: 'Mi tempus imperdiet nulla malesuada pellentesque elit eget. Imperdiet dui accumsan sit amet nulla. Mauris pharetra et ultrices neque ornare aenean euismod. Auctor augue mauris augue neque gravida.',
+    link: '',
+  },
+  {
+    img: 'https://placehold.co/400x900',
+    description: 'Consequat semper viverra nam libero justo laoreet sit amet cursus.',
+    link: '',
+  },
+  {
+    img: 'https://placehold.co/600x400',
+    description: 'Nibh venenatis cras sed felis eget velit aliquet sagittis. Dolor sit amet consectetur adipiscing. Erat nam at lectus urna duis. Eget dolor morbi non arcu risus quis varius quam.',
+    link: '',
+  },
+  {
+    img: 'https://placehold.co/900x900',
+    description: 'Molestie nunc non blandit massa enim nec dui.',
+    link: '',
+  },
+]
+
 export const contactsTitle = { title: 'Обсудить задачу' }
 
 export const formContacts = {
@@ -245,34 +273,6 @@ export const formContacts = {
   link: '',
   linkText: ' c политикой об обработке персональных данных',
 }
-
-export const awareContent = [
-  {
-    img: '',
-    description: 'Vel facilisis volutpat est velit egestas dui id ornare.',
-    id: 0,
-  },
-  {
-    img: '',
-    description: 'Mi tempus imperdiet nulla malesuada pellentesque elit eget. Imperdiet dui accumsan sit amet nulla. Mauris pharetra et ultrices neque ornare aenean euismod. Auctor augue mauris augue neque gravida.',
-    id: 1,
-  },
-  {
-    img: '',
-    description: 'Consequat semper viverra nam libero justo laoreet sit amet cursus.',
-    id: 2,
-  },
-  {
-    img: '',
-    description: 'Nibh venenatis cras sed felis eget velit aliquet sagittis. Dolor sit amet consectetur adipiscing. Erat nam at lectus urna duis. Eget dolor morbi non arcu risus quis varius quam.',
-    id: 3,
-  },
-  {
-    img: '',
-    description: 'Molestie nunc non blandit massa enim nec dui.',
-    id: 4,
-  },
-]
 
 export const footerLeft = {
   title: 'Контакты IBS',

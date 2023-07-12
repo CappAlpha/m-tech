@@ -150,9 +150,9 @@
   transition: all 0.2s linear;
 
   &:hover {
-    color: #335899;
+    transition: text-decoration 0.1s linear;
+    text-decoration: underline;
   }
-
   &:active {
     opacity: 0.6;
   }

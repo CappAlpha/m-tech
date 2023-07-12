@@ -18,7 +18,6 @@ interface Props {
 }
 
 export const Header: FC<Props> = ({ tel, header }) => {
-
   const [opened, setOpened] = useState(false);
   const [fixed, setFixed] = useState(true);
   const [isOnTop, setIsOnTop] = useState(true);

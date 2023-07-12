@@ -10,6 +10,7 @@ import { Form as FormI, schema } from './schema';
 import styles from './HeroForm.module.scss';
 import { Close } from '../../shared/Icon';
 import { TabList, Tab, TabPanel, Tabs } from 'react-tabs';
+import Link from 'next/link';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
@@ -51,9 +52,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
     if (formState === 'loading') {
       return;
     }
-
     setFormState('loading');
-
     // console.log(data)
   };
 
@@ -120,12 +119,16 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
                 </Tabs>
               </div>
 
-              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}> {form.textBtn}</button>
+              <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>
+                {form.textBtn}
+              </button>
             </form>
 
             <div className={styles.policy}>
               {form.text}
-              <a href={form.link} className={styles.link}>{form.linkText}</a>
+              <Link href={form.link} className={styles.link}>
+                {form.linkText}
+              </Link>
             </div>
           </div>
         )

@@ -3,11 +3,12 @@ import { FC } from 'react';
 import styles from './Aware.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import Link from 'next/link';
 
 interface Aware {
   img: string;
   description: string;
-  id: number;
+  link: string;
 }
 
 interface Props {
@@ -22,22 +23,14 @@ export const Aware: FC<Props> = ({ title, aware }) => {
 
       <Swiper breakpoints={{
         320: {
-          slidesPerView: 1,
-          spaceBetween: 20
+          slidesPerView: 2,
+          spaceBetween: 30
         },
         600: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        1024: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 40
         },
         1300: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        },
-        1600: {
           slidesPerView: 4,
           spaceBetween: 30
         },
@@ -47,18 +40,20 @@ export const Aware: FC<Props> = ({ title, aware }) => {
         },
       }} navigation={true} modules={[Navigation]} className={styles.swiper}>
         <div className={styles.awareWrap}>
-          {aware.map(({ img, description, id }) => (
+          {aware.map(({ img, description, link }) => (
             <SwiperSlide>
               <div className={styles.awareContent}>
-                <div className={styles.imgWrap}>
-                  <img src={img} className={styles.img} />
-                </div>
-                <div className={styles.description}>{description}</div>
+                <Link target='blank' href={link}>
+                  <div className={styles.imgWrap}>
+                    <img src={img} className={styles.img} />
+                  </div>
+                  <div className={styles.description}>{description}</div>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
         </div>
-      </Swiper>
-    </div>
+      </Swiper >
+    </div >
   );
 };

@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import styles from './VacanciesCard.module.scss';
+import Link from 'next/link';
 
 interface Props {
   title: string;
@@ -10,9 +11,9 @@ interface Props {
 
 export const VacanciesCard: FC<Props> = ({ title, work, link }) => {
   return (
-    <a href={link} className={styles.root}>
+    <Link target='blank' href={link} className={styles.root}>
       <div className={styles.title}>{title}</div>
       <div className={styles.work}>{work}</div>
-    </a>
+    </Link>
   );
 };

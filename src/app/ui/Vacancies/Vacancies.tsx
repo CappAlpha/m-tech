@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import styles from './Vacancies.module.scss';
 import { VacanciesCard } from './VacanciesCard';
+import Link from 'next/link';
 
 interface VacanciesCards {
   title: string;
@@ -30,7 +31,7 @@ export const Vacancies: FC<Props> = ({ vacanciesCards, title, titleAll, linkAll 
             link={link}
           />
         ))}
-        <a href={linkAll} className={styles.titleAll}>{titleAll}</a>
+        <Link target='blank' href={linkAll} className={styles.titleAll}>{titleAll}</Link>
       </div>
     </div>
   );

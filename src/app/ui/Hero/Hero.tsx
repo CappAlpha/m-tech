@@ -6,6 +6,12 @@ import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
 interface form {
   title: string;
+  nameTitle: string;
+  connectWith: string;
+  tabFirst: string;
+  tabSecond: string;
+  emailTitle: string;
+  phoneTitle: string;
   textBtn: string;
   text: string;
   link: string;
