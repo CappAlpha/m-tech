@@ -118,7 +118,10 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                         {errors?.email?.message}
                       </span>}
                   </div>
+                </div>
 
+
+                <div className={styles.inputWraps}>
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
                       {form.thirdTitle}
@@ -184,6 +187,11 @@ export const Contacts: FC<Props> = ({ title, form }) => {
           </div>
         )
         }
+        <div className={styles.formSend}>
+          <div className={styles.formSendText}>
+            Cпасибо, мы с вами свяжемся.
+          </div>
+        </div>
       </div >
     </div >
   )

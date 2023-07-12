@@ -315,3 +315,29 @@
     opacity: 0.6;
   }
 }
+
+.formSend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.formSendText {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include breakpoint(tablet) {
+    font-size: 28px;
+  }
+
+  @include breakpoint(mobile-m) {
+    font-size: 24px;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 20px;
+  }
+}

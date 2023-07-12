@@ -176,6 +176,10 @@
   }
   @include breakpoint(mobile-m) {
     max-width: 300px;
+    height: 60px;
+  }
+  @include breakpoint(mobile) {
+    height: 50px;
   }
 }
 
@@ -190,6 +194,6 @@
     font-size: 24px;
   }
   @include breakpoint(mobile-m) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
