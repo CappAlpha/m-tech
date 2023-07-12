@@ -34,7 +34,7 @@ export interface Props {
   title: string;
 }
 
-const limit = 12;
+const limit = 1500;
 
 export const Contacts: FC<Props> = ({ title, form }) => {
   const [formState, setFormState] = useState<FormState>('init');
@@ -47,7 +47,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
   } = useForm<FormI>({
     // @ts-ignore
     resolver: yupResolver(schema),
-    mode: 'onSubmit',
+    mode: 'onBlur',
     reValidateMode: 'onChange',
   });
 
@@ -102,7 +102,10 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                     </label>
 
                     <input type='email' className={styles.input} {...register('email')} />
-                    {Boolean(errors.email) && <span className={styles.span}>{errors?.email?.message}</span>}
+                    {Boolean(errors.email) &&
+                      <span className={styles.span}>
+                        {errors?.email?.message}
+                      </span>}
                   </div>
 
                   <div className={styles.inputWrap}>

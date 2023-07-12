@@ -44,7 +44,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
   } = useForm<FormI>({
     // @ts-ignore
     resolver: yupResolver(schema),
-    mode: 'onSubmit',
+    mode: 'onBlur',
     reValidateMode: 'onChange',
   });
 

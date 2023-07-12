@@ -2,8 +2,8 @@ import * as yup from 'yup';
 
 export interface Form {
   name: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
 }
 
 export const schema: yup.Schema<Form> = yup.object().shape({

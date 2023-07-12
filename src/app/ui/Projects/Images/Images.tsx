@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { previewData } from 'next/dist/client/components/headers';
 
 interface Images {
   images: { img: string, title: string, id: number }[]
