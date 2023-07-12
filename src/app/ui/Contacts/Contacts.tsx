@@ -28,6 +28,7 @@ interface form {
   text: string;
   link: string;
   linkText: string;
+  sendText: string;
 }
 
 export interface Props {
@@ -41,6 +42,9 @@ export const Contacts: FC<Props> = ({ title, form }) => {
   const [formState, setFormState] = useState<FormState>('init');
   const [files, setFiles] = useState(null);
   const [num, setNum] = useState('');
+  const [opened, setOpened] = useState(true);
+
+  const closeForm = () => setOpened(false);
 
   const {
     register,
@@ -57,10 +61,8 @@ export const Contacts: FC<Props> = ({ title, form }) => {
     if (formState === 'loading') {
       return;
     }
-
     setFormState('loading');
-
-    // console.log(data)
+    console.log(data)
   };
 
   const handleDragOver = (e: any) => {
@@ -90,7 +92,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
       <div className={styles.formRoot}>
         {formState === 'init' && (
-          <div className={styles.formWrap}>
+          <div className={cn(styles.formWrap, !opened && styles.formWrapClose)}>
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
                 <div className={styles.contacts}>
@@ -176,7 +178,9 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                 </div>
 
 
-                <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>{form.textBtn}</button>
+                <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid} onClick={() => setOpened(false)}>
+                  {form.textBtn}
+                </button>
               </div>
             </form>
 
@@ -187,12 +191,12 @@ export const Contacts: FC<Props> = ({ title, form }) => {
           </div>
         )
         }
-        <div className={styles.formSend}>
+        <div className={cn(styles.formSendBefore, !opened && styles.formSend)}>
           <div className={styles.formSendText}>
-            Cпасибо, мы с вами свяжемся.
+            {form.sendText}
           </div>
         </div>
-      </div >
+      </div>
     </div >
   )
 }

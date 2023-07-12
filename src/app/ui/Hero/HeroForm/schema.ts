@@ -9,5 +9,5 @@ export interface Form {
 export const schema: yup.Schema<Form> = yup.object().shape({
   name: yup.string().required('Заполните поле'),
   email: yup.string().email('Введите корректный адрес почты'),
-  phone: yup.string(),
+  phone: yup.string().default(''),
 });

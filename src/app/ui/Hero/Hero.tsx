@@ -16,6 +16,7 @@ interface form {
   text: string;
   link: string;
   linkText: string;
+  sendText: string;
 }
 
 interface Hero {

@@ -71,6 +71,10 @@
   flex-direction: column;
 }
 
+.formWrapClose {
+  display: none;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -392,12 +396,16 @@
   }
 }
 
+.formSendBefore {
+  display: none;
+  height: 800px;
+  width: 100%;
+}
+
 .formSend {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
-  width: 100%;
 }
 
 .formSendText {

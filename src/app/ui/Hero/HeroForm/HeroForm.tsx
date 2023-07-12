@@ -26,6 +26,7 @@ interface form {
   text: string;
   link: string;
   linkText: string;
+  sendText: string;
 }
 
 interface Props {
@@ -67,9 +68,9 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
       <div className={cn(styles.bgD, opened && styles.bg)} onClick={() => onClickItem()}></div>
       <div className={cn(styles.formRoot, opened && styles.opened)}>
         {formState === 'init' && (
-
           <div className={styles.formWrap}>
-            <h2 className={styles.title}>{form.title}
+            <h2 className={styles.title}>
+              {form.title}
             </h2>
 
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
@@ -135,7 +136,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
         }
         <div className={styles.formSend}>
           <div className={styles.formSendText}>
-            Cпасибо, мы с вами свяжемся.
+            {form.sendText}
           </div>
         </div>
         <div className={styles.closeBtn} onClick={() => onClickItem()}>
