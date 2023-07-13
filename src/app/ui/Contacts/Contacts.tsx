@@ -164,9 +164,9 @@ export const Contacts: FC<Props> = ({ title }) => {
 
             <div className={styles.policy}>
               Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии
-              <a href='' className={styles.link}>
+              <Link href='' target='_blank' className={styles.link}>
                 &nbsp; c политикой об обработке персональных данных
-              </a>
+              </Link>
             </div>
           </div>
         )

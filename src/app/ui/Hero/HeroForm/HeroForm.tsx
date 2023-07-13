@@ -111,7 +111,7 @@ export const HeroForm: FC<Props> = ({ opened, onClickItem }) => {
 
             <div className={styles.policy}>
               Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии
-              <Link href='' className={styles.link}>
+              <Link href='' target='_blank' className={styles.link}>
                 &nbsp; c политикой об обработке персональных данных'
               </Link>
             </div>
