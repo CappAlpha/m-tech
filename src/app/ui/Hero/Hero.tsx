@@ -29,11 +29,12 @@ export const Hero: FC<Props> = ({ hero }) => {
         </div>
 
         <div className={styles.wrap}>
-          <div className={styles.title}>{hero.title}</div>
           <div className={styles.bottomBlock}>
+            <div className={styles.title}>{hero.title}</div>
             <button className={styles.button} onClick={() => setOpened(true)}>{hero.button}</button>
-            <div className={styles.description}>{hero.description}</div>
+            <div className={styles.descriptionMobile}>{hero.description}</div>
           </div>
+          <div className={styles.description}>{hero.description}</div>
         </div>
       </div>
       <HeroForm opened={opened} onClickItem={closeForm} />
