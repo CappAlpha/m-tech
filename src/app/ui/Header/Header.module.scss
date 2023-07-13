@@ -89,9 +89,14 @@
 
     font-size: 20px;
   }
-
   @include breakpoint(mobile) {
     display: none;
+  }
+  &:hover {
+    color: #335899;
+  }
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -148,10 +153,6 @@
 
 .navItem {
   padding-bottom: 80px;
-
-  @include breakpoint(mobile-m) {
-    padding: 30px;
-  }
 }
 
 .navTitle {

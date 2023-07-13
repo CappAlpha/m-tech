@@ -59,7 +59,7 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
         },
       }} navigation={true} modules={[Navigation]} className={styles.swiper}>
         {images.map(({ img, title, id }) => (
-          <SwiperSlide>
+          <SwiperSlide key={id}>
             <div className={styles.imgWrap} onClick={() => onClickImage(id)}>
               <div className={toggleActiveStyles(id)} onClick={() => toggleActive(id)}>
                 <img className={styles.img} src={img} />

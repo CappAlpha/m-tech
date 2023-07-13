@@ -8,6 +8,7 @@ import InputMask from 'react-input-mask';
 import { Form as FormI, schema } from './schema';
 
 import styles from './Contacts.module.scss';
+import Link from 'next/link';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
@@ -43,8 +44,6 @@ export const Contacts: FC<Props> = ({ title, form }) => {
   const [files, setFiles] = useState(null);
   const [num, setNum] = useState('');
   const [opened, setOpened] = useState(true);
-
-  const closeForm = () => setOpened(false);
 
   const {
     register,
@@ -86,9 +85,9 @@ export const Contacts: FC<Props> = ({ title, form }) => {
         {form.description}
       </div>
 
-      <div className={styles.phone}>
+      <Link href={`tel:${form.phone}`} className={styles.phone}>
         {form.phone}
-      </div>
+      </Link>
 
       <div className={styles.formRoot}>
         {formState === 'init' && (
@@ -186,7 +185,9 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
             <div className={styles.policy}>
               {form.text}
-              <a href={form.link} className={styles.link}>{form.linkText}</a>
+              <a href={form.link} className={styles.link}>
+                {form.linkText}
+              </a>
             </div>
           </div>
         )

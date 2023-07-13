@@ -126,28 +126,28 @@ export const directionsTitle = { title: 'Наши направления' }
 
 export const directionsSection = [
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 1',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 1',
   },
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 2',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 2',
   },
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 3',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 3',
   },
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 4',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 4',
   },
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 5',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 5',
   },
   {
-    title: 'Lorem ipsum',
-    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh.',
+    title: 'Lorem ipsum 6',
+    description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 6',
   },
 ]
 
@@ -196,28 +196,28 @@ export const vacanciesTitle = {
 
 export const vacanciesCards = [
   {
-    title: 'IT',
-    work: 'Work',
+    title: 'IT 1',
+    work: 'Work 1',
     link: 'https://hh.ru',
   },
   {
-    title: 'IT',
-    work: 'Work',
+    title: 'IT 2',
+    work: 'Work 2',
     link: 'https://hh.ru',
   },
   {
-    title: 'IT',
-    work: 'Work',
+    title: 'IT 3',
+    work: 'Work 3',
     link: 'https://hh.ru',
   },
   {
-    title: 'IT',
-    work: 'Work',
+    title: 'IT 4',
+    work: 'Work 4',
     link: 'https://hh.ru',
   },
   {
-    title: 'IT',
-    work: 'Work',
+    title: 'IT 5',
+    work: 'Work 5',
     link: 'https://hh.ru',
   },
 ]
@@ -231,7 +231,7 @@ export const awareTitle = { title: 'Будь в курсе' }
 
 export const awareContent = [
   {
-    img: 'https://placehold.co/600x400',
+    img: 'https://placehold.co/600x401',
     description: 'Vel facilisis volutpat est velit egestas dui id ornare. First',
     link: '',
   },
@@ -284,8 +284,10 @@ export const footerLeft = {
   company: 'ООО «ИБС Экспертиза»',
   include: 'Входит в состав группы компаний IBS',
   address: 'Россия, 127434, город Москва, Дмитровское шоссе,дом 9-Б, эт. 5 пом. XIII, ком. 6',
-  tel: 'Телефон: +7 (495) 967-80-80 /',
-  fax: 'Факс: +7 (495) 967-80-81',
+  telText: 'Телефон:',
+  tel: '+7 (495) 967-80-80',
+  faxText: 'Факс:',
+  fax: '+7 (495) 967-80-81',
   mailTitle: 'E-mail: ',
   mail: 'ibs@ibs.ru',
 }

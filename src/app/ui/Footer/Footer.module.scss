@@ -53,7 +53,9 @@
 .company,
 .include,
 .address,
+.telText,
 .tel,
+.faxText,
 .fax,
 .mailTitle,
 .mail,
@@ -78,6 +80,23 @@
 
   @include breakpoint(mobile) {
     margin-top: 24px;
+    font-size: 12px;
+  }
+}
+
+.faxWrap,
+.telWrap {
+  display: flex;
+}
+
+.tel,
+.fax {
+  padding-left: 6px;
+  &:hover {
+    color: #335899;
+  }
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -89,6 +108,7 @@
   max-width: 500px;
 }
 
+.faxText,
 .fax,
 .include {
   margin-top: 0;

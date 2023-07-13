@@ -9,6 +9,7 @@ import {
 } from '@/app/ui/shared/Icon';
 
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
+import Link from 'next/link';
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 120;
 
@@ -62,7 +63,9 @@ export const Header: FC<Props> = ({ tel, header }) => {
       <div className={styles.wrap}>
         <Logo className={styles.logo} />
         <div className={styles.right}>
-          <div className={styles.tel}>{tel}</div>
+          <Link href={`tel:${tel}`} className={styles.tel}>
+            {tel}
+          </Link>
           <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} />
         </div>
       </div>
@@ -71,7 +74,7 @@ export const Header: FC<Props> = ({ tel, header }) => {
         <div className={styles.navScroll}>
           <div className={styles.navWrap}>
             {header.map(({ title, name }) => (
-              <div className={styles.navItem}>
+              <div key={title} className={styles.navItem}>
                 <a className={styles.navTitle} onClick={() => onClickEvents(name)}>
                   {title}
                 </a>

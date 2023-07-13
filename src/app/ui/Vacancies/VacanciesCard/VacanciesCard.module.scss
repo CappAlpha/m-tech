@@ -45,10 +45,10 @@
     font-size: 32px;
   }
   @include breakpoint(mobile-m) {
-    font-size: 38px;
+    font-size: 36px;
   }
   @include breakpoint(mobile) {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 

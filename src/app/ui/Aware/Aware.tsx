@@ -27,7 +27,7 @@ export const Aware: FC<Props> = ({ title, aware }) => {
       <Swiper breakpoints={{
         320: {
           slidesPerView: 2,
-          spaceBetween: 30
+          spaceBetween: 20
         },
         600: {
           slidesPerView: 3,
@@ -44,7 +44,7 @@ export const Aware: FC<Props> = ({ title, aware }) => {
       }} navigation={true} modules={[Navigation]} className={styles.swiper}>
         <div className={styles.awareWrap}>
           {awareRev.map(({ img, description, link }) => (
-            <SwiperSlide>
+            <SwiperSlide key={img}>
               <div className={styles.awareContent}>
                 <Link target='_blank' href={link}>
                   <div className={styles.imgWrap}>
