@@ -236,7 +236,7 @@ export const awareContent = [
     link: '',
   },
   {
-    img: 'https://placehold.co/900x1200',
+    img: 'https://placehold.co/900x1600',
     description: 'Mi tempus imperdiet nulla malesuada pellentesque elit eget. Imperdiet dui accumsan sit amet nulla. Mauris pharetra et ultrices neque ornare aenean euismod. Auctor augue mauris augue neque gravida.',
     link: '',
   },

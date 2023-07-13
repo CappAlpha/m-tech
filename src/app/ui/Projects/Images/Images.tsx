@@ -38,10 +38,10 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
           spaceBetween: 20,
         },
         600: {
-          slidesPerView: 2,
+          slidesPerView: 2.5,
           spaceBetween: 40
         },
-        1024: {
+        800: {
           slidesPerView: 3,
           spaceBetween: 40
         },

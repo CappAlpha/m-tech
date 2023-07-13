@@ -89,6 +89,9 @@
 }
 
 .swiper {
+  :global(.swiper-wrapper) {
+    width: 100vw;
+  }
   :global(.swiper-button-next) {
     background-image: url("/logo/arrowSwiper.svg");
     background-repeat: no-repeat;
