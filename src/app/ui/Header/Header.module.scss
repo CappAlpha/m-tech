@@ -92,12 +92,6 @@
   @include breakpoint(mobile) {
     display: none;
   }
-  &:hover {
-    color: #335899;
-  }
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .burgerIcon {

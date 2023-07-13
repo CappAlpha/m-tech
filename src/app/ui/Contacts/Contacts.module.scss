@@ -1,7 +1,7 @@
 .root {
   width: 100%;
   padding: 0 45px;
-  margin-bottom: 80px;
+  background: #eff1f4;
 
   @include breakpoint(mobile) {
     padding: 0 20px;
@@ -9,6 +9,7 @@
 }
 
 .title {
+  margin-top: 80px;
   width: 100%;
   max-width: 800px;
   margin-bottom: 90px;
@@ -191,6 +192,7 @@
 }
 
 .input {
+  background: #eff1f4;
   border: none;
   border-bottom: 3px solid #162249;
 
@@ -387,6 +389,7 @@
 
 .policy {
   max-width: 600px;
+  margin-bottom: 80px;
 
   color: #162249;
   font-size: 20px;
