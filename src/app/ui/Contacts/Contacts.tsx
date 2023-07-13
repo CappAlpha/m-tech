@@ -12,34 +12,13 @@ import Link from 'next/link';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
-interface form {
-  description: string;
-  phone: string;
-  contactsTitle: string;
-  firstTitle: string;
-  secondTitle: string;
-  thirdTitle: string;
-  fourthTitle: string;
-  textTitle: string;
-  descriptionTitle: string;
-  uploadText: string;
-  uploadButton: string;
-  uploadSuccess: string;
-  textBtn: string;
-  text: string;
-  link: string;
-  linkText: string;
-  sendText: string;
-}
-
 export interface Props {
-  form: form;
   title: string;
 }
 
 const limit = 1500;
 
-export const Contacts: FC<Props> = ({ title, form }) => {
+export const Contacts: FC<Props> = ({ title }) => {
   const [formState, setFormState] = useState<FormState>('init');
   const [files, setFiles] = useState(null);
   const [num, setNum] = useState('');
@@ -82,11 +61,11 @@ export const Contacts: FC<Props> = ({ title, form }) => {
       <div className={styles.title}>{title}</div>
 
       <div className={styles.description}>
-        {form.description}
+        Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону
       </div>
 
-      <Link href={`tel:${form.phone}`} className={styles.phone}>
-        {form.phone}
+      <Link href={`tel:+7 924 XXX XX XX`} className={styles.phone}>
+        +7 924 XXX XX XX
       </Link>
 
       <div className={styles.formRoot}>
@@ -95,13 +74,13 @@ export const Contacts: FC<Props> = ({ title, form }) => {
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
               <div className={styles.fields}>
                 <div className={styles.contacts}>
-                  {form.contactsTitle}
+                  Контактные данные
                 </div>
 
                 <div className={styles.inputWraps}>
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
-                      {form.firstTitle}
+                      Ф.И.О*
                     </label>
 
                     <input className={styles.input} {...register('name')} />
@@ -110,7 +89,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
-                      {form.secondTitle}
+                      E-mail*
                     </label>
 
                     <input type='email' className={styles.input} {...register('email')} />
@@ -125,7 +104,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                 <div className={styles.inputWraps}>
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
-                      {form.thirdTitle}
+                      Компания*
                     </label>
 
                     <input type='text' className={styles.input} {...register('company')} />
@@ -134,7 +113,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
                   <div className={styles.inputWrap}>
                     <label className={styles.inputTitle}>
-                      {form.fourthTitle}
+                      Телефон*
                     </label>
 
                     <InputMask className={styles.input} {...register('phone')} mask="+7(999)999-99-99" maskChar=" " />
@@ -143,14 +122,14 @@ export const Contacts: FC<Props> = ({ title, form }) => {
                 </div>
 
                 <div className={styles.textTitle}>
-                  {form.textTitle}
+                  Несколько слов о проекте
                 </div>
 
                 <div className={styles.inputWraps}>
                   <div className={styles.inputWrapText}>
                     <div className={styles.wrapForm}>
                       <label className={styles.inputTitle}>
-                        {form.descriptionTitle}
+                        Описание
                       </label>
                       <div className={cn(styles.counter, num.length === limit && styles.counterLimit)}>{num.length}/{limit}</div>
                     </div>
@@ -164,29 +143,29 @@ export const Contacts: FC<Props> = ({ title, form }) => {
 
                 <div className={cn(!files && styles.fileWrap, files && styles.fileWrapUpload)} onDragOver={handleDragOver} onDrop={handleDrop}>
                   <div className={styles.fileText}>
-                    {form.uploadText}
+                    Перетащите или
                   </div>
                   <div className={styles.fileTextUpload}>
-                    {form.uploadSuccess}
+                    Файл успешно загружен
                   </div>
 
                   <input id='filesPick' className={styles.file} type='file' multiple {...register('files')} />
                   <label htmlFor='filesPick' className={styles.fileOpen} >
-                    {form.uploadButton}
+                    выберите файл
                   </label>
                 </div>
 
 
                 <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid} onClick={() => setOpened(false)}>
-                  {form.textBtn}
+                  Отправить
                 </button>
               </div>
             </form>
 
             <div className={styles.policy}>
-              {form.text}
-              <a href={form.link} className={styles.link}>
-                {form.linkText}
+              Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии
+              <a href='' className={styles.link}>
+                &nbsp; c политикой об обработке персональных данных
               </a>
             </div>
           </div>
@@ -194,7 +173,7 @@ export const Contacts: FC<Props> = ({ title, form }) => {
         }
         <div className={cn(styles.formSendBefore, !opened && styles.formSend)}>
           <div className={styles.formSendText}>
-            {form.sendText}
+            Cпасибо, мы с вами свяжемся.
           </div>
         </div>
       </div>

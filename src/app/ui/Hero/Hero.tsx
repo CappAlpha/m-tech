@@ -4,21 +4,6 @@ import styles from "./Hero.module.scss";
 import { HeroForm } from './HeroForm';
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
 
-interface form {
-  title: string;
-  nameTitle: string;
-  connectWith: string;
-  tabFirst: string;
-  tabSecond: string;
-  emailTitle: string;
-  phoneTitle: string;
-  textBtn: string;
-  text: string;
-  link: string;
-  linkText: string;
-  sendText: string;
-}
-
 interface Hero {
   title: string;
   description: string;
@@ -27,10 +12,9 @@ interface Hero {
 
 interface Props {
   hero: Hero;
-  form: form,
 }
 
-export const Hero: FC<Props> = ({ hero, form }) => {
+export const Hero: FC<Props> = ({ hero }) => {
   const [opened, setOpened] = useState(false);
 
   const closeForm = () => setOpened(false);
@@ -52,7 +36,7 @@ export const Hero: FC<Props> = ({ hero, form }) => {
           </div>
         </div>
       </div>
-      <HeroForm form={form} opened={opened} onClickItem={closeForm} />
+      <HeroForm opened={opened} onClickItem={closeForm} />
     </>
   );
 };

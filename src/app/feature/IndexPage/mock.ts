@@ -37,22 +37,6 @@ export const hero = {
   description: 'Мангазея Технолоджи» ориентирована на цифровое развитие промышленных и девелоперских компаний. Выполняет функции бизнес-консультанта и интегратора при реализации ИТ-проектов на основе российского ПО.',
 }
 
-export const form = {
-  title: 'Обсудить задачу',
-  nameTitle: 'Ф.И.О*',
-  connectWith: 'Связаться по',
-  tabFirst: 'почте',
-  tabSecond: 'телефону',
-  emailTitle: 'E-mail*',
-  phoneTitle: 'Телефон*',
-  textBtn: 'Отправить',
-  text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
-  link: '',
-  linkText: ' c политикой об обработке персональных данных',
-  sendText: 'Cпасибо, мы с вами свяжемся.',
-}
-
-
 export const aboutTitle = { title: '30 лет развития ИТ-индустрии' }
 
 export const aboutTextSection = [
@@ -258,26 +242,6 @@ export const awareContent = [
 ]
 
 export const contactsTitle = { title: 'Обсудить задачу' }
-
-export const formContacts = {
-  description: 'Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону',
-  phone: '+7 924 XXX XX XX',
-  contactsTitle: 'Контактные данные',
-  firstTitle: 'Ф.И.О*',
-  secondTitle: 'E-mail*',
-  thirdTitle: 'Компания*',
-  fourthTitle: 'Телефон*',
-  textTitle: 'Несколько слов о проекте',
-  descriptionTitle: 'Описание',
-  uploadText: 'Перетащите или',
-  uploadButton: 'выберите файл',
-  uploadSuccess: 'Файл успешно загружен',
-  textBtn: 'Отправить',
-  text: 'Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии',
-  link: '',
-  linkText: ' c политикой об обработке персональных данных',
-  sendText: 'Cпасибо, мы с вами свяжемся.',
-}
 
 export const footerLeft = {
   title: 'Контакты IBS',

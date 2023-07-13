@@ -15,7 +15,7 @@ import { Footer } from "@/app/ui/Footer";
 
 import {
   headerTel, navMenu,
-  hero, form,
+  hero,
   aboutTitle, aboutTextSection, aboutReviewSection,
   projectsTitle, projects,
   directionsTitle, directionsSection,
@@ -23,7 +23,7 @@ import {
   tickerArr,
   vacanciesTitle, vacanciesCards, vacanciesAll,
   awareTitle, awareContent,
-  contactsTitle, formContacts,
+  contactsTitle,
   footerLeft, footerRight,
 } from "./mock";
 
@@ -31,7 +31,7 @@ export const IndexPage: FC = () => {
   return (
     <div className={styles.root}>
       <Header tel={headerTel.tel} header={navMenu} />
-      <Hero hero={hero} form={form} />
+      <Hero hero={hero} />
       <About title={aboutTitle.title} aboutTextSection={aboutTextSection} aboutReviewSection={aboutReviewSection} />
       <Projects title={projectsTitle.title} projects={projects} />
       <Directions title={directionsTitle.title} directionsSection={directionsSection} />
@@ -39,7 +39,7 @@ export const IndexPage: FC = () => {
       <Ticker tickerArr={tickerArr} />
       <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
       <Aware title={awareTitle.title} aware={awareContent} />
-      <Contacts title={contactsTitle.title} form={formContacts} />
+      <Contacts title={contactsTitle.title} />
       <Footer footerLeft={footerLeft} footerRight={footerRight} />
     </div>
   );

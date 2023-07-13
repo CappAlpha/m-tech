@@ -14,28 +14,12 @@ import Link from 'next/link';
 
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
-interface form {
-  title: string;
-  nameTitle: string;
-  connectWith: string;
-  tabFirst: string;
-  tabSecond: string;
-  emailTitle: string;
-  phoneTitle: string;
-  textBtn: string;
-  text: string;
-  link: string;
-  linkText: string;
-  sendText: string;
-}
-
 interface Props {
-  form: form;
   opened: boolean;
   onClickItem: () => void;
 }
 
-export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
+export const HeroForm: FC<Props> = ({ opened, onClickItem }) => {
   const [formState, setFormState] = useState<FormState>('init');
 
   const {
@@ -70,7 +54,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
         {formState === 'init' && (
           <div className={styles.formWrap}>
             <h2 className={styles.title}>
-              {form.title}
+              Обсудить задачу
             </h2>
 
             <form className={cn(styles.form, 'form')} onSubmit={handleSubmit(submit)}>
@@ -78,7 +62,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
 
                 <div className={styles.inputWrap}>
                   <label className={styles.inputTitle}>
-                    {form.nameTitle}
+                    Ф.И.О*
                   </label>
 
                   <input className={styles.input} {...register('name')} />
@@ -87,22 +71,22 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
 
                 <Tabs className={styles.inputWrap}>
                   <div className={styles.formNav}>
-                    {form.connectWith}
+                    Связаться по
 
                     <TabList className={styles.buttons}>
                       <Tab className={cn(styles.sEmail, activeTab === "email" && styles.active)} onClick={() => setTab('email')}>
-                        {form.tabFirst}
+                        почте
                       </Tab>
 
                       <Tab className={cn(styles.sPhone, activeTab === "phone" && styles.active)} onClick={() => setTab('phone')}>
-                        {form.tabSecond}
+                        телефону
                       </Tab>
                     </TabList>
                   </div>
 
                   <TabPanel>
                     <label className={styles.inputTitle}>
-                      {form.emailTitle}
+                      E-mail*
                     </label>
 
                     <input type='email' className={styles.input} {...register('email')} />
@@ -111,7 +95,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
 
                   <TabPanel>
                     <label className={styles.inputTitle}>
-                      {form.phoneTitle}
+                      Телефон*
                     </label>
 
                     <InputMask className={styles.input} {...register('phone')} mask="+7(999)999-99-99" maskChar=" " />
@@ -121,14 +105,14 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
               </div>
 
               <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid}>
-                {form.textBtn}
+                Отправить
               </button>
             </form>
 
             <div className={styles.policy}>
-              {form.text}
-              <Link href={form.link} className={styles.link}>
-                {form.linkText}
+              Нажимая кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии
+              <Link href='' className={styles.link}>
+                &nbsp; c политикой об обработке персональных данных'
               </Link>
             </div>
           </div>
@@ -136,7 +120,7 @@ export const HeroForm: FC<Props> = ({ form, opened, onClickItem }) => {
         }
         <div className={styles.formSend}>
           <div className={styles.formSendText}>
-            {form.sendText}
+            Cпасибо, мы с вами свяжемся.
           </div>
         </div>
         <div className={styles.closeBtn} onClick={() => onClickItem()}>
