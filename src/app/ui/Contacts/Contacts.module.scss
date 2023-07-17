@@ -214,6 +214,10 @@
   margin-top: 5px;
   color: red;
   font-size: 16px;
+
+  @include breakpoint(mobile) {
+    font-size: 12px;
+  }
 }
 
 .textTitle {
@@ -247,6 +251,7 @@
 
 .fileWrap {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;

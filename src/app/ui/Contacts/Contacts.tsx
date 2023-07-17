@@ -20,9 +20,10 @@ const limit = 1500;
 
 export const Contacts: FC<Props> = ({ title }) => {
   const [formState, setFormState] = useState<FormState>('init');
-  const [files, setFiles] = useState(null);
+  const [files, setFiles] = useState<File>();
   const [num, setNum] = useState('');
   const [opened, setOpened] = useState(true);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const {
     register,
@@ -43,16 +44,59 @@ export const Contacts: FC<Props> = ({ title }) => {
     console.log(data)
   };
 
-  const handleDragOver = (e: any) => {
+
+  //@ts-ignore
+  const onChangeFile = ({ target }) => {
+    if (target.files) {
+      const file = target.files[0];
+      const MAX_FILE_SIZE = 20000;
+      setErrorMsg("");
+
+      if (file !== undefined) {
+        const fileSizeKiloBytes = file.size / 1024
+
+        if (fileSizeKiloBytes > MAX_FILE_SIZE) {
+          setErrorMsg("Файл должен быть меньше 20 МБ");
+          return;
+        }
+
+      }
+      else return;
+
+      setFiles(file);
+    }
+  }
+
+  //@ts-ignore
+  const handleDragOver = (e) => {
     e.preventDefault();
   }
 
-  const handleDrop = (e: any) => {
+  //@ts-ignore
+  const handleDrop = (e) => {
     e.preventDefault();
+    if (e.dataTransfer.files) {
+      const file = e.dataTransfer.files[0];
+      setErrorMsg("");
+      const MAX_FILE_SIZE = 20000;
+
+      const fileSizeKiloBytes = file.size / 1024
+
+      if (fileSizeKiloBytes > MAX_FILE_SIZE) {
+        setErrorMsg("Файл должен быть меньше 20 МБ");
+        return;
+      }
+      if (e.dataTransfer.files.length > 1) {
+        setErrorMsg("Можно загрузить не более одного файла");
+        return;
+      }
+    }
+
     setFiles(e.dataTransfer.files);
   }
 
-  const handleNumChange = (e: any) => {
+  //@ts-ignore
+  const handleNumChange = (e) => {
     setNum(e.target.value.slice(0, limit));
   };
 
@@ -142,19 +186,26 @@ export const Contacts: FC<Props> = ({ title }) => {
                 </div>
 
                 <div className={cn(!files && styles.fileWrap, files && styles.fileWrapUpload)} onDragOver={handleDragOver} onDrop={handleDrop}>
-                  <div className={styles.fileText}>
-                    Перетащите или
-                  </div>
-                  <div className={styles.fileTextUpload}>
-                    Файл успешно загружен
+                  <div className={styles.wrapForm}>
+                    <div className={styles.fileText}>
+                      Перетащите или
+                    </div>
+
+                    <input id='filesPick' className={styles.file} type='file' {...register('files')} onChange={onChangeFile}
+                    />
+                    <label htmlFor='filesPick' className={styles.fileOpen}>
+                      выберите файл
+                    </label>
+
+                    <div className={styles.fileTextUpload}>
+                      Файл успешно загружен
+                    </div>
                   </div>
 
-                  <input id='filesPick' className={styles.file} type='file' multiple {...register('files')} />
-                  <label htmlFor='filesPick' className={styles.fileOpen} >
-                    выберите файл
-                  </label>
+                  <span className={styles.span}>
+                    {errorMsg}
+                  </span>
                 </div>
-
 
                 <button className={cn(styles.buttonDisabled, isValid && styles.button)} disabled={!isValid} onClick={() => setOpened(false)}>
                   Отправить
