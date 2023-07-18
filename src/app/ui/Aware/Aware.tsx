@@ -1,11 +1,12 @@
+import Link from 'next/link';
 import { FC } from 'react';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from './Aware.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import Link from 'next/link';
 
 interface Aware {
+  id: number;
   img: string;
   description: string;
   link: string;
@@ -17,7 +18,6 @@ interface Props {
 }
 
 export const Aware: FC<Props> = ({ title, aware }) => {
-
   const awareRev = aware.flat().reverse();
 
   return (
@@ -25,26 +25,30 @@ export const Aware: FC<Props> = ({ title, aware }) => {
       <div className={styles.title}>{title}</div>
 
       <Swiper breakpoints={{
-        320: {
-          slidesPerView: 2,
+        0: {
+          slidesPerView: 1.2,
           spaceBetween: 20
         },
         600: {
-          slidesPerView: 3,
+          slidesPerView: 2.2,
           spaceBetween: 40
         },
         1300: {
-          slidesPerView: 4,
+          slidesPerView: 4.1,
           spaceBetween: 30
         },
         1800: {
-          slidesPerView: 5,
+          slidesPerView: 5.1,
           spaceBetween: 40
         },
-      }} navigation={true} modules={[Navigation]} className={styles.swiper}>
+      }}
+        navigation={true}
+        modules={[Navigation]}
+        className={styles.swiper}
+      >
         <div className={styles.awareWrap}>
-          {awareRev.map(({ img, description, link }) => (
-            <SwiperSlide key={img}>
+          {awareRev.map(({ id, img, description, link }) => (
+            <SwiperSlide key={id}>
               <div className={styles.awareContent}>
                 <Link target='_blank' href={link}>
                   <div className={styles.imgWrap}>

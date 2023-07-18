@@ -32,8 +32,8 @@
   @include breakpoint(mobile-m) {
     max-width: 500px;
 
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 
@@ -118,6 +118,10 @@
   svg {
     height: 80px;
     fill: #162249;
+
+    @include breakpoint(mobile-m) {
+      height: 50px;
+    }
   }
 
   @include breakpoint(mobile) {

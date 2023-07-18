@@ -185,61 +185,72 @@ export const vacanciesTitle = {
 
 export const vacanciesCards = [
   {
+    id: 1,
     title: 'IT 1',
-    work: 'Work 1',
-    link: 'https://hh.ru',
+    type: 'Work 1',
+    url: 'https://hh.ru',
   },
   {
+    id: 2,
     title: 'IT 2',
-    work: 'Work 2',
-    link: 'https://hh.ru',
+    type: 'Work 2',
+    url: 'https://hh.ru',
   },
   {
+    id: 3,
     title: 'IT 3',
-    work: 'Work 3',
-    link: 'https://hh.ru',
+    type: 'Work 3',
+    url: 'https://hh.ru',
   },
   {
+    id: 4,
     title: 'IT 4',
-    work: 'Work 4',
-    link: 'https://hh.ru',
+    type: 'Work 4',
+    url: 'https://hh.ru',
   },
   {
+    id: 5,
     title: 'IT 5',
-    work: 'Work 5',
-    link: 'https://hh.ru',
+    type: 'Work 5',
+    url: 'https://hh.ru',
+  },
+  {
+    id: 6,
+    title: 'все вакансии',
+    type: 'All',
+    url: 'https://hh.ru',
   },
 ]
-
-export const vacanciesAll = {
-  title: 'все вакансии',
-  link: 'https://hh.ru',
-}
 
 export const awareTitle = { title: 'Будь в курсе' }
 
 export const awareContent = [
   {
+    id: 1,
     img: 'https://placehold.co/600x401',
     description: 'Vel facilisis volutpat est velit egestas dui id ornare. First',
     link: '',
   },
   {
+    id: 2,
     img: 'https://placehold.co/900x1600',
     description: 'Mi tempus imperdiet nulla malesuada pellentesque elit eget. Imperdiet dui accumsan sit amet nulla. Mauris pharetra et ultrices neque ornare aenean euismod. Auctor augue mauris augue neque gravida.',
     link: '',
   },
   {
+    id: 3,
     img: 'https://placehold.co/400x900',
     description: 'Consequat semper viverra nam libero justo laoreet sit amet cursus.',
     link: '',
   },
   {
+    id: 4,
     img: 'https://placehold.co/600x400',
     description: 'Nibh venenatis cras sed felis eget velit aliquet sagittis. Dolor sit amet consectetur adipiscing. Erat nam at lectus urna duis. Eget dolor morbi non arcu risus quis varius quam.',
     link: '',
   },
   {
+    id: 5,
     img: 'https://placehold.co/900x900',
     description: 'Molestie nunc non blandit massa enim nec dui. Last',
     link: '',

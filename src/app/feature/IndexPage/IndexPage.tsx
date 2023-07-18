@@ -22,7 +22,7 @@ import {
   directionsTitle, directions,
   solutionsTitle, solutions,
   tickerArr,
-  vacanciesTitle, vacanciesCards, vacanciesAll,
+  vacanciesTitle, vacanciesCards,
   awareTitle, awareContent,
   contactsTitle,
   footerLeft, footerRight,
@@ -38,7 +38,7 @@ export const IndexPage: FC = () => {
       <Directions title={directionsTitle.title} directions={directions} />
       <Solutions title={solutionsTitle.title} solutions={solutions} />
       <Ticker tickerArr={tickerArr} />
-      <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
+      <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} />
       <Aware title={awareTitle.title} aware={awareContent} />
       <Contacts title={contactsTitle.title} />
       <Footer footerLeft={footerLeft} footerRight={footerRight} />

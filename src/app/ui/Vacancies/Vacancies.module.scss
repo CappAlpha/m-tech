@@ -2,6 +2,10 @@
   width: 100%;
   padding: 0 43px;
   margin-bottom: 80px;
+
+  @include breakpoint(mobile-m) {
+    padding: 0 20px;
+  }
 }
 
 .title {
@@ -24,7 +28,8 @@
   }
 
   @include breakpoint(mobile) {
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 
@@ -33,15 +38,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  column-gap: 40px;
-  row-gap: 40px;
+  gap: 40px;
 
   @include breakpoint(desktop) {
-    column-gap: 25px;
+    gap: 25px;
   }
   @include breakpoint(mobile-m) {
     margin-top: 45px;
+    gap: 10px;
   }
   @include breakpoint(mobile) {
     margin-top: 40px;
