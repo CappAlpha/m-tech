@@ -75,13 +75,18 @@
     }
   }
 
-  .video {
-    transition: opacity 0.5s ease;
-    opacity: 0;
-  }
-  .button {
-    transition: opacity 0.5s ease;
-    opacity: 0;
+  @include breakpoint(mobile-m) {
+    .logo {
+      svg {
+        fill: #ffffff;
+      }
+    }
+    .video {
+      opacity: 1;
+    }
+    .button {
+      opacity: 1;
+    }
   }
 
   &:hover {
