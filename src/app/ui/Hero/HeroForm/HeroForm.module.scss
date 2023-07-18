@@ -243,7 +243,6 @@
   height: 83px;
   max-width: 420px;
 
-  cursor: pointer;
   border: 0px #335899;
   border-radius: 20px;
   background: #335899;
@@ -279,6 +278,7 @@
   &:hover {
     transform: translate3d(3px, -4px, 0);
     transition: transform 0.1s linear;
+    cursor: pointer;
   }
   &:active {
     opacity: 0.6;

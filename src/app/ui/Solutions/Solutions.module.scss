@@ -1,6 +1,10 @@
 .root {
   width: 100%;
   padding: 0 43px 12px;
+
+  @include breakpoint(mobile-m) {
+    padding: 0 20px 12px;
+  }
 }
 
 .title {
@@ -34,12 +38,30 @@
 }
 
 .wrap {
-  display: flex;
-  justify-content: center;
-  @include breakpoint(tablet) {
-    flex-wrap: wrap;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
+  @include breakpoint(mobile-m) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+  }
+}
+
+.block {
+  display: flex;
+  height: 400px;
+  position: relative;
+  z-index: 4;
+  padding: 20px;
+
+  &:nth-child(even) {
+    border-left: 3px solid #162249;
+    @include breakpoint(tablet) {
+      border: none;
+    }
+  }
   &:nth-child(1) {
     border-bottom: 3px solid #162249;
     @include breakpoint(tablet) {
@@ -52,43 +74,21 @@
       border: none;
     }
   }
-}
 
-.block {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  height: 500px;
-  position: relative;
-  z-index: 4;
-
-  padding: 20px;
-
-  @include breakpoint(desktop-big) {
-    height: 400px;
+  .video {
+    transition: opacity 0.5s ease;
+    opacity: 0;
   }
-  @include breakpoint(desktop) {
-    height: 320px;
-  }
-  @include breakpoint(tablet) {
-    margin-bottom: 30px;
-    max-width: 900px;
-    height: 419px;
-    .logo {
-      fill: #ffffff;
-    }
-    .video {
-      transition: opacity 0.5s ease;
-      opacity: 1;
-    }
-    .button {
-      opacity: 1;
-    }
+  .button {
+    transition: opacity 0.5s ease;
+    opacity: 0;
   }
 
   &:hover {
     .logo {
-      fill: #ffffff;
+      svg {
+        fill: #ffffff;
+      }
     }
 
     .video {
@@ -100,16 +100,6 @@
       transition: opacity 0.5s ease;
       opacity: 1;
     }
-  }
-
-  &:nth-child(even) {
-    border-left: 3px solid #162249;
-    @include breakpoint(tablet) {
-      border: none;
-    }
-  }
-  @include breakpoint(mobile) {
-    max-height: 240px;
   }
 }
 
@@ -120,7 +110,10 @@
   left: 0px;
   z-index: 1;
 
-  fill: #162249;
+  svg {
+    height: 80px;
+    fill: #162249;
+  }
 
   @include breakpoint(mobile) {
     max-width: 500px;
@@ -165,6 +158,7 @@
   &:hover {
     transition: color 0.2s linear;
     background: #fff;
+    cursor: pointer;
   }
 
   &:active {

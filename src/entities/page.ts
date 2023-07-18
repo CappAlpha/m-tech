@@ -109,15 +109,24 @@ export interface Project {
 }
 
 export interface Vacancy {
+  id: number;
   title: string;
   type?: string;
   url: string;
 }
 
 export interface Solution {
+  id: number;
   title: string;
   type: string;
   video: {
+    data: {
+      attributes: {
+        url: string;
+      };
+    };
+  };
+  file: {
     data: {
       attributes: {
         url: string;

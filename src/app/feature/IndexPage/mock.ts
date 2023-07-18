@@ -141,24 +141,29 @@ export const solutionsTitle = {
 
 export const solutions = [
   {
+    id: 1,
+    file: '',
+    type: '',
     video: '/video/solutions/mangazeya-development.mp4',
-    title: 'Скачать презентацию',
-    link: '',
   },
   {
+    id: 2,
+    file: '',
+    type: '',
     video: '/video/solutions/mangazeya-gaz.mp4',
-    title: 'Скачать презентацию',
-    link: '',
+
   },
   {
+    id: 3,
+    file: '',
+    type: '',
     video: '/video/solutions/mangazeya-technology.mp4',
-    title: 'Скачать презентацию',
-    link: '',
   },
   {
+    id: 4,
+    file: '',
+    type: '',
     video: '/video/solutions/mangazeya-agro.mp4',
-    title: 'Скачать презентацию',
-    link: '',
   },
 ]
 
