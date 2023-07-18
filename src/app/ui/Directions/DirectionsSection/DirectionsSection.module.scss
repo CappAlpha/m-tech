@@ -46,18 +46,17 @@
 
   @include breakpoint(desktop) {
     margin-bottom: 20px;
-
     font-size: 34px;
   }
 
   @include breakpoint(tablet) {
     margin-bottom: 10px;
-
     font-size: 28px;
   }
 
   @include breakpoint(mobile-m) {
     font-size: 24px;
+    padding-left: 30px;
   }
 }
 
@@ -84,7 +83,7 @@
   }
 
   @include breakpoint(mobile-m) {
-    left: -32px;
+    left: 0px;
     top: 6px;
   }
 }
@@ -94,7 +93,17 @@
 
   color: #000;
   font-size: 20px;
-  line-height: 42px;
+  line-height: 40px;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
 
   @include breakpoint(desktop) {
     margin-bottom: 30px;

@@ -2,6 +2,10 @@
   width: 100%;
   padding: 0 44px;
   margin-bottom: 80px;
+
+  @include breakpoint(mobile-m) {
+    padding: 0 20px;
+  }
 }
 
 .title {
@@ -28,8 +32,8 @@
   }
 
   @include breakpoint(mobile) {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 

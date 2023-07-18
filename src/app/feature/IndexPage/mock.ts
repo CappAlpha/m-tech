@@ -108,7 +108,7 @@ export const projects = [
 
 export const directionsTitle = { title: 'Наши направления' }
 
-export const directionsSection = [
+export const directions = [
   {
     title: 'Lorem ipsum 1',
     description: 'Mi eget mauris pharetra et ultrices neque ornare. Lorem ipsum dolor sit amet. Non blandit massa enim nec dui. Duis at tellus at urna condimentum mattis pellentesque id nibh. 1',

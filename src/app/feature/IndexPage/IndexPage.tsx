@@ -19,7 +19,7 @@ import {
   hero,
   aboutTitle, aboutTextSection, aboutReviewSection,
   projectsTitle, projects,
-  directionsTitle, directionsSection,
+  directionsTitle, directions,
   solutionsTitle, solutions,
   tickerArr,
   vacanciesTitle, vacanciesCards, vacanciesAll,
@@ -35,7 +35,7 @@ export const IndexPage: FC = () => {
       <Hero hero={hero} />
       <About title={aboutTitle.title} aboutTextSection={aboutTextSection} aboutReviewSection={aboutReviewSection} />
       <Projects title={projectsTitle.title} projects={projects} />
-      <Directions title={directionsTitle.title} directionsSection={directionsSection} />
+      <Directions title={directionsTitle.title} directions={directions} />
       <Solutions title={solutionsTitle.title} solutions={solutions} />
       <Ticker tickerArr={tickerArr} />
       <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} titleAll={vacanciesAll.title} linkAll={vacanciesAll.link} />
