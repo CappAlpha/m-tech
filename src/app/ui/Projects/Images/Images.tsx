@@ -1,10 +1,11 @@
-import { FC, useState } from 'react';
-
-import styles from './Images.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
+import { FC, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+
+import styles from './Images.module.scss';
 
 interface Images {
   images: { img: string, title: string, id: number }[]
@@ -18,9 +19,10 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
     objects: images,
   });
 
+  //commit Project FIXES изменить потом
   const toggleActive = (id: number) => {
     changeState({ ...appState, activeObject: appState.objects[id] });
-  }
+  };
 
   const toggleActiveStyles = (id: number) => {
     if (appState.objects[id] === appState.activeObject) {
@@ -28,21 +30,25 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
     } else {
       return styles.imgItm;
     }
-  }
+  };
 
   return (
     <div className={styles.root}>
       <Swiper breakpoints={{
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
         320: {
-          slidesPerView: 1.5,
-          spaceBetween: 20,
+          slidesPerView: 1.1,
+          spaceBetween: 10,
         },
         600: {
-          slidesPerView: 2.5,
+          slidesPerView: 2.1,
           spaceBetween: 40
         },
         800: {
-          slidesPerView: 3,
+          slidesPerView: 2.5,
           spaceBetween: 40
         },
         1300: {
@@ -57,11 +63,16 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
           slidesPerView: 6,
           spaceBetween: 30
         },
-      }} navigation={true} modules={[Navigation]} className={styles.swiper}>
+      }}
+        navigation={true}
+        modules={[Navigation]}
+        className={styles.swiper}
+      >
         {images.map(({ img, title, id }) => (
           <SwiperSlide key={id}>
             <div className={styles.imgWrap} onClick={() => onClickImage(id)}>
               <div className={toggleActiveStyles(id)} onClick={() => toggleActive(id)}>
+
                 <img className={styles.img} src={img} />
                 <div className={styles.title}>{title}</div>
               </div>
@@ -70,5 +81,5 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
         ))}
       </Swiper>
     </div >
-  )
-}
+  );
+};

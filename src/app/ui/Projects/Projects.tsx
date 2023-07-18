@@ -1,8 +1,9 @@
 import { FC, useState } from 'react';
 
-import styles from './Projects.module.scss';
 import { Images } from './Images';
 import { Info } from './Info'
+
+import styles from './Projects.module.scss';
 
 interface Projects {
   img: string;
@@ -17,10 +18,10 @@ interface Props {
 }
 
 export const Projects: FC<Props> = ({ title, projects }) => {
-  const [setImage, setsetImage] = useState(projects[0]);
+  const [project, setProject] = useState(projects[0]);
 
   const onClickImage = (id: number) => {
-    setsetImage(projects[id])
+    setProject(projects[id])
   }
 
   return (
@@ -29,8 +30,8 @@ export const Projects: FC<Props> = ({ title, projects }) => {
         <div className={styles.title}>{title}</div>
 
         <Images images={projects} onClickImage={onClickImage} />
-        <Info title={setImage.title} description={setImage.description} />
+        <Info title={project.title} description={project.description} />
       </div>
     </div>
-  )
-}
+  );
+};
