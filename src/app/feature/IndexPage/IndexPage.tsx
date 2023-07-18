@@ -1,5 +1,4 @@
 import { FC } from "react";
-import styles from "./IndexPage.module.scss";
 
 import { Header } from "@/app/ui/Header";
 import { Hero } from "@/app/ui/Hero";
@@ -13,8 +12,10 @@ import { Aware } from "@/app/ui/Aware";
 import { Contacts } from "@/app/ui/Contacts";
 import { Footer } from "@/app/ui/Footer";
 
+import styles from "./IndexPage.module.scss";
+
 import {
-  headerTel, navMenu,
+  headerTel, menuItem,
   hero,
   aboutTitle, aboutTextSection, aboutReviewSection,
   projectsTitle, projects,
@@ -30,7 +31,7 @@ import {
 export const IndexPage: FC = () => {
   return (
     <div className={styles.root}>
-      <Header tel={headerTel.tel} header={navMenu} />
+      <Header tel={headerTel.tel} header={menuItem} />
       <Hero hero={hero} />
       <About title={aboutTitle.title} aboutTextSection={aboutTextSection} aboutReviewSection={aboutReviewSection} />
       <Projects title={projectsTitle.title} projects={projects} />

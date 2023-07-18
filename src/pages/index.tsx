@@ -1,19 +1,22 @@
 import type { GetServerSideProps, NextPage } from 'next';
 
+//import { strapi } from '@/api/strapi;
 import { IndexPage } from '@/app/feature/IndexPage';
+import { Page } from '@/entities/page';
 
-// import { getInitialStore } from '../server/getInitialStore';
+export interface PageProps {
+  pageData: Page;
+}
 
-const Home: NextPage = (props) => {
-  return <IndexPage />;
+const Home: NextPage<PageProps> = ({ pageData }) => {
+  return <IndexPage pageData={pageData} />;
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  // const initialStore = await getInitialStore(ctx);
-
+export const getServerSideProps: GetServerSideProps = async () => {
+  // const page = await strapi<{ data: { attributes: Page } }>('/page?populate=deep')
   return {
     props: {
-      // initialStore,
+      //pageData: page?.data?.attributes,
     },
   };
 };

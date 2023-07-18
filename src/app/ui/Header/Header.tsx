@@ -1,20 +1,23 @@
 import cn from 'classnames';
+import Link from 'next/link';
 import { FC, useRef, useEffect, useState } from "react";
 
-import styles from "./Header.module.scss";
-import {
-  Logo,
-  Burger,
-  Close,
-} from '@/app/ui/shared/Icon';
+import { Logo, Burger, Close, } from '@/app/ui/shared/Icon';
+import { getTransformedPhone } from '../shared/constants/getTransformedPhone';
 
 import { useBlockScroll } from '../shared/hook/useBlockScroll';
-import Link from 'next/link';
+
+import styles from "./Header.module.scss";
 
 const MIN_SCROLL_FOR_FIXED_HEADER = 120;
 
+interface menuItem {
+  label: string;
+  name: string;
+}
+
 interface Props {
-  header: Array<({ title: string, name: string })>;
+  header: menuItem[];
   tel: string;
 }
 
@@ -25,9 +28,9 @@ export const Header: FC<Props> = ({ tel, header }) => {
 
   const oldScroll = useRef(0);
   const onClickEvents = (name: string) => {
-    setOpened(false)
+    setOpened(false);
     document.querySelector(`#${name}`)?.scrollIntoView({ behavior: 'smooth' });
-  }
+  };
 
   const onScroll = () => {
     const scrollTop = window.scrollY;
@@ -58,12 +61,14 @@ export const Header: FC<Props> = ({ tel, header }) => {
 
   useBlockScroll([opened]);
 
+  const transformedPhone = getTransformedPhone(tel)
+
   return (
     <header className={cn(styles.root, fixed && styles.fixed, !isOnTop && styles.darkened)}>
       <div className={styles.wrap}>
         <Logo className={styles.logo} />
         <div className={styles.right}>
-          <Link href={`tel:${tel}`} className={styles.tel}>
+          <Link href={`tel:${transformedPhone}`} className={styles.tel}>
             {tel}
           </Link>
           <Burger className={styles.burgerIcon} onClick={() => setOpened(true)} />
@@ -73,21 +78,23 @@ export const Header: FC<Props> = ({ tel, header }) => {
       <div className={cn(styles.navRoot, opened && styles.opened)}>
         <div className={styles.navScroll}>
           <div className={styles.navWrap}>
-            {header.map(({ title, name }) => (
-              <div key={title} className={styles.navItem}>
+            {header.map(({ label, name }) => (
+              <div key={label} className={styles.navItem}>
                 <a className={styles.navTitle} onClick={() => onClickEvents(name)}>
-                  {title}
+                  {label}
                 </a>
               </div>
             ))}
           </div>
         </div>
-        <div className={styles.closeBtn}
+        <div
+          className={styles.closeBtn}
           //@ts-ignore
-          onClick={() => setOpened(false)}>
+          onClick={() => setOpened(false)}
+        >
           <Close className={styles.closeIcon} />
         </div>
       </div>
     </header>
   );
-}
+};

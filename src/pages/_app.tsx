@@ -8,8 +8,6 @@ import Head from 'next/head';
 import React from 'react';
 
 import ErrorBoundary from '@/app/ui/ErrorBoundary/ErrorBoundary';
-// import { Provider as ReduxProvider } from 'react-redux';
-import { RootState, useInitStore } from '@/store/store';
 
 type Props<T> = AppProps<T> & {
   Component: NextPage<T> & {
@@ -18,19 +16,16 @@ type Props<T> = AppProps<T> & {
 };
 
 interface PageProps {
-  initialStore: RootState;
+  initialStore: undefined;
 }
 
 export default function App({ Component, pageProps }: Props<PageProps>) {
-  // const store = useInitStore(pageProps.initialStore);
   return (
     <>
-      {/* <ReduxProvider store={store}> */}
       <HeadApp />
       <ErrorBoundary>
         <Component {...pageProps} />
       </ErrorBoundary>
-      {/* </ReduxProvider> */}
     </>
   );
 }
@@ -40,7 +35,7 @@ const HeadApp: React.FC = () => {
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Заголовок</title>
+      <title>МТех</title>
       {/* <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
       <link rel="icon" href="/favicons/favicon.svg" />
       <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />

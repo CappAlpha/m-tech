@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import styles from "./About.module.scss";
-
 import { AboutTextSection } from "./AboutTextSection";
+
+import styles from "./About.module.scss";
 
 interface aboutTextSection {
   subtitle: string;

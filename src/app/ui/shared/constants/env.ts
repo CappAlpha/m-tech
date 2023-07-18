@@ -1,0 +1,1 @@
+export const STRAPI_HOST = process.env.NEXT_PUBLIC_STRAPI_HOST;

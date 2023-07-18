@@ -1,30 +1,30 @@
-export const navMenu = [
+export const menuItem = [
   {
-    title: 'О нас',
+    label: 'О нас',
     name: 'about',
   },
   {
-    title: 'Наши направления',
+    label: 'Наши направления',
     name: 'directions',
   },
   {
-    title: 'Отраслевые решения',
+    label: 'Отраслевые решения',
     name: 'solutions',
   },
   {
-    title: 'Наши проекты',
+    label: 'Наши проекты',
     name: 'projects',
   },
   {
-    title: 'Вакансии компании',
+    label: 'Вакансии компании',
     name: 'vacancies',
   },
   {
-    title: 'Будь в курсе',
+    label: 'Будь в курсе',
     name: 'aware',
   },
   {
-    title: 'Контакты ',
+    label: 'Контакты ',
     name: 'contacts',
   },
 ]
