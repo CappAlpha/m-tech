@@ -5,11 +5,8 @@
   max-width: 457px;
   height: 207px;
   padding: 30px;
-
   z-index: 10;
-
   cursor: pointer;
-
   border-radius: 28px;
   background-color: #162249;
 
@@ -17,12 +14,15 @@
     max-width: 340px;
     height: 180px;
   }
+
   @include breakpoint(mobile-m) {
     max-width: 457px;
     height: 207px;
   }
+
   @include breakpoint(mobile) {
     height: 180px;
+    border-radius: 20px;
   }
 }
 
@@ -44,9 +44,11 @@
   @include breakpoint(tablet) {
     font-size: 32px;
   }
+
   @include breakpoint(mobile-m) {
     font-size: 36px;
   }
+
   @include breakpoint(mobile) {
     font-size: 26px;
   }

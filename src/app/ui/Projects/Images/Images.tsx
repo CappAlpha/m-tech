@@ -36,15 +36,11 @@ export const Images: FC<Images> = ({ images, onClickImage }) => {
     <div className={styles.root}>
       <Swiper breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
           spaceBetween: 10,
         },
-        320: {
-          slidesPerView: 1.1,
-          spaceBetween: 10,
-        },
-        600: {
-          slidesPerView: 2.1,
+        500: {
+          slidesPerView: 2.5,
           spaceBetween: 40
         },
         800: {

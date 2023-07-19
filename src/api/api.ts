@@ -1,10 +1,10 @@
 import axios, { AxiosRequestConfig, Method } from 'axios';
 // import { onRejectResponse } from './interceptors';
 
-const API_HOST = process.env.NEXT_PUBLIC_API_HOST;
+const API_HOST = process.env.NEXT_PUBLIC_FORM_HOST;
 
 const config = {
-  baseURL: `${API_HOST}/api`,
+  baseURL: `${API_HOST}/`,
   headers: {
     'Cache-Control': 'no-cache',
     Pragma: 'no-cache',

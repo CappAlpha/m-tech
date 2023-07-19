@@ -89,6 +89,7 @@
   @include breakpoint(mobile-m) {
     padding: 38px 38px 60px;
     margin-top: 40px;
+    border-radius: 20px;
   }
 
   @include breakpoint(mobile) {
