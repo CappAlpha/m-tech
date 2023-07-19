@@ -24,7 +24,7 @@ import {
   tickerArr,
   vacanciesTitle, vacanciesCards,
   awareTitle, awareContent,
-  contactsTitle,
+  contacts,
   footerLeft, footerRight,
 } from "./mock";
 
@@ -40,7 +40,7 @@ export const IndexPage: FC = () => {
       <Ticker tickerArr={tickerArr} />
       <Vacancies title={vacanciesTitle.title} vacanciesCards={vacanciesCards} />
       <Aware title={awareTitle.title} aware={awareContent} />
-      <Contacts title={contactsTitle.title} />
+      <Contacts phone={contacts.phone} />
       <Footer footerLeft={footerLeft} footerRight={footerRight} />
     </div>
   );

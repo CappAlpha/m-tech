@@ -257,19 +257,14 @@ export const awareContent = [
   },
 ]
 
-export const contactsTitle = { title: 'Обсудить задачу' }
+export const contacts = { phone: '+7 924 XXX XX XX' }
 
 export const footerLeft = {
-  title: 'Контакты IBS',
   company: 'ООО «ИБС Экспертиза»',
   include: 'Входит в состав группы компаний IBS',
   address: 'Россия, 127434, город Москва, Дмитровское шоссе,дом 9-Б, эт. 5 пом. XIII, ком. 6',
-  telText: 'Телефон:',
-  tel: '+7 (495) 967-80-80',
-  faxText: 'Факс:',
-  fax: '+7 (495) 967-80-81',
-  mailTitle: 'E-mail: ',
-  mail: 'ibs@ibs.ru',
+  phone: '+7 (495) 967-80-80',
+  email: 'ibs@ibs.ru',
 }
 
 export const footerRight = {

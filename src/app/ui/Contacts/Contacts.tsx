@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 import { SubmitHandler } from 'react-hook-form/dist/types';
 import InputMask from 'react-input-mask';
 
+import { getTransformedPhone } from '../shared/constants/getTransformedPhone';
+
 import { Form as FormI, schema } from './schema';
 
 import styles from './Contacts.module.scss';
@@ -13,12 +15,12 @@ import styles from './Contacts.module.scss';
 export type FormState = 'loading' | 'error' | 'success' | 'init';
 
 export interface Props {
-  title: string;
+  phone: string;
 }
 
 const limit = 1500;
 
-export const Contacts: FC<Props> = ({ title }) => {
+export const Contacts: FC<Props> = ({ phone }) => {
   const [formState, setFormState] = useState<FormState>('init');
   const [files, setFiles] = useState<File>();
   const [num, setNum] = useState('');
@@ -102,14 +104,14 @@ export const Contacts: FC<Props> = ({ title }) => {
 
   return (
     <div className={styles.root} id="contacts">
-      <div className={styles.title}>{title}</div>
+      <div className={styles.title}>Обсудите задачу</div>
 
       <div className={styles.description}>
         Расскажите подробнее о вашем проекте или проконсультируйтесь с нами по телефону
       </div>
 
-      <Link href={`tel:+7 924 XXX XX XX`} className={styles.phone}>
-        +7 924 XXX XX XX
+      <Link href={`tel: ${getTransformedPhone(phone)}`} className={styles.phone}>
+        {phone}
       </Link>
 
       <div className={styles.formRoot}>

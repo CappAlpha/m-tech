@@ -21,8 +21,9 @@ export interface Page {
     list: Solution[];
   }
   footer: {
-    company?: string;
-    address?: string;
+    company: string;
+    address: string;
+    email: string;
   };
 }
 
